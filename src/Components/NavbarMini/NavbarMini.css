@@ -1,0 +1,69 @@
+.navbarMini {
+  width: 100%;
+  border-bottom: 2px solid var(--grey);
+}
+
+.miniLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+
+}
+
+.miniLinks li {
+  position: relative;
+}
+
+.miniLinks a {
+  color: var(--text-grey);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1.4rem;
+  position: relative;
+  transition: color 1s ease;
+}
+
+.miniLinks a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  border-radius: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--btn-bg);
+  transition: width 1s ease;
+  
+}
+
+
+.miniLinks .active::before {
+  width: 100%;
+  
+}
+.miniLinks a:hover{
+  color: var(--btn-bg);
+}
+
+.miniLinks .active {
+  color: var(--btn-bg);
+  font-weight: bold;
+}
+
+.miniLinks .active::before {
+  width: 100%;
+}
+.miniLinks a:not(.active)::before {
+  /* Ensure the pseudo-element for non-active links smoothly transitions */
+  transition: width 1s ease;
+}
+.indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--btn-bg);
+  width: 0;
+}

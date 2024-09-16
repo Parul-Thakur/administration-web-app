@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 300px; /* Adjust max-width for larger screens */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 2rem; /* Default font size */
+  margin: 0;
+}
+
+.card p {
+  font-size: 1rem; /* Default font size */
+  margin: 0;
+}
+
+.card-icon {
+  margin-top: 15px;
+}
+
+.first-card-title {
+  font-size: 2.2rem; /* Larger font size for first card */
+}
+
+.first-card-description {
+  font-size: 1.1rem; /* Larger font size for first card description */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 15px;
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .card h3 {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .card p {
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+  }
+
+  .first-card-title {
+    font-size: 1.7rem; /* Adjusted for smaller screens */
+  }
+
+  .first-card-description {
+    font-size: 1rem; /* Adjusted for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem; /* Even smaller font size for very small screens */
+  }
+
+  .card p {
+    font-size: 0.8rem; /* Even smaller font size for very small screens */
+  }
+
+  .first-card-title {
+    font-size: 1.5rem; /* Adjusted for very small screens */
+  }
+
+  .first-card-description {
+    font-size: 0.9rem; /* Adjusted for very small screens */
+  }
+}

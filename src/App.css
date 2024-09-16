@@ -1,0 +1,31 @@
+/* Global styles (e.g., in index.css or App.css) */
+
+/* Light theme (default) */
+body.light {
+  background-color: var(--background-color);
+  color: black;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: var(--background-color);
+  color: white;
+}
+.main {
+  flex: 1;
+  margin: 0rem auto;
+  width: 70%;
+}
+.reportMain{
+  flex: 1;
+  margin: 0rem auto;
+  width: 80%;
+}
+/* .main {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center; 
+  margin-top: 3rem; 
+} */

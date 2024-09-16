@@ -1,0 +1,36 @@
+.bar-chart-container {
+  position: relative; /* Ensure child elements can be positioned absolutely */
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-card {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+
+  padding: 10px;
+  border-radius: 2px;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: .7rem;
+}
+@media (max-width: 1440px) {
+  .info-card {
+    font-size: 0.5rem; 
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    font-size: 0.5rem; /* Even smaller font size on very small screens */
+    padding: 6px;
+    margin-bottom: 10px;
+  }
+}

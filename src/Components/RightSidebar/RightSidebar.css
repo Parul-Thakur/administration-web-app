@@ -1,0 +1,60 @@
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 20rem;
+  z-index: 1000;
+  background-color: var(--sidebar-color);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: var(--text-color);
+}
+
+/* Navbar links */
+.navbar a {
+  display: block;
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: var(--hover);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  color: var(--text-color);
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+}
