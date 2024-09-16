@@ -71,13 +71,14 @@ import LLA from "./Pages/LLA/LLA";
 import Api from "./Pages/API/Api";
 import AzureDetails from "./Pages/Settings/AzureDetails";
 
-export default function App({ open }) {
+export default function App() {
   const location = useLocation(); 
   const { theme } = useTheme();
 
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+
   return (
     <AnimatePresence mode="wait">
       <ScrollToTop />
@@ -195,10 +196,10 @@ export default function App({ open }) {
           <Route path="/cashier" element={<Cashier />} />
           <Route path="/custom-print-page" element={<CustomPrint />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/device-setting" element={<DeviceSetting/>} />
-          <Route path="/option-setting" element={<OptionSetting/>} />
-          <Route path="/winauth-setting" element={<WinAuth/>} />
-          <Route path="/azure-setting" element={<AzureDetails/>} />
+          <Route path="/device-setting" element={<DeviceSetting />} />
+          <Route path="/option-setting" element={<OptionSetting />} />
+          <Route path="/winauth-setting" element={<WinAuth />} />
+          <Route path="/azure-setting" element={<AzureDetails />} />
           <Route path="/license-info" element={<LicenseInfo />} />
           <Route path="/license-detail" element={<LicenseDetails />} />
           <Route path="/license-feature" element={<LicenseFeature />} />
@@ -206,7 +207,7 @@ export default function App({ open }) {
           <Route path="/oxpd-application-logs" element={<Logs />} />
           <Route path="/about" element={<About />} />
           <Route path="/lla" element={<LLA />} />
-          <Route path="/api" element={<Api/>} />
+          <Route path="/api" element={<Api />} />
         </Route>
       </Routes>
     </AnimatePresence>
