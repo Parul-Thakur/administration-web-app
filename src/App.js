@@ -14,7 +14,7 @@ import PrintDocs from "./Pages/Users/PrintDocs/PrintDocs";
 import EditUser from "./Pages/Users/EditUser/EditUser";
 import Devices from "./Pages/Devices/Devices";
 import EditDevice from "./Pages/Devices/EditDevice";
-import {devicesData} from "./Pages/Devices/devicesData";
+import { devicesData } from "./Pages/Devices/devicesData";
 import DeviceGroups from "./Pages/Devices/DeviceGroups";
 import AddDevice from "./Pages/Devices/AddDevice";
 import { useTheme } from "./utils/ThemeContext";
@@ -72,7 +72,7 @@ import Api from "./Pages/API/Api";
 import AzureDetails from "./Pages/Settings/AzureDetails";
 
 export default function App() {
-  const location = useLocation(); 
+  const location = useLocation();
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -83,84 +83,79 @@ export default function App() {
     <AnimatePresence mode="wait">
       <ScrollToTop />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Login />} />
+        {/* <Route path="/" element={<Login />} /> */}
         {/* <Route path="/" element={<Layout />}> */}
-          <Route
-            path="/dashboard"
-            element={  <Dashboard /> }/>
-            
-           
-          
-          <Route path="/server" element={<Server />} />
-          <Route
-            path="/server/edit/:serverId"
-            element={<EditPage data={serverData} />}
-          />
-          <Route path="/users" element={<Users />} />
-          <Route path="/users/add-user" element={<AddUser />} />
-          <Route
-            path="/users/edit/access-code/:userId"
-            element={<AccessCode data={UserData} />}
-          />
-          <Route
-            path="/users/edit/:userId"
-            element={<EditUser data={UserData} />}
-          />
-          <Route
-            path="/users/edit/alias/:userId"
-            element={<Alias data={UserData} />}
-          />
-          <Route
-            path="/users/edit/group/:userId"
-            element={<UserGroup data={UserData} />}
-          />
-          <Route
-            path="/users/edit/print-docs/:userId"
-            element={<PrintDocs data={UserData} />}
-          />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/server" element={<Server />} />
+        <Route
+          path="/server/edit/:serverId"
+          element={<EditPage data={serverData} />}
+        />
+        <Route path="/users" element={<Users />} />
+        <Route path="/users/add-user" element={<AddUser />} />
+        <Route
+          path="/users/edit/access-code/:userId"
+          element={<AccessCode data={UserData} />}
+        />
+        <Route
+          path="/users/edit/:userId"
+          element={<EditUser data={UserData} />}
+        />
+        <Route
+          path="/users/edit/alias/:userId"
+          element={<Alias data={UserData} />}
+        />
+        <Route
+          path="/users/edit/group/:userId"
+          element={<UserGroup data={UserData} />}
+        />
+        <Route
+          path="/users/edit/print-docs/:userId"
+          element={<PrintDocs data={UserData} />}
+        />
 
-          <Route path="/devices" element={<Devices />} />
-          <Route path="/devices/add-device" element={<AddDevice />} />
-          <Route
-            path="/devices/edit/:deviceId"
-            element={<EditDevice data={devicesData} />}
-          />
-          <Route path="/devices/groups/:deviceId" element={<DeviceGroups />} />
-          <Route path="/queues" element={<PrintQueues />} />
-          <Route path="/departments" element={<Department />} />
-          <Route path="/groups/user-groups" element={<Groups />} />
-          <Route path="/groups/device-groups" element={<Groups />} />
-          <Route path="/cost-codes" element={<CostCodes />} />
-          <Route path="/organizational-unit" element={<OrganizationalUnit />} />
+        <Route path="/devices" element={<Devices />} />
+        <Route path="/devices/add-device" element={<AddDevice />} />
+        <Route
+          path="/devices/edit/:deviceId"
+          element={<EditDevice data={devicesData} />}
+        />
+        <Route path="/devices/groups/:deviceId" element={<DeviceGroups />} />
+        <Route path="/queues" element={<PrintQueues />} />
+        <Route path="/departments" element={<Department />} />
+        <Route path="/groups/user-groups" element={<Groups />} />
+        <Route path="/groups/device-groups" element={<Groups />} />
+        <Route path="/cost-codes" element={<CostCodes />} />
+        <Route path="/organizational-unit" element={<OrganizationalUnit />} />
 
-          <Route path="/user-imports" element={<UserImports />} />
-          <Route path="/user-imports/add-user" element={<AddUserImport />} />
-          <Route
-            path="/user-imports/edit/:userId"
-            element={<EditUserImport data={userImportData} />}
-          />
-          <Route path="/device-imports" element={<DeviceImports />} />
-          <Route
-            path="/device-imports/add-device"
-            element={<AddDeviceImport />}
-          />
-          <Route
-            path="/device-imports/edit/:deviceId"
-            element={<EditDeviceImport data={deviceImportData} />}
-          />
+        <Route path="/user-imports" element={<UserImports />} />
+        <Route path="/user-imports/add-user" element={<AddUserImport />} />
+        <Route
+          path="/user-imports/edit/:userId"
+          element={<EditUserImport data={userImportData} />}
+        />
+        <Route path="/device-imports" element={<DeviceImports />} />
+        <Route
+          path="/device-imports/add-device"
+          element={<AddDeviceImport />}
+        />
+        <Route
+          path="/device-imports/edit/:deviceId"
+          element={<EditDeviceImport data={deviceImportData} />}
+        />
 
-          <Route path="/reports/scheduled-reports" element={<Report />} />
-          <Route path="/add-report" element={<AddReports />} />
-          {/* <Route
+        <Route path="/reports/scheduled-reports" element={<Report />} />
+        <Route path="/add-report" element={<AddReports />} />
+        {/* <Route
             path="/scheduled-reports/add-report"
             element={<AddScheduledReports />}
           /> */}
-          <Route
-            path="/edit-report/:reportType/edit/:userId"
-            element={<EditReport />}
-          />
-          <Route path="/reports/template-reports" element={<Report />} />
-          {/* <Route
+        <Route
+          path="/edit-report/:reportType/edit/:userId"
+          element={<EditReport />}
+        />
+        <Route path="/reports/template-reports" element={<Report />} />
+        {/* <Route
             path="/template-reports/add-template"
             element={<AddTemplateReports />}
           />
@@ -168,44 +163,44 @@ export default function App() {
             path="/template-reports/edit/:tempId"
             element={<EditTemplateReport data={templateData} />}
           /> */}
-          <Route path="/statistics" element={<Statistics />} />
-          <Route path="/email-templates" element={<EmailTemplate />} />
-          <Route
-            path="/email-templates/add-template"
-            element={<AddEmailTemplate />}
-          />
-          <Route
-            path="/email-templates/edit/:emailId"
-            element={<EditEmailTemplate data={emailData} />}
-          />
-          <Route path="/pricing-configuration" element={<PricingConfig />} />
-          <Route
-            path="/pricing-configuration/add-price"
-            element={<AddPriceScheme />}
-          />
-          <Route
-            path="/pricing-configuration/edit/:priceId"
-            element={<EditPriceScheme data={pricingConfigData} />}
-          />
-          <Route
-            path="/assign-pricing-configuration"
-            element={<AssignPricingConfig />}
-          />
-          <Route path="/cashier" element={<Cashier />} />
-          <Route path="/custom-print-page" element={<CustomPrint />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/device-setting" element={<DeviceSetting />} />
-          <Route path="/option-setting" element={<OptionSetting />} />
-          <Route path="/winauth-setting" element={<WinAuth />} />
-          <Route path="/azure-setting" element={<AzureDetails />} />
-          <Route path="/license-info" element={<LicenseInfo />} />
-          <Route path="/license-detail" element={<LicenseDetails />} />
-          <Route path="/license-feature" element={<LicenseFeature />} />
-          <Route path="/core-application-logs" element={<Logs />} />
-          <Route path="/oxpd-application-logs" element={<Logs />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/lla" element={<LLA />} />
-          <Route path="/api" element={<Api />} />
+        <Route path="/statistics" element={<Statistics />} />
+        <Route path="/email-templates" element={<EmailTemplate />} />
+        <Route
+          path="/email-templates/add-template"
+          element={<AddEmailTemplate />}
+        />
+        <Route
+          path="/email-templates/edit/:emailId"
+          element={<EditEmailTemplate data={emailData} />}
+        />
+        <Route path="/pricing-configuration" element={<PricingConfig />} />
+        <Route
+          path="/pricing-configuration/add-price"
+          element={<AddPriceScheme />}
+        />
+        <Route
+          path="/pricing-configuration/edit/:priceId"
+          element={<EditPriceScheme data={pricingConfigData} />}
+        />
+        <Route
+          path="/assign-pricing-configuration"
+          element={<AssignPricingConfig />}
+        />
+        <Route path="/cashier" element={<Cashier />} />
+        <Route path="/custom-print-page" element={<CustomPrint />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/device-setting" element={<DeviceSetting />} />
+        <Route path="/option-setting" element={<OptionSetting />} />
+        <Route path="/winauth-setting" element={<WinAuth />} />
+        <Route path="/azure-setting" element={<AzureDetails />} />
+        <Route path="/license-info" element={<LicenseInfo />} />
+        <Route path="/license-detail" element={<LicenseDetails />} />
+        <Route path="/license-feature" element={<LicenseFeature />} />
+        <Route path="/core-application-logs" element={<Logs />} />
+        <Route path="/oxpd-application-logs" element={<Logs />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/lla" element={<LLA />} />
+        <Route path="/api" element={<Api />} />
         {/* </Route> */}
       </Routes>
     </AnimatePresence>
