@@ -23,7 +23,7 @@ const DashboardContent = () => {
   return (
     <div style={{ width: "100%", height: "100%", padding: "0 20px 2rem" }}>
       {/* Cards Row */}
-      <Grid container spacing={2} marginBottom={2}>
+      <Grid container spacing={2} marginBottom={0}>
         {cardData.map((card, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <MuiCard
@@ -31,7 +31,7 @@ const DashboardContent = () => {
                 backgroundColor: "var(--sidebar-color)",
                 borderRadius: 2,
                 boxShadow: 3,
-                mb: "3rem",
+                mb: "1rem",
                 transition: "transform 0.3s ease-in-out",
                 "&:hover": {
                   transform: "scale(1.05)",
@@ -42,10 +42,10 @@ const DashboardContent = () => {
               <CardMedia
                 component="div"
                 sx={{
-                  height: "10rem",
-                  position: "relative", // Position relative to handle the overlay
-                  borderRadius: "2px 2px 0 0", // Rounded corners for the image top
-                  overflow: "hidden", // Ensure content doesn't overflow
+                  height: "8rem",
+                  position: "relative", 
+                  borderRadius: "2px 2px 0 0", 
+                  overflow: "hidden",
                 }}
               >
                 <Box
@@ -77,19 +77,23 @@ const DashboardContent = () => {
                   }}
                 />
               </CardMedia>
-              <CardContent>
+              <CardContent      sx={{
+                  height: "5rem",padding:"10px "}}>
                 <Typography
-                  variant="h6"
+                  variant="h8"
+                   component="h5"
                   sx={{
                     fontWeight: "bold",
-                    color: "var(--text-head)",
+                    color: "var(--text-grey)",
+                    
                   }}
                 >
                   {card.title}
                 </Typography>
                 <Typography
-                  variant="body2"
-                  sx={{ color: "var(--text-grey)", marginTop: "8px" }}
+                  variant="h8"
+                  component="h4"
+                  sx={{ color: "var(--text-head)", marginTop: "8px" }}
                 >
                   {card.text}
                 </Typography>

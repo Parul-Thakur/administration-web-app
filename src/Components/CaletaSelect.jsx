@@ -26,7 +26,7 @@ const CaletaSelect = () => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "flex-start", // Align the dropdown to the right
+        justifyContent: "flex-start", 
         padding: "1rem",
         alignItems: "center",
         gap: "1rem",
@@ -34,11 +34,7 @@ const CaletaSelect = () => {
         position: "fixed",
       }}
     >
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-      >
+      <>
         <Button
           id="caleta-dropdown-button"
           aria-controls={open ? "caleta-dropdown-menu" : undefined}
@@ -70,7 +66,6 @@ const CaletaSelect = () => {
               backgroundColor: "var(--color)", // Custom background color
               color: "var(--text-color)", // Custom text color
               padding: "10px", // Remove padding from the menu
-             
             },
             "& .MuiMenu-list": {
               padding: 0, // Remove padding from the list items container
@@ -95,16 +90,14 @@ const CaletaSelect = () => {
                 gap: "8px", // Adjust the gap between the text and the icon
               }}
             >
-               Caleta Web
+              Caleta Web
               <ListItemIcon sx={{ minWidth: "auto" }}>
                 <LockIcon fontSize="xs" />
               </ListItemIcon>
             </Box>
           </MenuItem>
-
-         
         </Menu>
-      </motion.div>
+      </>
     </Box>
   );
 };

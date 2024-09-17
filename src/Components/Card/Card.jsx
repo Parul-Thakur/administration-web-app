@@ -9,7 +9,7 @@
 //         <p className={first ? 'first-card-description' : ''}>{title}</p>
 //       </div>
 //       {IconComponent && <div className="card-icon">{IconComponent}</div>}
-      
+
 //     </div>
 //   );
 // };
@@ -20,13 +20,8 @@ import { Card, CardMedia, CardContent, Typography } from "@mui/material";
 
 const Card = ({ image, title, text }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image={image}
-        alt={title}
-      />
+    <Card>
+      <CardMedia component="img" image={image} alt={title} />
       <CardContent>
         <Typography variant="h6" component="div">
           {title}
@@ -40,7 +35,3 @@ const Card = ({ image, title, text }) => {
 };
 
 export default Card;
-
-
-
-

@@ -53,15 +53,15 @@ const RightSidebar = () => {
         position: "fixed",
         right: 0,
         top: 0,
-        width: "70px", // Sidebar width for icons only
+        width: "3%",
         height: "100%",
         backgroundColor: "var(--sidebar-color)",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between", // Space between top and bottom items
+        justifyContent: "space-between", 
         padding: "1rem 0",
         zIndex: (theme) => theme.zIndex.drawer + 2,
-        alignItems: "center", // Center the icons horizontally
+        alignItems: "center", 
       }}
     >
       <List

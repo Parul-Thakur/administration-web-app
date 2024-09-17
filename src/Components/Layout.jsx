@@ -24,7 +24,7 @@ function Layout() {
   // Hide Breadcrumb on Dashboard page
   const showBreadcrumb = location.pathname !== "/dashboard";
   const sidebarWidth = open ? "15%" : "4%";
-  const rightSidebarWidth = "5%";
+  const rightSidebarWidth = "4%";
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -36,7 +36,7 @@ function Layout() {
         sx={{
           flexGrow: 1,
           marginLeft: "0rem",
-          marginRight: "4%",
+          marginRight: "3%",
           marginTop: "0px",
         }}
       >

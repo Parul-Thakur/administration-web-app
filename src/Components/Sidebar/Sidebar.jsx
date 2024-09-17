@@ -22,7 +22,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import DnsIcon from "@mui/icons-material/Dns";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
-import BackupTableIcon from '@mui/icons-material/BackupTable';
+import BackupTableIcon from "@mui/icons-material/BackupTable";
 import DevicesIcon from "@mui/icons-material/Devices";
 import QueueIcon from "@mui/icons-material/Queue";
 import CorporateFareIcon from "@mui/icons-material/CorporateFare";
@@ -44,18 +44,52 @@ import InfoIcon from "@mui/icons-material/Info";
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import "./Sidebar.css";
 import logo from "../../Images/caleta-logo-removebg-preview.png";
+import SimpleBar from 'simplebar-react';
+import 'simplebar/dist/simplebar.min.css'; 
 
 const Sidebar = ({ open, toggleDrawer }) => {
+  const [openAdmin, setOpenAdmin] = useState(
+    () => JSON.parse(localStorage.getItem("openAdmin")) || false
+  );
+  const [openSystem, setOpenSystem] = useState(
+    () => JSON.parse(localStorage.getItem("openSystem")) || false
+  );
+
+  // Function to toggle the Admin dropdown and save its state
+  const toggleAdmin = () => {
+    setOpenAdmin((prevState) => {
+      const newState = !prevState;
+      localStorage.setItem("openAdmin", JSON.stringify(newState)); // Save to localStorage
+      return newState;
+    });
+  };
+
+  // Function to toggle the System dropdown and save its state
+  const toggleSystem = () => {
+    setOpenSystem((prevState) => {
+      const newState = !prevState;
+      localStorage.setItem("openSystem", JSON.stringify(newState)); // Save to localStorage
+      return newState;
+    });
+  };
+
+  // Ensure you can see these states persist
+  useEffect(() => {
+    const savedOpenAdmin = JSON.parse(localStorage.getItem("openAdmin"));
+    const savedOpenSystem = JSON.parse(localStorage.getItem("openSystem"));
+
+    if (savedOpenAdmin !== null) {
+      setOpenAdmin(savedOpenAdmin);
+    }
+    if (savedOpenSystem !== null) {
+      setOpenSystem(savedOpenSystem);
+    }
+  }, []);
   const sidebarRef = useRef(null);
   const location = useLocation();
 
   const is1440pxOrSmaller = useMediaQuery("(max-width: 1440px)");
   const is1024pxOrSmaller = useMediaQuery("(max-width: 1024px)");
-  const [openAdmin, setOpenAdmin] = useState(false);
-  const [openSystem, setOpenSystem] = useState(false);
-
-  const toggleAdmin = () => setOpenAdmin(!openAdmin);
-  const toggleSystem = () => setOpenSystem(!openSystem);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,20 +129,29 @@ const Sidebar = ({ open, toggleDrawer }) => {
             width: open ? (is1440pxOrSmaller ? "60px" : "15%") : "4%",
             boxSizing: "border-box",
             transition: "width 0.3s",
-            overflowX: "hidden",
+
             backgroundColor: "var(--sidebar-color)",
           },
           transition: "width 0.3s ease-in-out",
         }}
+      >
+       <SimpleBar
+        style={{
+          height: '100%',
+          maxHeight: '100vh', 
+         
+        }}
+        className="custom-scrollbar" // Optional: Add a custom class
       >
         <Box
           ref={sidebarRef}
           sx={{
             height: "100%",
             overflowY: "auto",
-            "&::-webkit-scrollbar": { display: "none" },
-            msOverflowStyle: "none",
-            scrollbarWidth: "none",
+            display: 'flex',
+            flexDirection: 'column',
+            // scrollbarWidth: "thin",
+            // scrollbarColor: "var(--hover) var(--sidebar-color)",
           }}
         >
           <Box
@@ -169,7 +212,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              // gap: ".5rem",
+              flexDirection: open ? "row" : "column", // Set row when open, column when closed
             }}
           >
             <NavLink to="/dashboard" style={{ textDecoration: "none" }}>
@@ -179,7 +222,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    padding: open ? "0.5rem 2rem" : "0.5rem 0 0",
+                    padding: open ? "0.5rem 2rem" : "0.5rem 1rem 0",
                     backgroundColor: isActive
                       ? "var(--hover)"
                       : "var(--drop-bg)",
@@ -187,32 +230,31 @@ const Sidebar = ({ open, toggleDrawer }) => {
                     fontWeight: isActive ? "bold" : "normal",
                     color: "var(--text-head)",
                     gap: open ? "1rem" : "0",
-                    flexDirection: open ? "row" : "column",
+                    flexDirection: open ? "row" : "column", // Change direction based on sidebar state
                     textAlign: "center",
                   }}
                 >
                   <SpaceDashboardIcon
                     sx={{
                       color: "inherit",
-                      marginBottom: open ? "0" : "0.5rem",
+                      marginBottom: open ? "0" : "0.5rem", // Space when closed
                     }}
                   />
                   {open && !is1440pxOrSmaller && (
-                    <>
-                      <Typography
-                        sx={{
-                          fontSize: "1rem",
-                          fontWeight: "bold",
-                          display: { xs: "none", sm: "block" },
-                        }}
-                      >
-                        Parul
-                      </Typography>
-                    </>
+                    <Typography
+                      sx={{
+                        fontSize: "1rem",
+                        fontWeight: "bold",
+                        display: { xs: "none", sm: "block" },
+                      }}
+                    >
+                      Parul
+                    </Typography>
                   )}
                 </Box>
               )}
             </NavLink>
+
             <Divider
               orientation="vertical"
               flexItem
@@ -222,6 +264,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                 opacity: "0.3",
               }}
             />
+
             <NavLink to="/settings" style={{ textDecoration: "none" }}>
               {({ isActive }) => (
                 <Box
@@ -230,6 +273,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                     alignItems: "center",
                     justifyContent: "center",
                     marginTop: open ? "0" : "0.5rem",
+                    marginBottom: open ? "0" : "0.5rem",
                     padding: "0.5rem 1rem",
                     backgroundColor: open
                       ? isActive
@@ -238,7 +282,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                       : isActive
                       ? "var(--hover)"
                       : "var(--drop-bg)",
-                    borderRadius: "20px ",
+                    borderRadius: "20px",
                     fontWeight: isActive ? "bold" : "normal",
                     gap: open ? "1rem" : "0",
                     flexDirection: open ? "row" : "column",
@@ -248,7 +292,6 @@ const Sidebar = ({ open, toggleDrawer }) => {
                   <SettingsIcon
                     sx={{
                       color: "var(--text-head)",
-                      marginBottom: open ? "0" : "0.5rem",
                     }}
                   />
                 </Box>
@@ -299,7 +342,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                 ""
               )}
             </ListItem>
-            <Collapse in={openAdmin} timeout="auto" unmountOnExit>
+            <Collapse in={openAdmin} timeout="auto">
               {[
                 { text: "Servers", icon: <DnsIcon />, path: "/server" },
                 { text: "Users", icon: <PeopleAltIcon />, path: "/users" },
@@ -458,10 +501,14 @@ const Sidebar = ({ open, toggleDrawer }) => {
                 ""
               )}
             </ListItem>
-            <Collapse in={openSystem} timeout="auto" unmountOnExit>
+            <Collapse in={openSystem} timeout="auto">
               {[
                 { text: "License & more", icon: <InfoIcon />, path: "/lla" },
-                { text: "Logs", icon: <BackupTableIcon />, path: "/core-application-logs" },
+                {
+                  text: "Logs",
+                  icon: <BackupTableIcon />,
+                  path: "/core-application-logs",
+                },
                 { text: "API", icon: <ApiIcon />, path: "/api" },
               ].map(({ text, icon, path }) => (
                 <NavLink
@@ -527,6 +574,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
             </Collapse>
           </List>
         </Box>
+        </SimpleBar>
       </Drawer>
     </>
   );
