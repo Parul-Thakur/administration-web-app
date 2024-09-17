@@ -84,15 +84,13 @@ export default function App() {
       <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Login />} />
-        <Route path="/" element={<Layout />}>
+        {/* <Route path="/" element={<Layout />}> */}
           <Route
             path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
+            element={  <Dashboard /> }/>
+            
+           
+          
           <Route path="/server" element={<Server />} />
           <Route
             path="/server/edit/:serverId"
@@ -208,7 +206,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/lla" element={<LLA />} />
           <Route path="/api" element={<Api />} />
-        </Route>
+        {/* </Route> */}
       </Routes>
     </AnimatePresence>
   );
