@@ -22,6 +22,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import DnsIcon from "@mui/icons-material/Dns";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import BackupTableIcon from '@mui/icons-material/BackupTable';
 import DevicesIcon from "@mui/icons-material/Devices";
 import QueueIcon from "@mui/icons-material/Queue";
 import CorporateFareIcon from "@mui/icons-material/CorporateFare";
@@ -460,6 +461,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
             <Collapse in={openSystem} timeout="auto" unmountOnExit>
               {[
                 { text: "License & more", icon: <InfoIcon />, path: "/lla" },
+                { text: "Logs", icon: <BackupTableIcon />, path: "/core-application-logs" },
                 { text: "API", icon: <ApiIcon />, path: "/api" },
               ].map(({ text, icon, path }) => (
                 <NavLink

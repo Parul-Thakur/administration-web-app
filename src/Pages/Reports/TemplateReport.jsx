@@ -43,11 +43,7 @@ export default function TemplateReport() {
         </Typography>
       </Box>
       <Box
-        sx={{
-          padding: "3rem",
-          backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
-        }}
+      
       >
         <CustomTable
           columns={columns}

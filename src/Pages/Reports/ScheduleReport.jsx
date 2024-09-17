@@ -45,13 +45,7 @@ export default function ScheduleReport() {
         </Typography>
       </Box>
       <Box
-        sx={{
-          padding: "3rem",
-          backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
-          borderRadius: " 1rem  ",
-          boxShadow: "var(--box-shadow)",
-        }}
+      
       >
         <CustomTable
           columns={columns}
