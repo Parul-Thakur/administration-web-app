@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
 import ReportForm from "./ReportForm";
 import { scheduledData, templateData } from "./ReportData";
 import { Divider, Typography } from "@mui/material";

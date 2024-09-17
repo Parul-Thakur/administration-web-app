@@ -9,7 +9,6 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
   InputAdornment,
   IconButton,
 } from "@mui/material";

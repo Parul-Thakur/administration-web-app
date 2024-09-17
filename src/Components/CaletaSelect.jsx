@@ -102,21 +102,7 @@ const CaletaSelect = () => {
             </Box>
           </MenuItem>
 
-          {/* Acleta Secure with Lock Icon */}
-          {/* <MenuItem onClick={handleClose} disabled>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px", // Adjust the gap between the text and the icon
-              }}
-            >
-              Caleta Secure
-              <ListItemIcon sx={{ minWidth: "auto" }}>
-                <LockIcon fontSize="xs" />
-              </ListItemIcon>
-            </Box>
-          </MenuItem> */}
+         
         </Menu>
       </motion.div>
     </Box>

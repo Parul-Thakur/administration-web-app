@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import UserData from "./UserData";
 import CustomTable from "../../../Components/CustomTable/CustomTable";
-import { Container, Typography, Box, Paper, Divider } from "@mui/material";
+import { Container, Typography, Box, Divider } from "@mui/material";
 
 export default function Users() {
   const [data, setData] = useState(UserData);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Typography, Box, Paper, Divider } from "@mui/material";
+import { Container, Typography, Box, Divider } from "@mui/material";
 import work from "../../Images/api.png";
 export default function Api() {
   return (

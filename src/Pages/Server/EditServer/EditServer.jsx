@@ -11,7 +11,6 @@ import {
   InputLabel,
   FormControlLabel,
   Grid,
-  Paper,
   Box,
   Checkbox,
   Divider,

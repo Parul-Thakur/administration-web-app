@@ -1,5 +1,4 @@
 import React from "react";
-import NavbarMini from "../../Components/NavbarMini/NavbarMini";
 import ReportForm from "./ReportForm";
 import { Divider, Typography } from "@mui/material";
 

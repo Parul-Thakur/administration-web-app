@@ -14,7 +14,6 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
   OutlinedInput,
   InputAdornment,
   Autocomplete,

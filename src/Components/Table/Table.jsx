@@ -83,12 +83,12 @@ export default function Table({
       )}
       <table {...getTableProps()} className="customTable">
         <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-              {headerGroup.headers.map((column) => (
+          {headerGroups.map((headerGroup, i) => (
+            <tr {...headerGroup.getHeaderGroupProps()} key={`headerGroup-${i}`}>
+              {headerGroup.headers.map((column, j) => (
                 <th
-                  {...column.getHeaderProps}
-                  key={column.id}
+                  {...column.getHeaderProps()}
+                  key={`header-${i}-${j}`} // Unique key for each header
                   className="sortable-header"
                 >
                   {column.render("Header")}
@@ -97,18 +97,17 @@ export default function Table({
             </tr>
           ))}
         </thead>
+
         <tbody {...getTableBodyProps()}>
-          {page.map((row) => {
+          {page.map((row, rowIndex) => {
             prepareRow(row);
             return (
-              <tr
-                {...row.getRowProps()}
-                key={row.id} // Unique key for rows
-              >
-                {row.cells.map((cell) => (
-                  <td {...cell.getCellProps()} key={cell.column.id}>
-                    {" "}
-                    {/* Unique key for cells */}
+              <tr {...row.getRowProps()} key={`row-${rowIndex}`}>
+                {row.cells.map((cell, cellIndex) => (
+                  <td
+                    {...cell.getCellProps()}
+                    key={`cell-${rowIndex}-${cellIndex}`}
+                  >
                     {cell.column.id === "status" ? (
                       <div className="status-container">
                         <span

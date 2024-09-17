@@ -12,7 +12,6 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
 } from "@mui/material";
 import AddToQueueIcon from "@mui/icons-material/AddToQueue";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";

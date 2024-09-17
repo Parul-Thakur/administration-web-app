@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { Container, Paper, Typography } from "@mui/material";
+// import { motion } from "framer-motion";
+import { Container, Typography } from "@mui/material";
 import NavbarMini from "../../Components/NavbarMini/NavbarMini";
 import { useLocation } from "react-router-dom";
 import ScheduleReport from "./ScheduleReport";

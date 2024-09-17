@@ -19,21 +19,25 @@ import image4 from '../../Images/trees.png';
 
 export const cardData = [
   {
+    id:1,
     image: image1,
     title: "Total Users",
     text: "3,424 active users",
   },
   {
+    id:2,
     image: image2,
     title: "Devices in Network",
     text: "45 connected devices",
   },
   {
+    id:3,
     image: image3,
     title: "Print Jobs Today",
     text: "78 documents printed",
   },
   {
+    id:4,
     image: image4,
     title: "Trees Saved",
     text: "Equivalent to 3 trees",

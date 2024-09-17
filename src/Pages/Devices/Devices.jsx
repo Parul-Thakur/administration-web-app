@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomTable from "../../Components/CustomTable/CustomTable";
 import { devicesData } from "./devicesData";
 import { motion } from "framer-motion";
-import { Container, Typography, Box, Paper, Divider } from "@mui/material";
+import { Container, Typography, Box, Divider } from "@mui/material";
 
 export default function Devices() {
   const [data, setData] = useState(devicesData);
@@ -77,13 +77,13 @@ export default function Devices() {
             </Typography>
           </Box>
           <Box
-            // sx={{
-            //   padding: "3rem",
-            //   backgroundColor: "var(--color)",
-            //   color: "var(--text-grey)",
-            //   borderRadius: " 1rem  ",
-            //   boxShadow: "var(--box-shadow)",
-            // }}
+          // sx={{
+          //   padding: "3rem",
+          //   backgroundColor: "var(--color)",
+          //   color: "var(--text-grey)",
+          //   borderRadius: " 1rem  ",
+          //   boxShadow: "var(--box-shadow)",
+          // }}
           >
             <CustomTable
               columns={columns}

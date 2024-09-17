@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Container, Typography, Box, Paper, Divider } from "@mui/material";
+import { Container, Typography, Box, Divider } from "@mui/material";
 import CustomTable from "../../Components/CustomTable/CustomTable";
 import orgUnitData from "./orgData";
 

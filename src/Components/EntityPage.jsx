@@ -7,7 +7,6 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
   Snackbar,
   Alert,
 } from "@mui/material";
@@ -207,13 +206,13 @@ function EntityPage({
         </Typography>
       </Box>
       <Box
-        // sx={{
-        //   padding: "3rem",
-        //   backgroundColor: "var(--color)",
-        //   color: "var(--text-grey)",
-        //   borderRadius: " 1rem  ",
-        //   boxShadow: "var(--box-shadow)",
-        // }}
+      // sx={{
+      //   padding: "3rem",
+      //   backgroundColor: "var(--color)",
+      //   color: "var(--text-grey)",
+      //   borderRadius: " 1rem  ",
+      //   boxShadow: "var(--box-shadow)",
+      // }}
       >
         <CustomTable
           data={entityData}

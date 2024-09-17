@@ -20,10 +20,10 @@ const code = [
 ];
 function AccessCode() {
   const [formData, setFormData] = useState({
-    code: "C1",
+   
     accessKey: "",
   });
-  const [selectedValue, setSelectedValue] = useState("option1");
+  const [selectedValue, setSelectedValue] = useState("C1");
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
@@ -79,7 +79,7 @@ function AccessCode() {
                 options={code}
                 label="Type"
                 name="code"
-                selectedValue={formData.code}
+                selectedValue={selectedValue}
                 handleChange={handleChange}
               />
               {/* ==============================ADD ACCESS CODE============================================================ */}

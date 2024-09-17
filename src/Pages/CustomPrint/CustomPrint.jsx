@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Box,
-  Paper,
   TextField,
   Autocomplete,
   Grid,
@@ -716,13 +715,13 @@ export default function CustomPrint() {
           </Box>
 
           <Box
-            // sx={{
-            //   padding: "3rem",
-            //   backgroundColor: "var(--color)",
-            //   color: "var(--text-grey)",
-            //   borderRadius: " 1rem  ",
-            //   boxShadow: "var(--box-shadow)",
-            // }}
+          // sx={{
+          //   padding: "3rem",
+          //   backgroundColor: "var(--color)",
+          //   color: "var(--text-grey)",
+          //   borderRadius: " 1rem  ",
+          //   boxShadow: "var(--box-shadow)",
+          // }}
           >
             <CustomTable
               columns={columns}

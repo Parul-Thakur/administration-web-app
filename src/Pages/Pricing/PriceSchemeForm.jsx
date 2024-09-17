@@ -3,20 +3,16 @@ import {
   Container,
   Grid,
   TextField,
-  Checkbox,
-  FormControlLabel,
-  Button,
   Typography,
   Box,
-  Paper,
   FormControl,
   InputLabel,
   OutlinedInput,
   InputAdornment,
 } from "@mui/material";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import SaveModal from "../../Components/SaveModal";
+// import SaveModal from "../../Components/SaveModal";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
 
 export default function PriceSchemeForm({
@@ -38,12 +34,12 @@ export default function PriceSchemeForm({
     }
   }, [isEditMode, existingData]);
 
-  const handleButtonClick = (textToAdd) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      message: prevData.message + textToAdd,
-    }));
-  };
+  // const handleButtonClick = (textToAdd) => {
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     message: prevData.message + textToAdd,
+  //   }));
+  // };
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -51,12 +47,12 @@ export default function PriceSchemeForm({
       [name]: type === "checkbox" ? checked : value,
     });
   };
-  const handleQuillChange = (value) => {
-    setFormData({
-      ...formData,
-      message: value,
-    });
-  };
+  // const handleQuillChange = (value) => {
+  //   setFormData({
+  //     ...formData,
+  //     message: value,
+  //   });
+  // };
   const [isModalOpen, setModalOpen] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,9 +63,9 @@ export default function PriceSchemeForm({
     setModalOpen(false);
   };
 
-  const handleCancel = () => {
-    console.log("Form submission canceled");
-  };
+  // const handleCancel = () => {
+  //   console.log("Form submission canceled");
+  // };
   const labelsLeft = [
     ["A3 Sheet", "A4 Sheet"],
     ["A3 Mono Page", "A4 Mono Page"],
@@ -151,7 +147,9 @@ export default function PriceSchemeForm({
         }}
       >
         <Typography variant="h10" component="h4" gutterBottom>
-          {isEditMode ? `Edit Pricing Configuration: ${formData.name}` : "Pricing Configuration"}
+          {isEditMode
+            ? `Edit Pricing Configuration: ${formData.name}`
+            : "Pricing Configuration"}
         </Typography>
       </Box>
 
@@ -313,17 +311,17 @@ export default function PriceSchemeForm({
           </Grid>
         </Box>
         <div>
-            <ActionButtonWithModal
-              isEditMode={isEditMode}
-              isModalOpen={isModalOpen}
-              handleSubmit={handleSubmit}
-              handleClose={handleClose}
-              updateText="Update"
-              addText="Add "
-              // icon={PersonAddAlt1Icon}
-            />
-          </div>
-        </form>
-      </Container>
+          <ActionButtonWithModal
+            isEditMode={isEditMode}
+            isModalOpen={isModalOpen}
+            handleSubmit={handleSubmit}
+            handleClose={handleClose}
+            updateText="Update"
+            addText="Add "
+            // icon={PersonAddAlt1Icon}
+          />
+        </div>
+      </form>
+    </Container>
   );
 }

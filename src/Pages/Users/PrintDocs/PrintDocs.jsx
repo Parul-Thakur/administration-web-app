@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 
-import { Container, Typography, Box, Paper } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 
 function PrintDocs() {
   const handleSubmit = (e) => {

@@ -138,11 +138,15 @@ const DashboardContent = () => {
                     style={{ display: "inline-block" }}
                     initial={{
                       backgroundColor:
-                        view === period ? "var(--btn-bg)" : "var(--sidebar-color)",
+                        view === period
+                          ? "var(--btn-bg)"
+                          : "var(--sidebar-color)",
                     }}
                     animate={{
                       backgroundColor:
-                        view === period ? "var(--btn-bg)" : "var(--sidebar-color)",
+                        view === period
+                          ? "var(--btn-bg)"
+                          : "var(--sidebar-color)",
                     }}
                     transition={{ duration: 0.3 }}
                   >
@@ -157,7 +161,10 @@ const DashboardContent = () => {
                             : index === periods.length - 1
                             ? "0 5px 5px 0"
                             : "0",
-                        color: view === period ? "var(--btn-text)" : "var(--text-color)",
+                        color:
+                          view === period
+                            ? "var(--btn-text)"
+                            : "var(--text-color)",
                         backgroundColor:
                           view === period
                             ? "linear-gradient(135deg, var(--btn-bg) 0%, var(--hover) 100%)"

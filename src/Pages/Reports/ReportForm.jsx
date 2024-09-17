@@ -5,7 +5,6 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
   TextField,
   FormControlLabel,
   Checkbox,
@@ -16,7 +15,6 @@ import {
 } from "@mui/material";
 import ReportRadioBtn from "./ReportRadiobtn";
 import { useParams } from "react-router-dom";
-import SaveModal from "../../Components/SaveModal";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
 
 const orderBy = [

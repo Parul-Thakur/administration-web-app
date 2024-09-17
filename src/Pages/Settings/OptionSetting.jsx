@@ -12,7 +12,6 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
 } from "@mui/material";
 
 import SaveModal from "../../Components/SaveModal";
@@ -522,7 +521,6 @@ export default function OptionSetting() {
                                         onChange={handleChange}
                                         sx={{
                                           color: "var(--text-grey)",
-                                          padding: "0",
 
                                           "&.Mui-checked": {
                                             color: "var(--btn-bg)",

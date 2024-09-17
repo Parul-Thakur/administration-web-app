@@ -6,7 +6,6 @@ import {
   Divider,
   FormControlLabel,
   Grid,
-  Paper,
   Table,
   TableBody,
   TableCell,

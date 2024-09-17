@@ -14,10 +14,8 @@ import {
   Button,
   Typography,
   Box,
-  Paper,
   InputAdornment,
 } from "@mui/material";
-import { motion } from "framer-motion";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
 
@@ -40,48 +38,47 @@ const setting = [
   "Request PIN at login",
 ];
 // Variants for the items (pop-in effect)
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 24,
-    },
-  },
-  closed: {
-    opacity: 0,
-    y: 20,
-    scale: 0.8,
-    transition: {
-      duration: 0.2,
-    },
-  },
-};
+// const itemVariants = {
+//   open: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       type: "spring",
+//       stiffness: 300,
+//       damping: 24,
+//     },
+//   },
+//   closed: {
+//     opacity: 0,
+//     y: 20,
+//     scale: 0.8,
+//     transition: {
+//       duration: 0.2,
+//     },
+//   },
+// };
 
 // Variants for the dropdown itself
-const dropdownVariants = {
-  open: {
-    opacity: 1,
-    height: "auto",
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 30,
-      staggerChildren: 0.05, // Stagger for a cascading effect
-      when: "beforeChildren", // Animate dropdown first
-    },
-  },
-  closed: {
-    opacity: 0,
-    height: 0,
-    transition: { duration: 0.3 },
-  },
-};
+// const dropdownVariants = {
+//   open: {
+//     opacity: 1,
+//     height: "auto",
+//     transition: {
+//       type: "spring",
+//       stiffness: 300,
+//       damping: 30,
+//       staggerChildren: 0.05, // Stagger for a cascading effect
+//       when: "beforeChildren", // Animate dropdown first
+//     },
+//   },
+//   closed: {
+//     opacity: 0,
+//     height: 0,
+//     transition: { duration: 0.3 },
+//   },
+// };
 const UserForm = ({ isEditMode, existingData, onSubmit }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     userLogon: "",
     fullName: "",
@@ -96,7 +93,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
     accountBalance: "",
     failedLogin: "",
   });
-  const [isError, setIsError] = useState(false);
+  // const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     if (isEditMode && existingData) {
@@ -112,12 +109,12 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
     });
   };
 
-  const handleGenerateAccessKey = () => {
-    setFormData({
-      ...formData,
-      accessKey: "GeneratedAccessKey123",
-    });
-  };
+  // const handleGenerateAccessKey = () => {
+  //   setFormData({
+  //     ...formData,
+  //     accessKey: "GeneratedAccessKey123",
+  //   });
+  // };
 
   const [isModalOpen, setModalOpen] = useState(false);
   const handleSubmit = (e) => {
@@ -802,12 +799,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                           onChange={handleChange}
                           sx={{
                             color: "var(--text-grey)",
-                            padding: "0",
-
+                            padding: 1,
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
-                            padding: 1,
+                         
                           }}
                         />
                       }

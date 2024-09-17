@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import CustomTable from "../../Components/CustomTable/CustomTable";
-import { Box, Container, Paper, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import NavbarMini from "../../Components/NavbarMini/NavbarMini";
 import {
   core_application_logsData,

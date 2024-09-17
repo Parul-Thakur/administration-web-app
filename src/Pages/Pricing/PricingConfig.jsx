@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Container, Typography, Box, Paper } from "@mui/material";
+// import { motion } from "framer-motion";
+import { Container, Typography, Box} from "@mui/material";
 import CustomTable from "../../Components/CustomTable/CustomTable";
 import { pricingConfigData } from "./pricingData";
 import NavbarMini from "../../Components/NavbarMini/NavbarMini";

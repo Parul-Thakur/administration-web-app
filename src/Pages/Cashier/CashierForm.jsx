@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  Paper,
   Grid,
   TextField,
   Autocomplete,
@@ -288,7 +287,7 @@ export default function CashierForm() {
       </Box>
       <Box
         sx={{
-         boxShadow: "var(--box-shadow)",
+          boxShadow: "var(--box-shadow)",
           borderRadius: "8px",
           padding: "2rem ",
           backgroundColor: "var(--color)",

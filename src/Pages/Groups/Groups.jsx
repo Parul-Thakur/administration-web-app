@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Container, Paper, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import NavbarMini from "../../Components/NavbarMini/NavbarMini";
 import UserGroups from "./UserGroups";
 import DeviceGroup from "./DeviceGroup";
