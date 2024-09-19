@@ -166,7 +166,7 @@ export default function CustomPrint() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -214,14 +214,14 @@ export default function CustomPrint() {
                             ...params.InputProps,
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               backgroundColor: "var(--color)",
                             },
                           }}
                           InputLabelProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{
@@ -256,13 +256,13 @@ export default function CustomPrint() {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -288,7 +288,7 @@ export default function CustomPrint() {
                       <InputLabel
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         }}
                       >
                         Print Queue*
@@ -301,7 +301,7 @@ export default function CustomPrint() {
                         label="  Print Queue*"
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         }}
                         sx={{
                           "& .MuiOutlinedInput-notchedOutline": {
@@ -317,7 +317,7 @@ export default function CustomPrint() {
                             color: "var(--text-head)", // Label color
                           },
                           "& .MuiSelect-icon": {
-                            color: "var(--text-grey)", // Icon color
+                            color: "var(--text-color)", // Icon color
                           },
                         }}
                       >
@@ -327,7 +327,7 @@ export default function CustomPrint() {
                             value={p}
                             style={{
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               backgroundColor: "var(--color)",
                             }}
                           >
@@ -352,13 +352,13 @@ export default function CustomPrint() {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -389,13 +389,13 @@ export default function CustomPrint() {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -430,13 +430,13 @@ export default function CustomPrint() {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -467,13 +467,13 @@ export default function CustomPrint() {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -504,13 +504,13 @@ export default function CustomPrint() {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -541,13 +541,13 @@ export default function CustomPrint() {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -609,13 +609,13 @@ export default function CustomPrint() {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -648,13 +648,13 @@ export default function CustomPrint() {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -718,7 +718,7 @@ export default function CustomPrint() {
           // sx={{
           //   padding: "3rem",
           //   backgroundColor: "var(--color)",
-          //   color: "var(--text-grey)",
+          //   color: "var(--text-color)",
           //   borderRadius: " 1rem  ",
           //   boxShadow: "var(--box-shadow)",
           // }}

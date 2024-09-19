@@ -56,7 +56,7 @@ export default function EmailTemplate() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -67,7 +67,7 @@ export default function EmailTemplate() {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}

@@ -57,7 +57,7 @@ export default function Logs() {
                   backgroundColor: "var(--background-color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h8" component="h4" gutterBottom>
@@ -83,7 +83,7 @@ export default function Logs() {
                   backgroundColor: "var(--background-color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h8" component="h4" gutterBottom>

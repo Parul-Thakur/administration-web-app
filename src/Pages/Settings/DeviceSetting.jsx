@@ -81,7 +81,7 @@ export default function DeviceSetting() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -92,7 +92,7 @@ export default function DeviceSetting() {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -104,7 +104,7 @@ export default function DeviceSetting() {
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                     >
                       Access Code Registration
@@ -117,7 +117,7 @@ export default function DeviceSetting() {
                       label="Access Code Registration"
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                       sx={{
                         "& .MuiOutlinedInput-notchedOutline": {
@@ -133,7 +133,7 @@ export default function DeviceSetting() {
                           color: "var(--text-head)", // Label color
                         },
                         "& .MuiSelect-icon": {
-                          color: "var(--text-grey)", // Icon color
+                          color: "var(--text-color)", // Icon color
                         },
                       }}
                     >
@@ -143,7 +143,7 @@ export default function DeviceSetting() {
                           value={a}
                           style={{
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: "var(--color)",
                           }}
                         >
@@ -162,7 +162,7 @@ export default function DeviceSetting() {
                           onChange={handleChange}
                           name="fPin"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -173,7 +173,7 @@ export default function DeviceSetting() {
                       label="Display 'Forgot Pin ?' Option"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -196,7 +196,7 @@ export default function DeviceSetting() {
                           onChange={handleChange}
                           name="jobPrice"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -207,7 +207,7 @@ export default function DeviceSetting() {
                       label="Show job price on device"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -227,7 +227,7 @@ export default function DeviceSetting() {
                       variant="body2"
                       sx={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         padding: "2rem 0 1rem 2rem",
                         backgroundColor: "var(--color)",
                         textAlign: "left",
@@ -250,7 +250,7 @@ export default function DeviceSetting() {
                             "&:hover": {
                               borderColor: "var(--primary-color)",
                               transform: "translateY(5px)",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           // onClick={handleCancel}
@@ -270,7 +270,7 @@ export default function DeviceSetting() {
                             "&:hover": {
                               borderColor: "var(--primary-color)",
                               transform: "translateY(5px)",
-                              color: "var(--text-grey)", // Button hover background color
+                              color: "var(--text-color)", // Button hover background color
                             },
                           }}
                           // onClick={handleCancel}
@@ -290,7 +290,7 @@ export default function DeviceSetting() {
                             "&:hover": {
                               borderColor: "var(--primary-color)",
                               transform: "translateY(5px)",
-                              color: "var(--text-grey)", // Button hover background color
+                              color: "var(--text-color)", // Button hover background color
                             },
                           }}
                           // onClick={handleCancel}

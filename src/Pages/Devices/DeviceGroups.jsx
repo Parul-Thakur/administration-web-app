@@ -100,7 +100,7 @@ export default function DeviceGroups() {
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
                 margin: "2rem 0 0",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -111,7 +111,7 @@ export default function DeviceGroups() {
             // sx={{
             //   padding: "3rem",
             //   backgroundColor: "var(--color)",
-            //   color: "var(--text-grey)",
+            //   color: "var(--text-color)",
             //   borderRadius: " 1rem  ",
             //   boxShadow: "var(--box-shadow)",
             // }}
@@ -122,7 +122,7 @@ export default function DeviceGroups() {
                 sx={{
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: "1rem",
                   boxShadow: "var(--box-shadow)",
                   display: "flex",
@@ -158,7 +158,7 @@ export default function DeviceGroups() {
                               edge="end"
                               size="small"
                               sx={{
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                                 "&:hover": {
                                   color: "var(--primary-color)", // Change color on hover
                                 },
@@ -170,14 +170,14 @@ export default function DeviceGroups() {
                         ),
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           height: "40px",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -205,7 +205,7 @@ export default function DeviceGroups() {
                       sx={{
                         fontSize: "0.8rem",
                         padding: "0.5rem 1rem",
-                        color: "var(--text-grey)", // Button text color
+                        color: "var(--text-color)", // Button text color
                         borderColor: "var(--grey)", // Button border color
                         width: "100%", // Full width
                       }}

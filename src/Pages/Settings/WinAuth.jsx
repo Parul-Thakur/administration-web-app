@@ -72,7 +72,7 @@ export default function WinAuth() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -83,7 +83,7 @@ export default function WinAuth() {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -102,13 +102,13 @@ export default function WinAuth() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -139,13 +139,13 @@ export default function WinAuth() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -170,7 +170,7 @@ export default function WinAuth() {
                       variant="body2"
                       sx={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         padding: "2rem 0 1rem 2rem",
                         backgroundColor: "var(--color)",
                         textAlign: "left",
@@ -180,8 +180,8 @@ export default function WinAuth() {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Grid container spacing={2} justifyContent="center">
-                      <Grid item xs={12} md={4}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={5}>
                         <TextField
                           fullWidth
                           size="small"
@@ -193,13 +193,13 @@ export default function WinAuth() {
                           InputProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           InputLabelProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{
@@ -230,13 +230,13 @@ export default function WinAuth() {
                           InputProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           InputLabelProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{
@@ -267,7 +267,7 @@ export default function WinAuth() {
                             "&:hover": {
                               borderColor: "var(--primary-color)",
                               transform: "translateY(5px)",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           // onClick={handleCancel}

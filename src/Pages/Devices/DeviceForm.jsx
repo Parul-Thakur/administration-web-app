@@ -90,7 +90,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h10" component="h4" gutterBottom>
@@ -101,7 +101,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -119,13 +119,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -158,13 +158,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -198,13 +198,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -235,13 +235,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -274,13 +274,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -311,13 +311,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -348,13 +348,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -386,13 +386,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -424,13 +424,13 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -456,7 +456,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Server
@@ -469,7 +469,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                     label="Server"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -485,7 +485,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -495,7 +495,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         value={s}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -510,7 +510,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Department
@@ -523,7 +523,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                     label="department"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -539,7 +539,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -549,7 +549,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         value={dept}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -564,7 +564,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Pricing Configuration
@@ -577,7 +577,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                     label="Pricing Configuration"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -593,7 +593,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -603,7 +603,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         value={price}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -619,7 +619,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Authentication Type
@@ -632,7 +632,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                     label=" Authentication Type"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -648,7 +648,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -658,7 +658,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         value={auth}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -678,7 +678,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="pin"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -689,7 +689,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       label="2FA - PIN Required"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -713,7 +713,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h10" component="h4" gutterBottom>
@@ -724,7 +724,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -746,7 +746,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                           checked={formData[type] || false}
                           onChange={handleChange}
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             padding: "0",
 
                             "&.Mui-checked": {
@@ -759,7 +759,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                       label={type}
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -793,7 +793,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                     <>
                       <Typography
                         variant="h7"
-                        sx={{ color: "var(--text-grey)", fontSize: "0.8rem" }}
+                        sx={{ color: "var(--text-color)", fontSize: "0.8rem" }}
                       >
                         Device status
                       </Typography>
@@ -817,7 +817,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                         <Typography
                           variant="body2"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             fontSize: "0.8rem",
                           }}
                         >

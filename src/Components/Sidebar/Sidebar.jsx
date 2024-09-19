@@ -44,8 +44,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 import "./Sidebar.css";
 import logo from "../../Images/caleta-logo-removebg-preview.png";
-import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css'; 
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
 
 const Sidebar = ({ open, toggleDrawer }) => {
   const [openAdmin, setOpenAdmin] = useState(
@@ -114,7 +114,8 @@ const Sidebar = ({ open, toggleDrawer }) => {
       };
     }
   }, [location.pathname]);
-
+  const isDashboardActive = location.pathname === "/dashboard";
+  const isSettingsActive = location.pathname === "/settings";
   return (
     <>
       <Drawer
@@ -135,445 +136,487 @@ const Sidebar = ({ open, toggleDrawer }) => {
           transition: "width 0.3s ease-in-out",
         }}
       >
-       <SimpleBar
-        style={{
-          height: '100%',
-          maxHeight: '100vh', 
-         
-        }}
-        className="custom-scrollbar" // Optional: Add a custom class
-      >
-        <Box
-          ref={sidebarRef}
-          sx={{
+        <SimpleBar
+          style={{
             height: "100%",
-            overflowY: "auto",
-            display: 'flex',
-            flexDirection: 'column',
-            // scrollbarWidth: "thin",
-            // scrollbarColor: "var(--hover) var(--sidebar-color)",
+            maxHeight: "100vh",
           }}
+          className="custom-scrollbar" // Optional: Add a custom class
         >
           <Box
+            ref={sidebarRef}
             sx={{
+              height: "100%",
+              overflowY: "auto",
               display: "flex",
-              alignItems: "center",
-              padding: open ? "1rem .5rem" : "1rem",
-              marginBottom: "1rem",
-              gap: open ? "1rem" : "0",
-              justifyContent: open ? "space-between" : "center",
-              flexDirection: open ? "row" : "column",
+              flexDirection: "column",
+              // scrollbarWidth: "thin",
+              // scrollbarColor: "var(--hover) var(--sidebar-color)",
             }}
           >
-            {open && (
-              <>
-                <ListItemIcon sx={{ minWidth: "unset", marginRight: "0.5rem" }}>
-                  <img src={logo} alt="logo" style={{ width: "3rem" }} />
-                </ListItemIcon>
-
-                <ListItemText
-                  primary="Caleta"
-                  primaryTypographyProps={{
-                    sx: {
-                      color: "var(--text-head)",
-                      fontSize: "2rem",
-                      fontWeight: "bold",
-                      margin: "0 2rem 0 0",
-                    },
-                  }}
-                />
-              </>
-            )}
-
-            {!open && (
-              <ListItemIcon sx={{ minWidth: "unset" }}>
-                <img src={logo} alt="logo" style={{ width: "2rem" }} />
-              </ListItemIcon>
-            )}
-
-            <IconButton
-              aria-label="toggle drawer"
-              edge="start"
-              onClick={toggleDrawer}
+            <Box
               sx={{
-                marginLeft: open ? "2rem" : "unset",
+                display: "flex",
+                alignItems: "center",
+                padding: open ? "0rem .8rem " : "0.5rem 0 1rem",
 
-                color: "var(--btn-bg)",
-                borderRadius: "10px",
+                gap: open ? ".5rem" : "0",
+                justifyContent: open ? "space-between" : "center",
+                flexDirection: open ? "row" : "column",
               }}
             >
-              {open ? <NavigateBeforeIcon /> : <NavigateNextIcon />}{" "}
-              {/* Change icon based on open state */}
-            </IconButton>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: open ? "row" : "column", // Set row when open, column when closed
-            }}
-          >
-            <NavLink to="/dashboard" style={{ textDecoration: "none" }}>
-              {({ isActive }) => (
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: open ? "0.5rem 2rem" : "0.5rem 1rem 0",
-                    backgroundColor: isActive
-                      ? "var(--hover)"
-                      : "var(--drop-bg)",
-                    borderRadius: "20px",
-                    fontWeight: isActive ? "bold" : "normal",
-                    color: "var(--text-head)",
-                    gap: open ? "1rem" : "0",
-                    flexDirection: open ? "row" : "column", // Change direction based on sidebar state
-                    textAlign: "center",
-                  }}
-                >
-                  <SpaceDashboardIcon
+              {open && (
+                <>
+                  <ListItemIcon
                     sx={{
-                      color: "inherit",
-                      marginBottom: open ? "0" : "0.5rem", // Space when closed
+                      minWidth: "unset",
+                      //  marginRight: "0.5rem"
+                    }}
+                  >
+                    <img src={logo} alt="logo" style={{ width: "2rem" }} />
+                  </ListItemIcon>
+
+                  <ListItemText
+                    primary="Caleta"
+                    primaryTypographyProps={{
+                      sx: {
+                        color: "var(--text-color)",
+                        fontSize: "1.5rem",
+                        fontWeight: 700,
+                      },
                     }}
                   />
-                  {open && !is1440pxOrSmaller && (
-                    <Typography
-                      sx={{
-                        fontSize: "1rem",
-                        fontWeight: "bold",
-                        display: { xs: "none", sm: "block" },
-                      }}
-                    >
-                      Parul
-                    </Typography>
-                  )}
-                </Box>
+                </>
               )}
-            </NavLink>
 
+              {!open && (
+                <ListItemIcon sx={{ minWidth: "unset" }}>
+                  <img src={logo} alt="logo" style={{ width: "2rem" }} />
+                </ListItemIcon>
+              )}
+
+              <IconButton
+                aria-label="toggle drawer"
+                edge="start"
+                onClick={toggleDrawer}
+                sx={{
+                  marginLeft: open ? "2rem" : "unset",
+                  color: "var(--btn-bg)",
+                  borderRadius: "10px",
+                }}
+              >
+                {open ? <NavigateBeforeIcon /> : <NavigateNextIcon />}{" "}
+                {/* Change icon based on open state */}
+              </IconButton>
+            </Box>
             <Divider
-              orientation="vertical"
+              orientation="horizontal"
               flexItem
               sx={{
-                margin: "0 0.5rem",
-                backgroundColor: "var(--text-head)",
+                margin: " 0.2rem 0 0.5rem",
+                backgroundColor: "var(--grey)",
                 opacity: "0.3",
               }}
             />
-
-            <NavLink to="/settings" style={{ textDecoration: "none" }}>
-              {({ isActive }) => (
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginTop: open ? "0" : "0.5rem",
-                    marginBottom: open ? "0" : "0.5rem",
-                    padding: "0.5rem 1rem",
-                    backgroundColor: open
-                      ? isActive
-                        ? "var(--hover)"
-                        : "transparent"
-                      : isActive
-                      ? "var(--hover)"
-                      : "var(--drop-bg)",
-                    borderRadius: "20px",
-                    fontWeight: isActive ? "bold" : "normal",
-                    gap: open ? "1rem" : "0",
-                    flexDirection: open ? "row" : "column",
-                    textAlign: "center",
-                  }}
-                >
-                  <SettingsIcon
+            <Box
+              sx={{
+                backgroundColor: isDashboardActive
+                  ? "var(--hover)" // Change the entire background when dashboard is active
+                  : "transparent", // Keep it transparent otherwise
+                borderRadius: "20px", // Optional: smooth corners for the whole section
+                padding: "0.1rem 0", // Optional: adjust spacing around the content
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: open ? "row" : "column",
+                }}
+              >
+                {/* Dashboard NavLink */}
+                <NavLink to="/dashboard" style={{ textDecoration: "none" }}>
+                  <Box
                     sx={{
-                      color: "var(--text-head)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: open ? "0.2rem 1rem" : "0.5rem 1rem 0",
+                      backgroundColor: isDashboardActive
+                        ? "var(--hover)" // Apply hover bg color when dashboard is active
+                        : "var(--drop-bg)",
+                      borderRadius: "20px",
+                      gap: open ? "1.5rem" : "0",
+                      flexDirection: open ? "row" : "column",
+                      textAlign: "center",
                     }}
-                  />
-                </Box>
-              )}
-            </NavLink>
-          </Box>
-
-          <List
-            sx={{
-              backgroundColor: "var(--drop-bg)",
-              padding: "0",
-              borderRadius: "0px 20px 0px 20px",
-              margin: open ? "2rem .8rem" : "1rem 0",
-            }}
-            className="sidebarLinks"
-          >
-            {/* Administration Tools Dropdown */}
-            <ListItem button onClick={toggleAdmin}>
-              {!open && (
-                <ListItemIcon
-                  sx={{
-                    minWidth: "auto",
-                    color: "var(--text-head)",
-                    justifyContent: "center",
-                    fontSize: ".7rem",
-                  }}
-                >
-                  <AdminPanelSettingsIcon />
-                </ListItemIcon>
-              )}
-              {open && (
-                <ListItemText
-                  primary="Administration Tools"
-                  primaryTypographyProps={{
-                    sx: {
-                      fontSize: ".8rem",
-                      color: "var(--text-head)",
-                      display: { xs: "none", sm: "block" },
-                    },
-                  }}
-                />
-              )}
-              {open ? (
-                <IconButton sx={{ color: "var(--text-head)" }}>
-                  {openAdmin ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                </IconButton>
-              ) : (
-                ""
-              )}
-            </ListItem>
-            <Collapse in={openAdmin} timeout="auto">
-              {[
-                { text: "Servers", icon: <DnsIcon />, path: "/server" },
-                { text: "Users", icon: <PeopleAltIcon />, path: "/users" },
-                { text: "Devices", icon: <DevicesIcon />, path: "/devices" },
-                { text: "Print Queues", icon: <QueueIcon />, path: "/queues" },
-                {
-                  text: "Departments",
-                  icon: <CorporateFareIcon />,
-                  path: "/departments",
-                },
-                {
-                  text: "Groups",
-                  icon: <Groups3Icon />,
-                  path: "/groups/user-groups",
-                },
-                {
-                  text: "Cost Codes",
-                  icon: <SourceIcon />,
-                  path: "/cost-codes",
-                },
-                {
-                  text: "Organizational Unit",
-                  icon: <Diversity1Icon />,
-                  path: "/organizational-unit",
-                },
-                { text: "Imports", icon: <InputIcon />, path: "/user-imports" },
-                {
-                  text: "Reports",
-                  icon: <SummarizeIcon />,
-                  path: "/reports/scheduled-reports",
-                },
-                {
-                  text: "Statistics",
-                  icon: <QueryStatsIcon />,
-                  path: "/statistics",
-                },
-                {
-                  text: "Email Template",
-                  icon: <AssignmentIcon />,
-                  path: "/email-templates",
-                },
-                {
-                  text: "Pricing",
-                  icon: <EuroIcon />,
-                  path: "/pricing-configuration",
-                },
-                { text: "Cashier", icon: <PaymentsIcon />, path: "/cashier" },
-                {
-                  text: "Custom Print",
-                  icon: <LocalPrintshopIcon />,
-                  path: "/custom-print-page",
-                },
-              ].map(({ text, icon, path }) => (
-                <NavLink
-                  to={path}
-                  key={text}
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  style={{ textDecoration: "none" }}
-                >
-                  {({ isActive }) => (
-                    <ListItem
+                  >
+                    <SpaceDashboardIcon
                       sx={{
-                        color: isActive
+                        fontSize: "1.2rem",
+                        color: isDashboardActive
                           ? "var(--text-head)"
-                          : "var(--text-grey)",
-                        backgroundColor: isActive
-                          ? "var(--hover)"
-                          : "transparent",
-                        borderRadius: isActive ? "10px" : "0",
-                        fontWeight: "bold",
-                        gap: "1rem",
-                        transition:
-                          "background-color 0.3s, transform 0.3s, border-radius 0.3s",
-                        "&:hover": {
-                          backgroundColor: "var(--hover)",
-                          borderRadius: "10px",
-                          transform: "scale(1.05)",
-                          fontWeight: "bold",
-                        },
-                        padding: ".5rem",
-                        justifyContent:
-                          openAdmin && !is1440pxOrSmaller
-                            ? "center"
-                            : "flex-start",
+                          : "var(--text-color)",
+                        marginBottom: open ? "0" : "0.5rem",
                       }}
-                    >
-                      <ListItemIcon
+                    />
+                    {open && !is1440pxOrSmaller && (
+                      <Typography
                         sx={{
-                          minWidth: "auto",
-                          color: "inherit",
-                          justifyContent: "center",
-                          fontSize: ".7rem",
+                          color: isDashboardActive
+                            ? "var(--text-head)"
+                            : "var(--text-color)",
+                          fontSize: "0.875rem",
+                          fontWeight: 500,
+                          display: { xs: "none", sm: "block" },
                         }}
                       >
-                        {icon}
-                      </ListItemIcon>
-                      {open && !is1440pxOrSmaller && (
-                        <ListItemText
-                          primary={text}
-                          primaryTypographyProps={{
-                            sx: {
-                              fontSize: ".7rem",
-                              display: { xs: "none", sm: "block" },
-                            },
-                          }}
-                        />
-                      )}
-                    </ListItem>
-                  )}
+                       Hanoi
+                      </Typography>
+                    )}
+                  </Box>
                 </NavLink>
-              ))}
-            </Collapse>
-            <hr
-              style={{
-                borderColor: "var(--text-head)",
-                backgroundColor: "var(--text-head)",
-                borderWidth: "1px",
-                width: "100%",
-                borderStyle: "solid",
-                opacity: 0.1,
+
+                {/* Divider */}
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{
+                    margin: "0 1.5rem 0 1rem",
+                    backgroundColor: isDashboardActive
+                      ? "var(--hover)" // Change background color when dashboard is active
+                      : "var(--text-head)", // Default background color
+                    opacity: "0.3",
+                  }}
+                />
+
+                {/* Settings NavLink */}
+                <NavLink to="/settings" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginTop: open ? "0" : "0.5rem",
+                      marginBottom: open ? "0" : "0.5rem",
+                      padding:"0.2rem 0.5rem",
+                      backgroundColor: isDashboardActive
+                        ? "var(--hover)" // Apply hover bg color when dashboard is active
+                        : isSettingsActive
+                        ? "var(--hover)" // Change bg color only for settings when active
+                        : "var(--drop-bg)",
+                      borderRadius: "20px",
+                      flexDirection: open ? "row" : "column",
+                      textAlign: "center",
+                    }}
+                  >
+                    <SettingsIcon
+                      sx={{
+                        color: "var(--text-head)",
+                        fontSize: "1.2rem",
+                      }}
+                    />
+                  </Box>
+                </NavLink>
+              </Box>
+            </Box>
+            <Divider
+              orientation="horizontal"
+              flexItem
+              sx={{
+                margin: " 0.6rem 0 0",
+                backgroundColor: "var(--grey)",
+                opacity: "0.3",
               }}
             />
-            {/* System Dropdown */}
-            <ListItem button onClick={toggleSystem}>
-              {!open && (
-                <ListItemIcon
-                  sx={{
-                    minWidth: "auto",
-                    color: "var(--text-head)",
-                    justifyContent: "center",
-                    fontSize: ".7rem",
-                  }}
-                >
-                  <SettingsSystemDaydreamIcon />
-                </ListItemIcon>
-              )}
-              {open && (
-                <ListItemText
-                  primary="System"
-                  primaryTypographyProps={{
-                    sx: {
-                      fontSize: ".8rem",
-                      color: "var(--text-head)",
-                      display: { xs: "none", sm: "block" },
-                    },
-                  }}
-                />
-              )}
-              {open ? (
-                <IconButton sx={{ color: "var(--text-head)" }}>
-                  {openSystem ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                </IconButton>
-              ) : (
-                ""
-              )}
-            </ListItem>
-            <Collapse in={openSystem} timeout="auto">
-              {[
-                { text: "License & more", icon: <InfoIcon />, path: "/lla" },
-                {
-                  text: "Logs",
-                  icon: <BackupTableIcon />,
-                  path: "/core-application-logs",
-                },
-                { text: "API", icon: <ApiIcon />, path: "/api" },
-              ].map(({ text, icon, path }) => (
-                <NavLink
-                  to={path}
-                  key={text}
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
-                  style={{ textDecoration: "none" }}
-                >
-                  {({ isActive }) => (
-                    <ListItem
-                      sx={{
-                        color: isActive
-                          ? "var(--text-head)"
-                          : "var(--text-grey)",
-                        backgroundColor: isActive
-                          ? "var(--hover)"
-                          : "transparent",
-                        borderRadius: isActive ? "10px" : "0",
-                        fontWeight: "bold",
-                        gap: "1rem",
-                        transition:
-                          "background-color 0.3s, transform 0.3s, border-radius 0.3s",
-                        "&:hover": {
-                          backgroundColor: "var(--hover)",
-                          borderRadius: "10px",
-                          transform: "scale(1.05)",
-                          fontWeight: "bold",
-                        },
-                        padding: "0.5rem",
-                        justifyContent:
-                          openSystem && !is1440pxOrSmaller
-                            ? "center"
-                            : "flex-start",
-                      }}
-                    >
-                      <ListItemIcon
+            <List
+              sx={{
+                backgroundColor: "var(--drop-bg)",
+                padding: "0",
+                borderRadius: "20px ",
+                margin: open ? "2rem .8rem" : "1rem 0",
+              }}
+              className="sidebarLinks"
+            >
+              {/* Administration Tools Dropdown */}
+              <ListItem button onClick={toggleAdmin}>
+                {!open && (
+                  <ListItemIcon
+                    sx={{
+                      minWidth: "auto",
+                      justifyContent: "center",
+                      fontSize: ".7rem",
+                    }}
+                  >
+                    <AdminPanelSettingsIcon />
+                  </ListItemIcon>
+                )}
+                {open && (
+                  <ListItemText
+                    primary="Administration Tools"
+                    primaryTypographyProps={{
+                      sx: {
+                        fontWeight: 500,
+                        fontSize: ".8rem",
+                        color: "var(--text-color)",
+                        display: { xs: "none", sm: "block" },
+                      },
+                    }}
+                  />
+                )}
+                {open ? (
+                  <IconButton sx={{ color: "var(--text-head)" }}>
+                    {openAdmin ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                  </IconButton>
+                ) : (
+                  ""
+                )}
+              </ListItem>
+              <Collapse in={openAdmin} timeout="auto">
+                {[
+                  { text: "Servers", icon: <DnsIcon />, path: "/server" },
+                  { text: "Users", icon: <PeopleAltIcon />, path: "/users" },
+                  { text: "Devices", icon: <DevicesIcon />, path: "/devices" },
+                  {
+                    text: "Print Queues",
+                    icon: <QueueIcon />,
+                    path: "/queues",
+                  },
+                  {
+                    text: "Departments",
+                    icon: <CorporateFareIcon />,
+                    path: "/departments",
+                  },
+                  {
+                    text: "Groups",
+                    icon: <Groups3Icon />,
+                    path: "/groups/user-groups",
+                  },
+                  {
+                    text: "Cost Codes",
+                    icon: <SourceIcon />,
+                    path: "/cost-codes",
+                  },
+                  {
+                    text: "Organizational Unit",
+                    icon: <Diversity1Icon />,
+                    path: "/organizational-unit",
+                  },
+                  {
+                    text: "Imports",
+                    icon: <InputIcon />,
+                    path: "/user-imports",
+                  },
+                  {
+                    text: "Reports",
+                    icon: <SummarizeIcon />,
+                    path: "/reports/scheduled-reports",
+                  },
+                  {
+                    text: "Statistics",
+                    icon: <QueryStatsIcon />,
+                    path: "/statistics",
+                  },
+                  {
+                    text: "Email Template",
+                    icon: <AssignmentIcon />,
+                    path: "/email-templates",
+                  },
+                  {
+                    text: "Pricing",
+                    icon: <EuroIcon />,
+                    path: "/pricing-configuration",
+                  },
+                  { text: "Cashier", icon: <PaymentsIcon />, path: "/cashier" },
+                  {
+                    text: "Custom Print",
+                    icon: <LocalPrintshopIcon />,
+                    path: "/custom-print-page",
+                  },
+                ].map(({ text, icon, path }) => (
+                  <NavLink
+                    to={path}
+                    key={text}
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                    style={{ textDecoration: "none" }}
+                  >
+                    {({ isActive }) => (
+                      <ListItem
                         sx={{
-                          minWidth: "auto",
-                          color: "inherit",
-                          justifyContent: "center",
-                          fontSize: ".7rem",
+                          color: isActive
+                            ? "var(--text-head)"
+                            : "var(--text-color)",
+                          backgroundColor: isActive
+                            ? "var(--hover)"
+                            : "transparent",
+                          borderRadius: isActive ? "20px" : "0",
+                          fontWeight: "bold",
+                          gap: "1rem",
+                          transition:
+                            "background-color 0.3s, transform 0.3s, border-radius 0.3s",
+                          "&:hover": {
+                            backgroundColor: "var(--hover2)",
+                            color: "var(--text-head)",
+                            borderRadius: "20px",
+                            // transform: "scale(1)",
+                            fontWeight: "bold",
+                          },
+                          padding: "0.1rem 1rem",
+                          justifyContent:
+                            openAdmin && !is1440pxOrSmaller
+                              ? "center"
+                              : "flex-start",
                         }}
                       >
-                        {icon}
-                      </ListItemIcon>
-                      {open && !is1440pxOrSmaller && (
-                        <ListItemText
-                          primary={text}
-                          primaryTypographyProps={{
-                            sx: {
-                              fontSize: ".7rem",
-                              display: { xs: "none", sm: "block" },
-                            },
+                        <ListItemIcon
+                          sx={{
+                            minWidth: "auto",
+                            color: "inherit",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
-                        />
-                      )}
-                    </ListItem>
-                  )}
-                </NavLink>
-              ))}
-            </Collapse>
-          </List>
-        </Box>
+                        >
+                          {React.cloneElement(icon, { sx: { fontSize: 20 } })}
+                        </ListItemIcon>
+                        {open && !is1440pxOrSmaller && (
+                          <ListItemText
+                            primary={text}
+                            primaryTypographyProps={{
+                              sx: {
+                                fontSize: "0.875rem",
+                                fontWeight: 500,
+                                display: { xs: "none", sm: "block" },
+                              },
+                            }}
+                          />
+                        )}
+                      </ListItem>
+                    )}
+                  </NavLink>
+                ))}
+              </Collapse>
+              <hr
+                style={{
+                  borderColor: "var(--text-head)",
+                  backgroundColor: "var(--text-head)",
+                  borderWidth: "1px",
+                  width: "100%",
+                  borderStyle: "solid",
+                  opacity: 0.1,
+                }}
+              />
+              {/* System Dropdown */}
+              <ListItem button onClick={toggleSystem}>
+                {!open && (
+                  <ListItemIcon
+                    sx={{
+                      minWidth: "auto",
+                      justifyContent: "center",
+                      fontSize: ".7rem",
+                    }}
+                  >
+                    <SettingsSystemDaydreamIcon />
+                  </ListItemIcon>
+                )}
+                {open && (
+                  <ListItemText
+                    primary="System"
+                    primaryTypographyProps={{
+                      sx: {
+                        fontWeight: 500,
+                        fontSize: ".8rem",
+                        color: "var(--text-color)",
+                        display: { xs: "none", sm: "block" },
+                      },
+                    }}
+                  />
+                )}
+                {open ? (
+                  <IconButton sx={{ color: "var(--text-head)" }}>
+                    {openSystem ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                  </IconButton>
+                ) : (
+                  ""
+                )}
+              </ListItem>
+              <Collapse in={openSystem} timeout="auto">
+                {[
+                  { text: "License & more", icon: <InfoIcon />, path: "/lla" },
+                  {
+                    text: "Logs",
+                    icon: <BackupTableIcon />,
+                    path: "/core-application-logs",
+                  },
+                  { text: "API", icon: <ApiIcon />, path: "/api" },
+                ].map(({ text, icon, path }) => (
+                  <NavLink
+                    to={path}
+                    key={text}
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                    style={{ textDecoration: "none" }}
+                  >
+                    {({ isActive }) => (
+                      <ListItem
+                        sx={{
+                          color: isActive
+                            ? "var(--text-head)"
+                            : "var(--text-color)",
+                          backgroundColor: isActive
+                            ? "var(--hover)"
+                            : "transparent",
+                          borderRadius: isActive ? "20px" : "0",
+                          fontWeight: "bold",
+                          gap: "1rem",
+                          transition:
+                            "background-color 0.3s, transform 0.3s, border-radius 0.3s",
+                          "&:hover": {
+                            backgroundColor: "var(--hover2)",
+                            borderRadius: "20px",
+                            color: "var(--text-head)",
+                            // transform: "scale(1.05)",
+                            fontWeight: "bold",
+                          },
+                          padding: "0.1rem 1rem",
+                          justifyContent:
+                            openSystem && !is1440pxOrSmaller
+                              ? "center"
+                              : "flex-start",
+                        }}
+                      >
+                        <ListItemIcon
+                          sx={{
+                            minWidth: "auto",
+                            color: "inherit",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          {React.cloneElement(icon, { sx: { fontSize: 20 } })}
+                        </ListItemIcon>
+                        {open && !is1440pxOrSmaller && (
+                          <ListItemText
+                            primary={text}
+                            primaryTypographyProps={{
+                              sx: {
+                                fontSize: "0.875rem",
+                                fontWeight: 500,
+                                display: { xs: "none", sm: "block" },
+                              },
+                            }}
+                          />
+                        )}
+                      </ListItem>
+                    )}
+                  </NavLink>
+                ))}
+              </Collapse>
+            </List>
+          </Box>
         </SimpleBar>
       </Drawer>
     </>

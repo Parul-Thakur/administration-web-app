@@ -14,6 +14,14 @@ const breakpoints = {
   },
 };
 const theme1 = createTheme({
+  typography: {
+    h4: {
+      fontFamily: 'Roboto, Arial, sans-serif',
+      fontWeight: 500,
+      fontSize: '32px', // Set the font size to 32px
+      color: 'var(--text-head)', // Use CSS variable for color if needed
+    },
+  },
   breakpoints,
 })
 export const ThemeProvider = ({ children }) => {

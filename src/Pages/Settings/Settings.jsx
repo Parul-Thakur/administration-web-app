@@ -59,7 +59,13 @@ export default function Settings() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Settings
       </Typography>
@@ -81,10 +87,19 @@ export default function Settings() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+
+              color: "var(--text-color)",
             }}
           >
-            <Typography variant="h8" component="h4" gutterBottom>
+            <Typography
+              variant="h8"
+              component="h4"
+              gutterBottom
+              style={{
+                fontWeight: 500,
+                fontSize:".875rem"
+              }}
+            >
               Server Configuration
             </Typography>
           </Box>
@@ -93,7 +108,7 @@ export default function Settings() {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -104,7 +119,7 @@ export default function Settings() {
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                     >
                       Print Job Display Order
@@ -117,7 +132,7 @@ export default function Settings() {
                       label=" Print Job Display Order"
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                       sx={{
                         "& .MuiOutlinedInput-notchedOutline": {
@@ -133,7 +148,7 @@ export default function Settings() {
                           color: "var(--text-head)", // Label color
                         },
                         "& .MuiSelect-icon": {
-                          color: "var(--text-grey)", // Icon color
+                          color: "var(--text-color)", // Icon color
                         },
                       }}
                     >
@@ -143,7 +158,7 @@ export default function Settings() {
                           value={type}
                           style={{
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: "var(--color)",
                           }}
                         >
@@ -165,13 +180,13 @@ export default function Settings() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -202,13 +217,13 @@ export default function Settings() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -239,13 +254,13 @@ export default function Settings() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -276,13 +291,13 @@ export default function Settings() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -310,7 +325,7 @@ export default function Settings() {
                           onChange={handleChange}
                           name="createUser"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -321,7 +336,7 @@ export default function Settings() {
                       label="Create user at first print"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 

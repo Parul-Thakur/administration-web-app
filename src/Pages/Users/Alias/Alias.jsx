@@ -46,7 +46,7 @@ function Alias() {
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
                 margin: "2rem 0 0",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -57,7 +57,7 @@ function Alias() {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -97,7 +97,7 @@ function Alias() {
                               edge="end"
                               size="small"
                               sx={{
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                                 "&:hover": {
                                   color: "var(--primary-color)", // Optional: Change color on hover
                                 },
@@ -109,14 +109,14 @@ function Alias() {
                         ),
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           height: "40px",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -140,7 +140,7 @@ function Alias() {
                       sx={{
                         fontSize: "0.8rem",
                         padding: "0.5rem 1rem", // Adjusted padding for responsiveness
-                        color: "var(--text-grey)", // Button text color
+                        color: "var(--text-color)", // Button text color
                         borderColor: "var(--grey)", // Button border color
                         "&:hover": {
                           backgroundColor: "var(--btn-bg)",
@@ -159,7 +159,7 @@ function Alias() {
                 variant="body2"
                 sx={{
                   fontSize: "0.8rem",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   padding: "5rem 0 0",
                   backgroundColor: "var(--color)",
                   textAlign: "center",

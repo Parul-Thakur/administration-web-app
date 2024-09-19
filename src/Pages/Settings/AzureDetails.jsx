@@ -75,7 +75,7 @@ export default function AzureDetails() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -86,7 +86,7 @@ export default function AzureDetails() {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -102,7 +102,7 @@ export default function AzureDetails() {
                           onChange={handleChange}
                           name="sso"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -113,7 +113,7 @@ export default function AzureDetails() {
                       label="Enable Microsoft SSO"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -141,13 +141,13 @@ export default function AzureDetails() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -178,13 +178,13 @@ export default function AzureDetails() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -215,13 +215,13 @@ export default function AzureDetails() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -252,13 +252,13 @@ export default function AzureDetails() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{

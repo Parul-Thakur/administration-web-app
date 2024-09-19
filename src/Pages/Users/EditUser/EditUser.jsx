@@ -4,6 +4,7 @@ import UserData from "../Users/UserData";
 import { useParams } from "react-router-dom";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 import { Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
 const EditUser = () => {
   const { userId } = useParams(); // Extract userId from the route parameters
@@ -26,7 +27,14 @@ const EditUser = () => {
     // Log the updated data (you may want to save this back to a file or state in a real app)
     console.log("Updated user data:", updatedUsers);
   };
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
   return (
     <>
       <Typography
@@ -39,7 +47,12 @@ const EditUser = () => {
       </Typography>
       <NavbarMini />
 
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {userData ? (
           <UserForm
             isEditMode={true}
@@ -49,7 +62,7 @@ const EditUser = () => {
         ) : (
           <div>Loading...</div>
         )}
-      </div>
+      </motion.div>
     </>
   );
 };

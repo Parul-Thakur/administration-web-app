@@ -73,14 +73,16 @@ export default function EditServer() {
   };
 
   if (!formData.hostname) return <Typography>Loading...</Typography>;
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
   return (
-    <motion.div
-      initial={{ y: "-50%", opacity: 0, scale: 0.8 }}
-      animate={{ y: "0%", opacity: 1, scale: 1 }}
-      exit={{ y: "50%", opacity: 0, scale: 1.2 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-    >
+    <>
       <Typography
         variant="h4"
         component="h4"
@@ -94,12 +96,17 @@ export default function EditServer() {
         flexItem
         sx={{
           height: "1px",
-          backgroundColor: "var(--text-grey)",
+          backgroundColor: "var(--text-color)",
           opacity: "0.3",
         }}
       />
 
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -110,7 +117,7 @@ export default function EditServer() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -123,7 +130,7 @@ export default function EditServer() {
                 fontSize: "0.8rem",
                 padding: " 1rem 2rem 0",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: "1rem 1rem 0 0",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -134,7 +141,7 @@ export default function EditServer() {
             sx={{
               padding: "3rem 2rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: "1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -143,7 +150,7 @@ export default function EditServer() {
               variant="body2"
               sx={{
                 fontSize: "0.8rem",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 marginBottom: "2rem", // Adjust margin for proper spacing
               }}
             >
@@ -163,13 +170,13 @@ export default function EditServer() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -200,13 +207,13 @@ export default function EditServer() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -231,7 +238,7 @@ export default function EditServer() {
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                     >
                       Failover Server
@@ -244,7 +251,7 @@ export default function EditServer() {
                       label="Failover Server"
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                       sx={{
                         "& .MuiOutlinedInput-notchedOutline": {
@@ -260,7 +267,7 @@ export default function EditServer() {
                           color: "var(--text-head)", // Label color
                         },
                         "& .MuiSelect-icon": {
-                          color: "var(--text-grey)", // Icon color
+                          color: "var(--text-color)", // Icon color
                         },
                       }}
                     >
@@ -270,7 +277,7 @@ export default function EditServer() {
                           value={s}
                           style={{
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: "var(--color)",
                           }}
                         >
@@ -292,13 +299,13 @@ export default function EditServer() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -312,15 +319,15 @@ export default function EditServer() {
                           borderColor: "var(--primary-color) !important",
                         },
                         "& .MuiOutlinedInput-input": {
-                          color: "var(--text-grey) !important",
+                          color: "var(--text-color) !important",
                         },
                       },
                       "& .MuiInputLabel-root.Mui-disabled": {
                         fontWeight: "bold",
-                        color: "var(--text-grey) !important",
+                        color: "var(--text-color) !important",
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--text-grey) !important",
+                        borderColor: "var(--text-color) !important",
                       },
                     }}
                   />
@@ -334,7 +341,7 @@ export default function EditServer() {
                         onChange={handleChange}
                         name="break"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -344,7 +351,7 @@ export default function EditServer() {
                     label="Scheduled daily break"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -366,7 +373,7 @@ export default function EditServer() {
                       fontSize: "0.8rem",
                       "& .MuiInputLabel-root": {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                       "& .MuiOutlinedInput-root": {
                         height: "2.5rem",
@@ -380,7 +387,7 @@ export default function EditServer() {
                           borderColor: "var(--primary-color)",
                         },
                         "& .MuiInputBase-input": {
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       },
                     }}
@@ -396,7 +403,7 @@ export default function EditServer() {
                       fontSize: "0.8rem",
                       "& .MuiInputLabel-root": {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                       "& .MuiOutlinedInput-root": {
                         height: "2.5rem",
@@ -410,7 +417,7 @@ export default function EditServer() {
                           borderColor: "var(--primary-color)",
                         },
                         "& .MuiInputBase-input": {
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       },
                     }}
@@ -431,7 +438,7 @@ export default function EditServer() {
             icon={PublishedWithChangesIcon}
           />
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }

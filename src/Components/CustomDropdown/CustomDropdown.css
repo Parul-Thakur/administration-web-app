@@ -5,8 +5,8 @@
 }
 
 .dropdown-button {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: var(--background-color);
+ 
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
@@ -18,8 +18,8 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--background-color);
+  border: 1px solid var(--background-color);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   list-style: none;
@@ -35,5 +35,5 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f0f0f0;
+  background-color: var(--hover);
 }

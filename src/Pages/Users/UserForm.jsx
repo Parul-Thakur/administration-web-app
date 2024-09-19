@@ -145,7 +145,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h10" component="h4" gutterBottom>
@@ -156,7 +156,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -174,13 +174,13 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -211,13 +211,13 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -248,13 +248,13 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -285,13 +285,13 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -315,7 +315,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Department
@@ -328,7 +328,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     label="Department"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -344,7 +344,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -354,7 +354,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         value={dept}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -369,7 +369,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Department
@@ -384,7 +384,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     label="Department"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       cursor: "pointer",
                     }}
                     sx={{
@@ -401,7 +401,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         color: "var(--text-head)",
                       },
                       // "& .MuiSelect-icon": {
-                      //   color: "var(--text-grey)",
+                      //   color: "var(--text-color)",
                       //   fontSize: "16px",
                       // },
                     }}
@@ -414,7 +414,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         <svg
                           width="10" // Set the icon size smaller
                           height="10"
-                          fill="var(--text-grey)" // Set the icon color to grey
+                          fill="var(--text-color)" // Set the icon color to grey
                           viewBox="0 0 20 20"
                         >
                           <path d="M0 7 L 20 7 L 10 16" />
@@ -437,7 +437,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                           value={dept}
                           style={{
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: "var(--color)",
                           }}
                         >
@@ -453,7 +453,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       // top: "50%",
                       // left: "3%",
                       // transform: "translateY(-50%)",
@@ -469,7 +469,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     label="Cost Code"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -485,7 +485,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -495,7 +495,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         value={code}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -510,7 +510,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       // top: "50%",
                       // left: "3%",
                       // transform: "translateY(-50%)",
@@ -526,7 +526,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     label="Account Type"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -542,7 +542,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -552,7 +552,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         value={type}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -577,18 +577,23 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                       InputProps={{
                         startAdornment: (
                           <InputAdornment position="start">
-                            <EuroSymbolIcon fontSize="small" />
+                            <EuroSymbolIcon
+                              sx={{
+                                color: "var(--text-color)",
+                                fontSize: ".8rem",
+                              }}
+                            />
                           </InputAdornment>
                         ),
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -620,13 +625,13 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -652,7 +657,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       // top: "50%",
                       // left: "3%",
                       // transform: "translateY(-50%)",
@@ -668,7 +673,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     label="Access Type"
                     style={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                     sx={{
                       "& .MuiOutlinedInput-notchedOutline": {
@@ -684,7 +689,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         color: "var(--text-head)", // Label color
                       },
                       "& .MuiSelect-icon": {
-                        color: "var(--text-grey)", // Icon color
+                        color: "var(--text-color)", // Icon color
                       },
                     }}
                   >
@@ -694,7 +699,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         value={type}
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           backgroundColor: "var(--color)",
                         }}
                       >
@@ -715,7 +720,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         fontSize: "0.8rem", // Match font size
                         fontWeight: "400", // Adjust font weight to match
                         marginRight: 8, // Space between text and checkbox
-                        color: "var(--text-grey)", // Match text color
+                        color: "var(--text-color)", // Match text color
                       }}
                     >
                       Access Status
@@ -729,7 +734,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                           onChange={handleChange}
                           name="accessStatus"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -740,7 +745,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                       label="Locked"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -764,7 +769,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h10" component="h4" gutterBottom>
@@ -776,7 +781,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: "1rem",
               boxShadow: "var(--box-shadow)",
             }}
@@ -798,19 +803,18 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                           checked={formData[type] || false}
                           onChange={handleChange}
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             padding: 1,
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
-                         
                           }}
                         />
                       }
                       label={type}
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
 
@@ -850,14 +854,14 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         height: "40px",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -881,7 +885,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     sx={{
                       fontSize: "0.8rem",
                       padding: "0.5rem 1rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       borderColor: "var(--grey)",
                       "&:hover": {
                         backgroundColor: "var(--btn-bg)",
@@ -900,7 +904,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                     sx={{
                       fontSize: "0.8rem",
                       padding: "0.5rem 1rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       borderColor: "var(--grey)",
                       "&:hover": {
                         backgroundColor: "var(--btn-bg)",

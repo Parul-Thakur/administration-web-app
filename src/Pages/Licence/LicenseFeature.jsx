@@ -30,7 +30,7 @@ export default function LicenseFeature() {
           backgroundColor: "var(--color)",
           // padding: "1rem",
           // margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h7" component="h5" gutterBottom>
@@ -51,13 +51,13 @@ export default function LicenseFeature() {
           padding: "1rem",
           // backgroundColor: "red",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Grid item xs={12}>
           <Grid container spacing={1}>
             {sendMail.map((type) => (
-              <Grid item xs={6}  key={type} sx={{ padding: "1rem " }}>
+              <Grid item xs={6} key={type} sx={{ padding: "1rem " }}>
                 <FormControlLabel
                   control={
                     <span
@@ -72,7 +72,12 @@ export default function LicenseFeature() {
                         color: "var(--color)",
                       }}
                     >
-                      <CheckCircleIcon style={{ fontSize: "1.5rem",backgroundColor: "var(--btn-bg)", }} />
+                      <CheckCircleIcon
+                        style={{
+                          fontSize: "1.5rem",
+                          backgroundColor: "var(--btn-bg)",
+                        }}
+                      />
                       {/* Checkmark icon */}
                     </span>
                   }
@@ -80,7 +85,7 @@ export default function LicenseFeature() {
                   labelPlacement="end"
                   sx={{
                     // backgroundColor: "var(--hover)",
-                    border:"1px solid var(--btn-bg)",
+                    border: "1px solid var(--btn-bg)",
                     borderRadius: "2rem",
                     padding: ".5rem 1rem",
                     display: "flex",

@@ -44,9 +44,9 @@ export default function ReportRadioBtn({
           component="legend"
           sx={{
             fontSize: "0.7rem",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
             marginRight: "2rem",
-            flexWrap:"wrap"
+            flexWrap: "wrap",
           }}
         >
           {label}
@@ -82,7 +82,7 @@ export default function ReportRadioBtn({
                       fontSize: ".9rem",
                     },
                     transform: "scale(1.2)!important",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     "&.Mui-checked": {
                       color: "var(--btn-bg)",
                     },
@@ -102,7 +102,7 @@ export default function ReportRadioBtn({
                   InputProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       backgroundColor:
                         selectedValue !== "L4" ? "var(--grey)" : "inherit",
                     },
@@ -110,7 +110,7 @@ export default function ReportRadioBtn({
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -145,7 +145,7 @@ export default function ReportRadioBtn({
                         fontSize: ".9rem",
                       },
                       transform: "scale(1.2)!important",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       "&.Mui-checked": {
                         color: "var(--btn-bg)",
                       },
@@ -156,7 +156,7 @@ export default function ReportRadioBtn({
                 sx={{
                   "& .MuiFormControlLabel-label": {
                     fontSize: ".9rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                   "& .Mui-checked + .MuiFormControlLabel-label": {
                     color: "var(--btn-bg)",

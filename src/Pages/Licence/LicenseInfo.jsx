@@ -21,7 +21,7 @@ export default function LicenseInfo() {
           backgroundColor: "var(--color)",
           // padding: "1rem",
           // margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h7" component="h5" gutterBottom>
@@ -42,7 +42,7 @@ export default function LicenseInfo() {
           padding: "1rem 1rem 2rem",
           // backgroundColor: "red",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Grid container spacing={2}>
@@ -52,7 +52,7 @@ export default function LicenseInfo() {
                 display: "flex",
                 gap: "1rem",
                 marginBottom: "1rem",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="body2">Application:</Typography>
@@ -66,7 +66,7 @@ export default function LicenseInfo() {
                 display: "flex",
                 gap: "1rem",
                 marginBottom: "1rem",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="body2">Server:</Typography>
@@ -80,7 +80,7 @@ export default function LicenseInfo() {
                 display: "flex",
                 gap: "1rem",
                 marginBottom: "1rem",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="body2">License Type:</Typography>
@@ -93,7 +93,7 @@ export default function LicenseInfo() {
               sx={{
                 display: "flex",
                 gap: "1rem",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="body2">SA Expiry Date:</Typography>

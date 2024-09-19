@@ -159,7 +159,7 @@ export default function CashierForm() {
           backgroundColor: "var(--background-color)",
           padding: "1rem",
           margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h8" component="h4" gutterBottom>
@@ -211,14 +211,14 @@ export default function CashierForm() {
                     ...params.InputProps,
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       backgroundColor: "var(--color)",
                     },
                   }}
                   InputLabelProps={{
                     style: {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   sx={{
@@ -265,7 +265,7 @@ export default function CashierForm() {
                     height: "2rem",
                     "& .MuiOutlinedInput-input": {
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                     "& .MuiOutlinedInput-root": {
                       "& fieldset": {
@@ -325,7 +325,7 @@ export default function CashierForm() {
                 height: "2rem",
                 "& .MuiOutlinedInput-input": {
                   fontSize: "0.8rem",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {

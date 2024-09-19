@@ -165,7 +165,7 @@ const SaveModal = ({
               variant="contained"
               sx={{
                 fontSize: "0.8rem",
-                backgroundColor: "var(--card1)",
+                backgroundColor: "var(--btn-bg)",
                 color: "var(--btn-text)",
                 padding: "0.5rem 1.5rem",
                 transition: "transform 0.2s ease",

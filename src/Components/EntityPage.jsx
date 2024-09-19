@@ -99,7 +99,7 @@ function EntityPage({
           backgroundColor: "var(--background-color)",
           padding: "1rem",
           margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -113,7 +113,7 @@ function EntityPage({
         sx={{
           padding: "3rem",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
           borderRadius: " 1rem  ",
           boxShadow: "var(--box-shadow)",
         }}
@@ -132,13 +132,13 @@ function EntityPage({
                 InputProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{
@@ -198,7 +198,7 @@ function EntityPage({
           backgroundColor: "var(--background-color)",
           padding: "1rem",
           margin: "3rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h10" component="h4" gutterBottom>
@@ -209,7 +209,7 @@ function EntityPage({
       // sx={{
       //   padding: "3rem",
       //   backgroundColor: "var(--color)",
-      //   color: "var(--text-grey)",
+      //   color: "var(--text-color)",
       //   borderRadius: " 1rem  ",
       //   boxShadow: "var(--box-shadow)",
       // }}

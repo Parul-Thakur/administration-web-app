@@ -1,12 +1,19 @@
 import React from "react";
 import UserForm from "../UserForm";
 import { Divider, Typography } from "@mui/material";
-
+import { motion } from "framer-motion";
 const AddUser = () => {
   const handleAddUser = (formData) => {
     console.log("User data submitted:", formData);
   };
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
   return (
     <>
       {" "}
@@ -27,9 +34,14 @@ const AddUser = () => {
           opacity: "0.3",
         }}
       />
-      <div className="main">
+            <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <UserForm isEditMode={false} onSubmit={handleAddUser} />
-      </div>
+      </motion.div>
     </>
   );
 };

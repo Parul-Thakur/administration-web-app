@@ -9,7 +9,7 @@ const SidebarLink = ({ icon, text, isActive, open }) => {
       component={motion.div}
       className="blob-list-item"
       sx={{
-        color: isActive ? "var(--btn-bg)" : "var(--text-grey)",
+        color: isActive ? "var(--btn-bg)" : "var(--text-color)",
         fontSize: "1rem",
         backgroundColor: isActive ? "var(--hover)" : "transparent",
         borderRadius: isActive ? "50px" : "0",
@@ -37,7 +37,7 @@ const SidebarLink = ({ icon, text, isActive, open }) => {
 
       <ListItemIcon
         sx={{
-          color: isActive ? "var(--btn-bg)" : "var(--text-grey)",
+          color: isActive ? "var(--btn-bg)" : "var(--text-color)",
           fontSize: "1rem",
         }}
       >
@@ -49,7 +49,7 @@ const SidebarLink = ({ icon, text, isActive, open }) => {
           primaryTypographyProps={{
             sx: {
               fontSize: "0.9rem",
-              color: isActive ? "var(--btn-bg)" : "var(--text-grey)",
+              color: isActive ? "var(--btn-bg)" : "var(--text-color)",
               padding: "0",
             },
           }}

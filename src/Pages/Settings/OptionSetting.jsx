@@ -93,7 +93,7 @@ export default function OptionSetting() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -106,7 +106,7 @@ export default function OptionSetting() {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -125,7 +125,7 @@ export default function OptionSetting() {
                             onChange={handleChange}
                             name="emailS"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -136,7 +136,7 @@ export default function OptionSetting() {
                         label="Email Settings"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
 
@@ -160,7 +160,7 @@ export default function OptionSetting() {
                             onChange={handleChange}
                             name="ssl"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -171,7 +171,7 @@ export default function OptionSetting() {
                         label="SSL Certificate"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
 
@@ -230,13 +230,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -268,13 +268,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -306,13 +306,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -344,13 +344,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -379,7 +379,7 @@ export default function OptionSetting() {
                                     onChange={handleChange}
                                     name="eAuth"
                                     sx={{
-                                      color: "var(--text-grey)",
+                                      color: "var(--text-color)",
                                       "&.Mui-checked": {
                                         color: "var(--btn-bg)",
                                       },
@@ -390,7 +390,7 @@ export default function OptionSetting() {
                                 label="Email Authenticated"
                                 labelPlacement="end"
                                 sx={{
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                   display: "flex",
                                   alignItems: "center",
 
@@ -417,7 +417,7 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                   backgroundColor: !formData.eAuth
                                     ? "var(--grey)"
                                     : "transparent",
@@ -426,7 +426,7 @@ export default function OptionSetting() {
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -459,7 +459,7 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                   backgroundColor: !formData.eAuth
                                     ? "var(--grey)"
                                     : "transparent",
@@ -468,7 +468,7 @@ export default function OptionSetting() {
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -499,7 +499,7 @@ export default function OptionSetting() {
                                     fontSize: "0.8rem",
                                     fontWeight: "400",
                                     // marginRight: ".5rem",
-                                    color: "var(--text-grey)",
+                                    color: "var(--text-color)",
                                   }}
                                 >
                                   Send System Email To
@@ -520,7 +520,7 @@ export default function OptionSetting() {
                                         checked={formData[type] || false}
                                         onChange={handleChange}
                                         sx={{
-                                          color: "var(--text-grey)",
+                                          color: "var(--text-color)",
 
                                           "&.Mui-checked": {
                                             color: "var(--btn-bg)",
@@ -532,7 +532,7 @@ export default function OptionSetting() {
                                     label={type}
                                     labelPlacement="end"
                                     sx={{
-                                      color: "var(--text-grey)",
+                                      color: "var(--text-color)",
                                       display: "flex",
                                       alignItems: "center",
 
@@ -599,13 +599,13 @@ export default function OptionSetting() {
                                 readOnly: true,
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -638,8 +638,8 @@ export default function OptionSetting() {
                                 variant="outlined"
                                 component="span"
                                 sx={{
-                                  border: "1px solid var(--text-grey)",
-                                  color: "var(--text-grey)",
+                                  border: "1px solid var(--text-color)",
+                                  color: "var(--text-color)",
                                   textTransform: "none",
                                   fontSize: "0.8rem",
                                   padding: "8px 16px",
@@ -660,7 +660,7 @@ export default function OptionSetting() {
                               <InputLabel
                                 style={{
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 }}
                               >
                                 Type*
@@ -673,7 +673,7 @@ export default function OptionSetting() {
                                 label=" Print Job Display Order"
                                 style={{
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 }}
                                 sx={{
                                   "& .MuiOutlinedInput-notchedOutline": {
@@ -692,7 +692,7 @@ export default function OptionSetting() {
                                     color: "var(--text-head)", // Label color
                                   },
                                   "& .MuiSelect-icon": {
-                                    color: "var(--text-grey)", // Icon color
+                                    color: "var(--text-color)", // Icon color
                                   },
                                 }}
                               >
@@ -702,7 +702,7 @@ export default function OptionSetting() {
                                     value={t}
                                     style={{
                                       fontSize: "0.8rem",
-                                      color: "var(--text-grey)",
+                                      color: "var(--text-color)",
                                       backgroundColor: "var(--color)",
                                     }}
                                   >
@@ -725,13 +725,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -763,13 +763,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{
@@ -802,13 +802,13 @@ export default function OptionSetting() {
                               InputProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               InputLabelProps={{
                                 style: {
                                   fontSize: "0.8rem",
-                                  color: "var(--text-grey)",
+                                  color: "var(--text-color)",
                                 },
                               }}
                               sx={{

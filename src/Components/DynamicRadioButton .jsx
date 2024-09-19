@@ -82,14 +82,14 @@ export default function DynamicRadioButton({ options, label }) {
         shrink: true,
         style: {
           fontSize: "0.8rem",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         },
       },
       fullWidth: true,
       InputProps: {
         style: {
           fontSize: "0.8rem",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
           height: "2.5rem",
         },
       },
@@ -118,7 +118,7 @@ export default function DynamicRadioButton({ options, label }) {
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
                 margin: "2rem 0 0",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -129,7 +129,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -147,13 +147,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -183,7 +183,7 @@ export default function DynamicRadioButton({ options, label }) {
                       readOnly: true,
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         border: "1px solid var(--grey)", //
                         backgroundColor: "transparent",
                       },
@@ -191,7 +191,7 @@ export default function DynamicRadioButton({ options, label }) {
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -219,7 +219,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="header"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -229,7 +229,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="First line is a header"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -248,7 +248,7 @@ export default function DynamicRadioButton({ options, label }) {
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
                 margin: "2rem 0 0",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -259,7 +259,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -277,13 +277,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -314,13 +314,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -351,13 +351,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -388,13 +388,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -425,13 +425,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -462,13 +462,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -499,13 +499,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -540,7 +540,7 @@ export default function DynamicRadioButton({ options, label }) {
                 padding: "1rem",
 
                 marginBottom: "-1px",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -551,7 +551,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "1rem 3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Grid container spacing={4}>
@@ -567,13 +567,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -604,13 +604,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -642,13 +642,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -680,13 +680,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -717,13 +717,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -754,13 +754,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -788,7 +788,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="ssl"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -798,7 +798,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="Use SSL Connection"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -819,7 +819,7 @@ export default function DynamicRadioButton({ options, label }) {
                 padding: "1rem",
 
                 marginBottom: "-1px",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -830,7 +830,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "1rem 3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Grid item xs={12} md={4}>
@@ -845,7 +845,7 @@ export default function DynamicRadioButton({ options, label }) {
                     variant="body2"
                     sx={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     Disabled Accounts
@@ -860,7 +860,7 @@ export default function DynamicRadioButton({ options, label }) {
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                     >
                       Disabled Accounts
@@ -873,7 +873,7 @@ export default function DynamicRadioButton({ options, label }) {
                       label="Do not import"
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                       sx={{
                         "& .MuiOutlinedInput-notchedOutline": {
@@ -889,7 +889,7 @@ export default function DynamicRadioButton({ options, label }) {
                           color: "var(--text-head)",
                         },
                         "& .MuiSelect-icon": {
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                     >
@@ -899,7 +899,7 @@ export default function DynamicRadioButton({ options, label }) {
                           value={a}
                           style={{
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: "var(--color)",
                           }}
                         >
@@ -918,7 +918,7 @@ export default function DynamicRadioButton({ options, label }) {
                 padding: "1rem",
 
                 marginBottom: "-1px",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -929,7 +929,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "1rem 3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Grid container spacing={2}>
@@ -941,7 +941,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="description"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -951,7 +951,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="Description"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiTypography-root": {
@@ -972,7 +972,7 @@ export default function DynamicRadioButton({ options, label }) {
                         marginTop: "0.5rem",
                         "& .MuiInputBase-root": {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                     />
@@ -987,7 +987,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="accesscode"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -997,7 +997,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="Access Code"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiTypography-root": {
@@ -1018,7 +1018,7 @@ export default function DynamicRadioButton({ options, label }) {
                         marginTop: "0.5rem",
                         "& .MuiInputBase-root": {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                     />
@@ -1033,7 +1033,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="department"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -1043,7 +1043,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="Department"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiTypography-root": {
@@ -1064,7 +1064,7 @@ export default function DynamicRadioButton({ options, label }) {
                         marginTop: "0.5rem",
                         "& .MuiInputBase-root": {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                     />
@@ -1079,7 +1079,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="costcode"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -1089,7 +1089,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="Cost Code"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiTypography-root": {
@@ -1110,7 +1110,7 @@ export default function DynamicRadioButton({ options, label }) {
                         marginTop: "0.5rem",
                         "& .MuiInputBase-root": {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                     />
@@ -1130,7 +1130,7 @@ export default function DynamicRadioButton({ options, label }) {
                 backgroundColor: "var(--search-bg)",
                 padding: "1rem",
                 marginBottom: "-1px",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -1141,7 +1141,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "1rem 3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Grid container spacing={4}>
@@ -1157,13 +1157,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -1193,7 +1193,7 @@ export default function DynamicRadioButton({ options, label }) {
                       readOnly: true,
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         border: "1px solid var(--grey)", //
                         backgroundColor: "transparent",
                       },
@@ -1201,7 +1201,7 @@ export default function DynamicRadioButton({ options, label }) {
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -1229,7 +1229,7 @@ export default function DynamicRadioButton({ options, label }) {
                         onChange={handleChange}
                         name="header"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -1239,7 +1239,7 @@ export default function DynamicRadioButton({ options, label }) {
                     label="First line is a header"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -1258,7 +1258,7 @@ export default function DynamicRadioButton({ options, label }) {
                 backgroundColor: "var(--search-bg)",
                 padding: "1rem",
                 marginBottom: "-1px",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -1269,7 +1269,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "1rem 3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Grid container spacing={4}>
@@ -1285,13 +1285,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -1326,7 +1326,7 @@ export default function DynamicRadioButton({ options, label }) {
                 padding: "1rem",
 
                 marginBottom: "-1px",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -1337,7 +1337,7 @@ export default function DynamicRadioButton({ options, label }) {
               sx={{
                 padding: "1rem 3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Grid container spacing={4}>
@@ -1353,13 +1353,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -1390,13 +1390,13 @@ export default function DynamicRadioButton({ options, label }) {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -1483,7 +1483,7 @@ export default function DynamicRadioButton({ options, label }) {
           component="legend"
           sx={{
             fontSize: "0.8rem",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
             marginRight: "1rem",
           }}
         >
@@ -1509,7 +1509,7 @@ export default function DynamicRadioButton({ options, label }) {
                   size="small"
                   sx={{
                     transform: "scale(1.2)!important",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     "&.Mui-checked": {
                       color: "var(--btn-bg)",
                     },

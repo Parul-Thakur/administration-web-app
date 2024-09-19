@@ -33,7 +33,7 @@ export default function Api() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               // margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             {/*<Typography variant="h8" component="h4" gutterBottom>
@@ -44,7 +44,7 @@ export default function Api() {
             sx={{
               padding: "2rem 0",
 
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: "1rem",
 
               display: "flex",
@@ -71,7 +71,7 @@ export default function Api() {
                 }}
               />
             </Box>
-            {/* <Typography variant="h10" component="h5" gutterBottom marginTop={4} sx={{color:"var(--text-grey)"}}>
+            {/* <Typography variant="h10" component="h5" gutterBottom marginTop={4} sx={{color:"var(--text-color)"}}>
                We're currently working on this page.
             </Typography> */}
           </Box>

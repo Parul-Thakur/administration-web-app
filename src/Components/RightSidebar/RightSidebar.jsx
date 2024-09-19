@@ -42,10 +42,11 @@ const RightSidebar = () => {
 
   // Extract the username from the email and capitalize it
   const userName = userEmail
-    ? userEmail
-        .replace(/@gmail\.com$/, "")
-        .replace(/\b\w/g, (char) => char.toUpperCase())
-    : "Guest";
+  ? userEmail
+      .split("@")[0] // Split at '@' and keep the part before it
+      .replace(/\b\w/g, (char) => char.toUpperCase()) // Capitalize the first letter of each word
+  : "Guest";
+
 
   return (
     <Box

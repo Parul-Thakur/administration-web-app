@@ -44,7 +44,7 @@
 }
 
 .nav-link .MuiListItemIcon-root {
-  color: var(--text-grey);
+  color: var(--text-color);
 }
 
 .sidebarLinks hr {
@@ -58,12 +58,12 @@
 }
 
 .nav-link .MuiListItemText-root {
-  color: var(--text-grey);
+  color: var(--text-color);
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-grey);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   padding: 0.2rem 1rem;

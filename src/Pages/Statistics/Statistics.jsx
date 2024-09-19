@@ -380,7 +380,7 @@ export default function Statistics() {
                       color: "var(--text-head)",
                     },
                     "& .MuiSelect-select": {
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   MenuProps={{
@@ -388,7 +388,7 @@ export default function Statistics() {
                       sx: {
                         "& .MuiMenuItem-root": {
                           backgroundColor: "var(--color)",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                         "& .MuiMenuItem-root:hover": {
                           backgroundColor: "var(--primary-color)",
@@ -450,7 +450,7 @@ export default function Statistics() {
                       color: "var(--text-head)",
                     },
                     "& .MuiSelect-select": {
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   MenuProps={{
@@ -458,7 +458,7 @@ export default function Statistics() {
                       sx: {
                         "& .MuiMenuItem-root": {
                           backgroundColor: "var(--color)",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                         "& .MuiMenuItem-root:hover": {
                           backgroundColor: "var(--primary-color)",
@@ -521,7 +521,7 @@ export default function Statistics() {
                       color: "var(--text-head)",
                     },
                     "& .MuiSelect-select": {
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     },
                   }}
                   MenuProps={{
@@ -529,7 +529,7 @@ export default function Statistics() {
                       sx: {
                         "& .MuiMenuItem-root": {
                           backgroundColor: "var(--color)",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                         "& .MuiMenuItem-root:hover": {
                           backgroundColor: "var(--primary-color)",

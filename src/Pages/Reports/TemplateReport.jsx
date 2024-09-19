@@ -35,16 +35,14 @@ export default function TemplateReport() {
           backgroundColor: "var(--background-color)",
           padding: "1rem",
           margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h8" component="h4" gutterBottom>
           List of all template reports
         </Typography>
       </Box>
-      <Box
-      
-      >
+      <Box>
         <CustomTable
           columns={columns}
           data={data}

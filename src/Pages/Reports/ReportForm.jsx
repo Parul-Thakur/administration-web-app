@@ -185,7 +185,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
             backgroundColor: "var(--background-color)",
             padding: "1rem",
             margin: "2rem 0 0",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
           }}
         >
           <Typography variant="h10" component="h4" gutterBottom>
@@ -200,7 +200,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               padding: "2rem 2rem",
               border: "1px solid var(--grey)",
               // backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               // boxShadow: "var(--box-shadow)",
             }}
@@ -209,7 +209,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -244,7 +244,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     margin: "2rem 1rem ",
                     padding: "1rem 2rem 0",
                     border: "1px solid var(--hover)",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     borderRadius: "10px",
                     backgroundColor: "var(--color)",
                   }}
@@ -274,13 +274,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{ fontSize: "0.8rem" }}
@@ -308,13 +308,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                           InputProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           InputLabelProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{ fontSize: "0.8rem" }}
@@ -340,13 +340,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             InputLabelProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             sx={{ fontSize: "0.8rem" }}
@@ -369,13 +369,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             InputLabelProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             sx={{ fontSize: "0.8rem" }}
@@ -399,13 +399,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             InputLabelProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             sx={{ fontSize: "0.8rem" }}
@@ -459,14 +459,14 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                           InputProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           InputLabelProps={{
                             shrink: true,
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{
@@ -497,14 +497,14 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                           InputProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           InputLabelProps={{
                             shrink: true,
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{
@@ -534,14 +534,14 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                           InputProps={{
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           InputLabelProps={{
                             shrink: true,
                             style: {
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                             },
                           }}
                           sx={{
@@ -570,7 +570,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     margin: "2rem 1rem ",
                     padding: "1rem 2rem 0",
                     border: "1px solid var(--hover)",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     borderRadius: "10px",
                     backgroundColor: "var(--color)",
                   }}
@@ -600,13 +600,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{ fontSize: "0.8rem" }}
@@ -626,7 +626,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -673,7 +673,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   margin: "2rem 0 0",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -723,14 +723,14 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             InputLabelProps={{
                               shrink: true,
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             sx={{
@@ -760,14 +760,14 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             InputLabelProps={{
                               shrink: true,
                               style: {
                                 fontSize: "0.8rem",
-                                color: "var(--text-grey)",
+                                color: "var(--text-color)",
                               },
                             }}
                             sx={{
@@ -828,7 +828,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     // width: "50%",
                     padding: "3rem",
                     backgroundColor: "var(--color)",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     borderRadius: " 1rem  ",
                     boxShadow: "var(--box-shadow)",
                   }}
@@ -872,13 +872,13 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -908,7 +908,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     // width: "50%",
                     padding: "3rem",
                     backgroundColor: "var(--color)",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     borderRadius: " 1rem  ",
                     boxShadow: "var(--box-shadow)",
                   }}
@@ -949,7 +949,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         InputProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor:
                               formData.detailed === "D1"
                                 ? "var(--grey)"
@@ -959,7 +959,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -988,7 +988,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1015,7 +1015,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="print"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1025,7 +1025,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Print"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1045,7 +1045,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="copy"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1055,7 +1055,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Copy"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1075,7 +1075,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="scan"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1085,7 +1085,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Scan"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1105,7 +1105,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="eprint"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1115,7 +1115,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="External Print"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1140,7 +1140,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1167,7 +1167,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="A3"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1177,7 +1177,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="A3"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1197,7 +1197,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="A4"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1207,7 +1207,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="A4"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1229,7 +1229,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1256,7 +1256,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="mono"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1266,7 +1266,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Mono"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1286,7 +1286,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="color"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1296,7 +1296,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Colour"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1318,7 +1318,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1345,7 +1345,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="simplex"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1355,7 +1355,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Page Side"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1375,7 +1375,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="duplex"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1385,7 +1385,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Duplex"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1410,7 +1410,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1437,7 +1437,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             onChange={handleChange}
                             name="includeprice"
                             sx={{
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               "&.Mui-checked": {
                                 color: "var(--btn-bg)",
                               },
@@ -1447,7 +1447,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="Include Price"
                         labelPlacement="end"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           display: "flex",
                           alignItems: "center",
                           "& .MuiFormControlLabel-label": {
@@ -1468,7 +1468,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   margin: "2rem 0 0",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1509,7 +1509,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1533,7 +1533,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                       <InputLabel
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         }}
                       >
                         By*
@@ -1546,7 +1546,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         label="orderBy"
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         }}
                         sx={{
                           "& .MuiOutlinedInput-notchedOutline": {
@@ -1562,7 +1562,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             color: "var(--text-head)", // Label color
                           },
                           "& .MuiSelect-icon": {
-                            color: "var(--text-grey)", // Icon color
+                            color: "var(--text-color)", // Icon color
                           },
                         }}
                       >
@@ -1572,7 +1572,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             value={o}
                             style={{
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               backgroundColor: "var(--color)",
                             }}
                           >
@@ -1592,7 +1592,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   // width: "50%",
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}

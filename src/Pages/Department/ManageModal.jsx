@@ -166,7 +166,7 @@ const ManageModal = ({
               position: "absolute",
               right: 8,
               top: 8,
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <CloseIcon />

@@ -43,8 +43,8 @@ const DashboardContent = () => {
                 component="div"
                 sx={{
                   height: "8rem",
-                  position: "relative", 
-                  borderRadius: "2px 2px 0 0", 
+                  position: "relative",
+                  borderRadius: "2px 2px 0 0",
                   overflow: "hidden",
                 }}
               >
@@ -77,15 +77,18 @@ const DashboardContent = () => {
                   }}
                 />
               </CardMedia>
-              <CardContent      sx={{
-                  height: "5rem",padding:"10px "}}>
+              <CardContent
+                sx={{
+                  height: "5rem",
+                  padding: "10px ",
+                }}
+              >
                 <Typography
                   variant="h8"
-                   component="h5"
+                  component="h5"
                   sx={{
                     fontWeight: "bold",
-                    color: "var(--text-grey)",
-                    
+                    color: "var(--text-color)",
                   }}
                 >
                   {card.title}

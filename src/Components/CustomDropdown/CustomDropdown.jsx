@@ -11,11 +11,39 @@ function CustomDropdown({ anchorEl, activeRow, rowIndex, onMenuClick, onClose, o
         keepMounted
         open={Boolean(anchorEl && activeRow === rowIndex)}
         onClose={onClose}
+        // Custom styles for the Menu background
+        sx={{
+          '& .MuiPaper-root': {
+            backgroundColor: 'var(--background-color)', // Your custom background color
+          },
+        }}
       >
         {options.map((option, index) => (
-          <MenuItem key={index} onClick={option.onClick}>
-            <ListItemIcon>{option.icon}</ListItemIcon>
-            <ListItemText primary={option.label} />
+          <MenuItem
+            key={index}
+            onClick={option.onClick}
+            // Custom styles for MenuItem background
+            sx={{
+              '&:hover': {
+                backgroundColor: 'var(--hover2)', // Your custom hover color
+              },
+              backgroundColor: 'var(--background-color)', // Default background color
+              color: 'var(--text-color)', // Text color
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                color: 'var(--text-color)', // Icon color
+              }}
+            >
+              {option.icon}
+            </ListItemIcon>
+            <ListItemText
+              primary={option.label}
+              sx={{
+                color: 'var(--text-color)', // Text color
+              }}
+            />
           </MenuItem>
         ))}
       </Menu>

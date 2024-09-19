@@ -121,7 +121,7 @@ h3 {
   right: 1rem;
   /* transform: translateY(-2.2rem); */
   cursor: pointer;
-  color: var(--text-grey);
+  color: var(--text-color);
   display: flex;
   align-items: center;
 }

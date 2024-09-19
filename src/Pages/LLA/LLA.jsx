@@ -23,10 +23,10 @@ import LicenseDetails from "../Licence/LicenceDetails";
 // Define the width of the internal drawer/sidebar
 const internalDrawerWidth = 240;
 const icons = {
-  Overview: <InfoIcon sx={{ color: 'var(--text-grey)' }} />,
-  Details: <DescriptionIcon sx={{ color: 'var(--text-grey)' }}/>,
-  Features: <FeatureIcon sx={{ color: 'var(--text-grey)' }}/>,
-  Summary: <AboutIcon sx={{ color: 'var(--text-grey)' }}/>,
+  Overview: <InfoIcon sx={{ color: "var(--text-color)" }} />,
+  Details: <DescriptionIcon sx={{ color: "var(--text-color)" }} />,
+  Features: <FeatureIcon sx={{ color: "var(--text-color)" }} />,
+  Summary: <AboutIcon sx={{ color: "var(--text-color)" }} />,
 };
 export default function LLA() {
   const [currentPage, setCurrentPage] = useState("License");
@@ -88,7 +88,7 @@ export default function LLA() {
                   boxSizing: "border-box",
                   position: "relative",
                   backgroundColor: "var(--sidebar-color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 },
               }}
             >
@@ -100,7 +100,7 @@ export default function LLA() {
                     fontWeight: "bold",
                     fontSize: ".7rem", // Adjust font size as needed
                     // textAlign: "left",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   }}
                 >
                   License
@@ -140,7 +140,7 @@ export default function LLA() {
                       padding: "0 0 1rem",
                       fontSize: ".7rem", // Small font for text
                       margin: "0.5rem 1rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       fontWeight: "bold", // Add color if needed
                     }}
                   >
@@ -181,7 +181,7 @@ export default function LLA() {
                 flexGrow: 1,
                 p: 3,
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               {renderContent()}

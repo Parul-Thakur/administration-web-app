@@ -56,7 +56,7 @@
 }
 
 .customTable tr {
-  color: var(--text-grey);
+  color: var(--text-color);
   font-size: 0.8rem;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .searchInput::placeholder {
-  color: var(--text-grey);
+  color: var(--text-color);
 }
 
 .search-icon {
@@ -99,7 +99,7 @@
   left: 2rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-grey);
+  color: var(--text-color);
 }
 
 .user-button {
@@ -171,7 +171,7 @@ tr:hover .more-options {
   margin: 2rem 1rem 0;
   font-size: 0.8rem;
   gap: 0.5rem;
-  color: var(--text-grey);
+  color: var(--text-color);
 }
 
 .pagination button {
@@ -180,7 +180,7 @@ tr:hover .more-options {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: var(--text-grey);
+  color: var(--text-color);
 }
 
 .pagination button svg {
@@ -191,7 +191,7 @@ tr:hover .more-options {
   padding: 0.2rem;
   font-size: 0.8rem; /* Match font size */
   cursor: pointer;
-  color: var(--text-grey);
+  color: var(--text-color);
   border: none;
   background-color: var(--color);
   margin-right: 2rem;

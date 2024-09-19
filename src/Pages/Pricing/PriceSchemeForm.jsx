@@ -93,7 +93,7 @@ export default function PriceSchemeForm({
                     htmlFor={`outlined-adornment-amount-${rowIndex}-${colIndex}`}
                     sx={{
                       fontSize: "0.8rem",
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                     }}
                   >
                     {label}
@@ -109,7 +109,7 @@ export default function PriceSchemeForm({
                       fontSize: "0.8rem",
                       "& .MuiOutlinedInput-input": {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                       "& .MuiOutlinedInput-root": {
                         "& fieldset": {
@@ -143,7 +143,7 @@ export default function PriceSchemeForm({
           backgroundColor: "var(--background-color)",
           padding: "1rem",
           margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h10" component="h4" gutterBottom>
@@ -158,7 +158,7 @@ export default function PriceSchemeForm({
           sx={{
             padding: "3rem",
             backgroundColor: "var(--color)",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
             borderRadius: " 1rem  ",
             boxShadow: "var(--box-shadow)",
           }}
@@ -176,13 +176,13 @@ export default function PriceSchemeForm({
                 InputProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{
@@ -215,7 +215,7 @@ export default function PriceSchemeForm({
                 sx={{
                   padding: "1rem 3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography
@@ -224,7 +224,7 @@ export default function PriceSchemeForm({
                     fontSize: "1rem",
                     fontWeight: "bold",
                     marginBottom: "2rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     textAlign: "center",
                   }}
                 >
@@ -247,7 +247,7 @@ export default function PriceSchemeForm({
                 sx={{
                   padding: "1rem 3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   // display: "flex",
                   // flexDirection: "column",
                 }}
@@ -258,7 +258,7 @@ export default function PriceSchemeForm({
                     fontSize: "1rem",
                     fontWeight: "bold",
                     marginBottom: "1.5rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     textAlign: "center",
                   }}
                 >
@@ -279,7 +279,7 @@ export default function PriceSchemeForm({
                 sx={{
                   padding: "1rem 3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   display: "flex",
                   flexDirection: "column",
                 }}
@@ -290,7 +290,7 @@ export default function PriceSchemeForm({
                     fontSize: "1rem",
                     fontWeight: "bold",
                     marginBottom: "1.5rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     textAlign: "center",
                   }}
                 >

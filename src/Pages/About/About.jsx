@@ -33,7 +33,7 @@ export default function About() {
           backgroundColor: "var(--color)",
           // padding: "1rem",
           // margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h10" component="h4" gutterBottom>
@@ -54,7 +54,7 @@ export default function About() {
           padding: "1rem 1rem",
           // backgroundColor: "red",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Box
@@ -70,7 +70,7 @@ export default function About() {
                   display: "flex",
                   gap: "1rem",
                   marginBottom: "1rem",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="body2">Application:</Typography>
@@ -87,7 +87,7 @@ export default function About() {
                   display: "flex",
                   gap: "1rem",
                   marginBottom: "1rem",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="body2">Release</Typography>
@@ -128,18 +128,18 @@ export default function About() {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     Caleta Secure Print - Core
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     2.0.0.0-SNAPSHOT
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     Caleta Secure Print - OXPd
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>-</TableCell>
+                  <TableCell sx={{ color: "var(--text-color)" }}>-</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -173,24 +173,26 @@ export default function About() {
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     System Uptime
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     2h 58m
                   </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     Max Occupied Memory (JVM)
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>3 GB</TableCell>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
+                    3 GB
+                  </TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     Memory Usage
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     84.82/140 MB
                   </TableCell>
                 </TableRow>

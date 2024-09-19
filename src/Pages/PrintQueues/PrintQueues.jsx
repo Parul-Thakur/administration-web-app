@@ -82,7 +82,7 @@ function PrintQueues() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
@@ -101,7 +101,7 @@ function PrintQueues() {
                 transition: "transform 0.2s ease",
                 "&:hover": {
                   transform: "translateY(5px)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 },
               }}
               // onClick={handleCancel}
@@ -114,7 +114,7 @@ function PrintQueues() {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}
@@ -133,13 +133,13 @@ function PrintQueues() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -170,13 +170,13 @@ function PrintQueues() {
                     InputProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     InputLabelProps={{
                       style: {
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     sx={{
@@ -200,7 +200,7 @@ function PrintQueues() {
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                     >
                       Type
@@ -213,7 +213,7 @@ function PrintQueues() {
                       label="Type"
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                       sx={{
                         "& .MuiOutlinedInput-notchedOutline": {
@@ -229,7 +229,7 @@ function PrintQueues() {
                           color: "var(--text-head)", // Label color
                         },
                         "& .MuiSelect-icon": {
-                          color: "var(--text-grey)", // Icon color
+                          color: "var(--text-color)", // Icon color
                         },
                       }}
                     >
@@ -239,7 +239,7 @@ function PrintQueues() {
                           value={t}
                           style={{
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: "var(--color)",
                           }}
                         >
@@ -286,7 +286,7 @@ function PrintQueues() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "3rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h10" component="h4" gutterBottom>

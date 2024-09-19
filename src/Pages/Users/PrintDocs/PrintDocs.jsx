@@ -32,7 +32,7 @@ function PrintDocs() {
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
                 margin: "2rem 0 0",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
               }}
             >
               <Typography variant="h10" component="h4" gutterBottom>
@@ -43,7 +43,7 @@ function PrintDocs() {
               sx={{
                 padding: "3rem",
                 backgroundColor: "var(--color)",
-                color: "var(--text-grey)",
+                color: "var(--text-color)",
                 borderRadius: " 1rem  ",
                 boxShadow: "var(--box-shadow)",
               }}
@@ -52,7 +52,7 @@ function PrintDocs() {
                 variant="body2"
                 sx={{
                   fontSize: "0.8rem",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   padding: "5rem 0 0 ",
                   backgroundColor: "var(--color)",
                   textAlign: "center",

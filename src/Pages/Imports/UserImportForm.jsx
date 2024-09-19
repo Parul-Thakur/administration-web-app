@@ -126,14 +126,14 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
       shrink: true,
       style: {
         fontSize: "0.8rem",
-        color: "var(--text-grey)",
+        color: "var(--text-color)",
       },
     },
     fullWidth: true,
     InputProps: {
       style: {
         fontSize: "0.8rem",
-        color: "var(--text-grey)",
+        color: "var(--text-color)",
         height: "2.5rem",
       },
     },
@@ -166,7 +166,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
             backgroundColor: "var(--background-color)",
             padding: "1rem",
             margin: "2rem 0 0",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
           }}
         >
           <Typography variant="h10" component="h4" gutterBottom>
@@ -177,7 +177,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
           sx={{
             padding: "3rem",
             backgroundColor: "var(--color)",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
             borderRadius: " 1rem  ",
             boxShadow: "var(--box-shadow)",
           }}
@@ -195,13 +195,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 InputProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{
@@ -225,7 +225,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 <InputLabel
                   style={{
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     // top: "50%",
                     // left: "3%",
                     // transform: "translateY(-50%)",
@@ -241,7 +241,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                   label="New Users Email Template"
                   style={{
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   }}
                   sx={{
                     "& .MuiOutlinedInput-notchedOutline": {
@@ -257,7 +257,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       color: "var(--text-head)", // Label color
                     },
                     "& .MuiSelect-icon": {
-                      color: "var(--text-grey)", // Icon color
+                      color: "var(--text-color)", // Icon color
                     },
                   }}
                 >
@@ -267,7 +267,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       value={temp}
                       style={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         backgroundColor: "var(--color)",
                       }}
                     >
@@ -344,7 +344,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
             backgroundColor: "var(--background-color)",
             padding: "1rem",
             margin: "2rem 0 0",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
           }}
         >
           <Typography variant="h10" component="h4" gutterBottom>
@@ -356,7 +356,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
           sx={{
             padding: "3rem",
             backgroundColor: "var(--color)",
-            color: "var(--text-grey)",
+            color: "var(--text-color)",
             borderRadius: " 1rem  ",
             boxShadow: "var(--box-shadow)",
           }}
@@ -378,7 +378,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         checked={formData[type] || false}
                         onChange={handleChange}
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           padding: "0",
 
                           "&.Mui-checked": {
@@ -391,7 +391,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                     label={type}
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
 
@@ -418,7 +418,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         onChange={handleChange}
                         name="specificuser"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -429,7 +429,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                     label="Apply settings from a specific user"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -458,7 +458,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           ...params.InputProps,
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             backgroundColor: formData.specificuser
                               ? ""
                               : "var(--grey)",
@@ -467,7 +467,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         InputLabelProps={{
                           style: {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                         sx={{
@@ -499,7 +499,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         onChange={handleChange}
                         name="accesskey"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -509,7 +509,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                     label="Generate First Access Key"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -529,7 +529,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         onChange={handleChange}
                         name="pin"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -539,7 +539,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                     label="Generate PIN"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
                       "& .MuiFormControlLabel-label": {
@@ -570,7 +570,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                   backgroundColor: "var(--color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h10" component="h4" gutterBottom>
@@ -581,7 +581,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 sx={{
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -599,13 +599,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -635,7 +635,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         readOnly: true,
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           border: "1px solid var(--grey)", //
                           backgroundColor: "transparent",
                         },
@@ -643,7 +643,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -671,7 +671,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="header"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -681,7 +681,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       label="First line is a header"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
                         "& .MuiFormControlLabel-label": {
@@ -701,7 +701,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                   backgroundColor: "var(--color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h10" component="h4" gutterBottom>
@@ -712,7 +712,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 sx={{
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -730,13 +730,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -767,13 +767,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -804,13 +804,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -841,13 +841,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -878,13 +878,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -915,13 +915,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -952,13 +952,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -989,7 +989,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                   backgroundColor: "var(--color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h10" component="h4" gutterBottom>
@@ -1000,7 +1000,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 sx={{
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1018,13 +1018,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -1055,13 +1055,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -1093,13 +1093,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -1131,13 +1131,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -1168,13 +1168,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -1205,13 +1205,13 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       InputProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       InputLabelProps={{
                         style: {
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         },
                       }}
                       sx={{
@@ -1239,7 +1239,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="ssl"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -1249,7 +1249,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       label="Use SSL Connection"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
                         "& .MuiFormControlLabel-label": {
@@ -1269,7 +1269,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                   backgroundColor: "var(--color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h10" component="h4" gutterBottom>
@@ -1280,7 +1280,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 sx={{
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1297,7 +1297,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       variant="body2"
                       sx={{
                         fontSize: "0.8rem",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       }}
                     >
                       Disabled Accounts
@@ -1312,7 +1312,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       <InputLabel
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         }}
                       >
                         Disabled Accounts
@@ -1325,7 +1325,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                         label="Do not import"
                         style={{
                           fontSize: "0.8rem",
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                         }}
                         sx={{
                           "& .MuiOutlinedInput-notchedOutline": {
@@ -1341,7 +1341,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                             color: "var(--text-head)",
                           },
                           "& .MuiSelect-icon": {
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                       >
@@ -1351,7 +1351,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                             value={a}
                             style={{
                               fontSize: "0.8rem",
-                              color: "var(--text-grey)",
+                              color: "var(--text-color)",
                               backgroundColor: "var(--color)",
                             }}
                           >
@@ -1369,7 +1369,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                   backgroundColor: "var(--color)",
                   padding: "1rem",
                   margin: "2rem 0 0",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                 }}
               >
                 <Typography variant="h10" component="h4" gutterBottom>
@@ -1380,7 +1380,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                 sx={{
                   padding: "3rem",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-grey)",
+                  color: "var(--text-color)",
                   borderRadius: " 1rem  ",
                   boxShadow: "var(--box-shadow)",
                 }}
@@ -1394,7 +1394,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="description"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -1404,7 +1404,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       label="Description"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
                         "& .MuiTypography-root": {
@@ -1425,7 +1425,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           marginTop: "0.5rem",
                           "& .MuiInputBase-root": {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                       />
@@ -1440,7 +1440,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="accesscode"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -1450,7 +1450,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       label="Access Code"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
                         "& .MuiTypography-root": {
@@ -1471,7 +1471,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           marginTop: "0.5rem",
                           "& .MuiInputBase-root": {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                       />
@@ -1486,7 +1486,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="department"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -1496,7 +1496,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       label="Department"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
                         "& .MuiTypography-root": {
@@ -1517,7 +1517,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           marginTop: "0.5rem",
                           "& .MuiInputBase-root": {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                       />
@@ -1532,7 +1532,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           onChange={handleChange}
                           name="costcode"
                           sx={{
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                             "&.Mui-checked": {
                               color: "var(--btn-bg)",
                             },
@@ -1542,7 +1542,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                       label="Cost Code"
                       labelPlacement="end"
                       sx={{
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                         display: "flex",
                         alignItems: "center",
                         "& .MuiTypography-root": {
@@ -1563,7 +1563,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
                           marginTop: "0.5rem",
                           "& .MuiInputBase-root": {
                             fontSize: "0.8rem",
-                            color: "var(--text-grey)",
+                            color: "var(--text-color)",
                           },
                         }}
                       />

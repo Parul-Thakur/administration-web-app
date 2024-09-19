@@ -1,14 +1,16 @@
 .navbarMini {
   width: 100%;
   border-bottom: 2px solid var(--grey);
+  position: relative;
 }
 
 .miniLinks {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0; 
+  padding: 0.875rem 0 0 2rem ;
   position: relative;
-
 }
 
 .miniLinks li {
@@ -16,12 +18,14 @@
 }
 
 .miniLinks a {
-  color: var(--text-grey);
+  color: var(--text-color);
   text-decoration: none;
-  font-size: 1rem;
-  padding: 1.4rem;
+  font-size: 0.875rem; 
+  font-weight: 500;
+  padding: 0 0 0.875rem; 
   position: relative;
-  transition: color 1s ease;
+  transition: color .03s ease;
+  display: inline-block;
 }
 
 .miniLinks a::before {
@@ -33,31 +37,25 @@
   bottom: 0;
   left: 0;
   background-color: var(--btn-bg);
-  transition: width 1s ease;
-  
+  transition: width .03s ease;
 }
 
+.miniLinks a:hover::before {
+  width: 100%; 
+}
 
 .miniLinks .active::before {
-  width: 100%;
-  
+  width: 100%; 
 }
-.miniLinks a:hover{
-  color: var(--btn-bg);
+
+.miniLinks a:not(.active)::before {
+  transition: width 1s ease;
 }
 
 .miniLinks .active {
   color: var(--btn-bg);
-  font-weight: bold;
 }
 
-.miniLinks .active::before {
-  width: 100%;
-}
-.miniLinks a:not(.active)::before {
-  /* Ensure the pseudo-element for non-active links smoothly transitions */
-  transition: width 1s ease;
-}
 .indicator {
   position: absolute;
   bottom: 0;

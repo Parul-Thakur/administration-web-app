@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { motion } from "framer-motion";
-import { Container, Typography, Box} from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import CustomTable from "../../Components/CustomTable/CustomTable";
 import { pricingConfigData } from "./pricingData";
 import NavbarMini from "../../Components/NavbarMini/NavbarMini";
@@ -39,7 +39,7 @@ export default function PricingConfig() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -50,7 +50,7 @@ export default function PricingConfig() {
             sx={{
               padding: "3rem",
               backgroundColor: "var(--color)",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
               borderRadius: " 1rem  ",
               boxShadow: "var(--box-shadow)",
             }}

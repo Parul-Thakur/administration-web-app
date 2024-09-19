@@ -86,7 +86,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
           backgroundColor: "var(--background-color)",
           padding: "1rem",
           margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h10" component="h4" gutterBottom>
@@ -98,7 +98,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
         variant="body2"
         sx={{
           fontSize: "0.8rem",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
           padding: "2rem 0 0 2rem",
           backgroundColor: "var(--color)",
         }}
@@ -109,7 +109,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
         sx={{
           padding: "3rem",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
           borderRadius: " 1rem  ",
           boxShadow: "var(--box-shadow)",
         }}
@@ -128,13 +128,13 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                 InputProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{
@@ -173,7 +173,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{
@@ -204,13 +204,13 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                 InputProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{
@@ -240,7 +240,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                         onChange={handleChange}
                         name="checkbox"
                         sx={{
-                          color: "var(--text-grey)",
+                          color: "var(--text-color)",
                           "&.Mui-checked": {
                             color: "var(--btn-bg)",
                           },
@@ -251,7 +251,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                     label="Use this as default tempelate for new users"
                     labelPlacement="end"
                     sx={{
-                      color: "var(--text-grey)",
+                      color: "var(--text-color)",
                       display: "flex",
                       alignItems: "center",
 
@@ -286,7 +286,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
         sx={{
           padding: "3rem",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
           borderRadius: "1rem ",
           boxShadow: "var(--box-shadow)",
           margin: "2rem 0 0",
@@ -300,7 +300,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                   variant="body2"
                   sx={{
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     padding: "1rem 0",
                     backgroundColor: "var(--color)",
                   }}
@@ -319,7 +319,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                   variant="body2"
                   sx={{
                     fontSize: "0.7rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     padding: "1rem 0",
                     textAlign: "center",
                     backgroundColor: "var(--color)",
@@ -340,7 +340,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                       "&:hover": {
                         borderColor: "var(--btn-bg)",
                         transform: "translateY(5px)",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     onClick={() => handleButtonClick("Full Name ")}
@@ -359,7 +359,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                       "&:hover": {
                         borderColor: "var(--btn-bg)",
                         transform: "translateY(5px)",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     onClick={() => handleButtonClick("User Logon ")}
@@ -378,7 +378,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                       "&:hover": {
                         borderColor: "var(--btn-bg)",
                         transform: "translateY(5px)",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     onClick={() => handleButtonClick("First Access Key ")}
@@ -397,7 +397,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                       "&:hover": {
                         borderColor: "var(--btn-bg)",
                         transform: "translateY(5px)",
-                        color: "var(--text-grey)",
+                        color: "var(--text-color)",
                       },
                     }}
                     onClick={() => handleButtonClick("pin ")}
@@ -427,13 +427,13 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
                 InputProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 InputLabelProps={{
                   style: {
                     fontSize: "0.8rem",
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                   },
                 }}
                 sx={{

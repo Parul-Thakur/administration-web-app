@@ -3,32 +3,30 @@
   /* --modal-bg: #e9f5f7;
   --modal-select: #008ca8; */
   /* --background-color: #f0f0f0;  */
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
 
-  
   --background-color: #fafbff;
-  --dashboard-bg:#a2c4fa;
+  --dashboard-bg: #a2c4fa;
   --sidebar-color: #f3f7fd;
   --header-bg: #f5f8fd;
   --search-bg: #e2e5e9;
   --btn-bg: #0b57d0;
-  --btn-text:#ffffff;
+  --btn-text: #ffffff;
   --hover: #a8c7fa;
+  --hover2: #c4d6f4;
   --drop-bg: #e3ecfa;
-  --text-color: #333;
+  --text-color: rgb(4, 30, 73, 0.7);
   --text-color2: #ffffff;
-  --text-head: #4c5f7e;
+  --text-head: rgb(4, 30, 73);
   --color: #ffffff;
-  --icon:#ffcb00;
-  --card1:#7cacf8;
-  --card2:#a8c7fa;
+  --icon: #ffcb00;
+  --card1: #7cacf8;
+  --card2: #a8c7fa;
   --text-grey: #6a6969;
   --grey: #c2c2c28f;
-  --font-family: "Poppins", sans-serif;
-  --font-family2: "PT Serif Caption";
+  --font-family: Roboto, "Helvetica Neue", sans-serif;
+  --font-family2: "Google Sans", sans-serif;
   --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
-
-
 
   /* --primary-color: #91c8e4;
   --secondary-color: #4682a9;
@@ -42,34 +40,29 @@
   /* --hover2: #c3e1f068;  */
 }
 
-
 body.dark {
-  
   --background-color: #031525;
-  --dashboard-bg:#041627;
+  --dashboard-bg: #041627;
   --sidebar-color: #071a2b;
   --header-bg: #162c46;
   --search-bg: #162c46;
   --btn-bg: #7cacf8;
-  --btn-text:#000000;
+  --btn-text: #000000;
   --hover: #0842a0;
+  --hover2:#203655;
   --drop-bg: #10243a;
-  --text-color: #ffffff;
+  --text-color: rgb(211, 227, 253, 0.7);
   --text-color2: #ffffff;
-  --text-head: #98a8c2;
+  --text-head: rgb(211, 227, 253);
   --color: #0d2136;
-  --icon:#ffcb00;
+  --icon: #ffcb00;
   --card1: #10253c;
-  --card2:#213b5a;
+  --card2: #213b5a;
   --text-grey: #e7e7e7;
   --grey: #c2c2c258;
-  --font-family: "Poppins", sans-serif;
-  --font-family2: "PT Serif Caption";
+  --font-family: "Roboto", "Helvetica Neue", sans-serif;
+  --font-family2: "Google Sans", sans-serif;
   --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-
-
-
-
 
   /* --modal-bg: #000000;
   --modal-select: #9dcbcf;
@@ -90,11 +83,12 @@ body.dark {
   --hover2: #56616768; */
 }
 :global {
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: var(--background-color);
-}
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+  }
 }

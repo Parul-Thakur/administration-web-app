@@ -26,8 +26,8 @@ const CaletaSelect = () => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "flex-start", 
-        padding: "1rem",
+        justifyContent: "flex-start",
+        padding: ".5rem 1.5rem",
         alignItems: "center",
         gap: "1rem",
         zIndex: "1",
@@ -45,13 +45,16 @@ const CaletaSelect = () => {
           sx={{
             backgroundColor: "transparent",
             textTransform: "none",
+            color: "var(--text-head)",
             "&:hover": {
-              color: "var(--text-head)", // Hover effect
+              color: "var(--text-color)", // Hover effect
             },
-            color: "var(--text-color)", // Color for text
+            // Color for text
           }}
         >
-          <Typography variant="body1">Caleta Core</Typography>
+          <Typography variant="body1" sx={{ fontWeight: 500 }}>
+            Caleta Core
+          </Typography>
         </Button>
         <Menu
           id="caleta-dropdown-menu"
@@ -75,7 +78,7 @@ const CaletaSelect = () => {
           <MenuItem
             onClick={handleClose}
             sx={{
-              color: "var(--btn-bg)", // Selected background color
+              color: "var(--btn-bg)",
             }}
           >
             Caleta Core

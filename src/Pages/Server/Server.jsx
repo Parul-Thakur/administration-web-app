@@ -24,14 +24,16 @@ export default function Server() {
     ],
     []
   );
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
   return (
-    <motion.div
-      initial={{ y: "-50%", opacity: 0, scale: 0.8 }}
-      animate={{ y: "0%", opacity: 1, scale: 1 }} //
-      exit={{ y: "50%", opacity: 0, scale: 1.2 }} //
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-    >
+    <>
       <Typography
         variant="h4"
         component="h4"
@@ -49,7 +51,12 @@ export default function Server() {
           opacity: "0.3",
         }}
       />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -60,7 +67,7 @@ export default function Server() {
               backgroundColor: "var(--background-color)",
               padding: "1rem",
               margin: "2rem 0 0",
-              color: "var(--text-grey)",
+              color: "var(--text-color)",
             }}
           >
             <Typography variant="h8" component="h4" gutterBottom>
@@ -71,7 +78,7 @@ export default function Server() {
           // sx={{
           //   padding: "3rem",
           //   backgroundColor: "var(--color)",
-          //   color: "var(--text-grey)",
+          //   color: "var(--text-color)",
           //   borderRadius: " 1rem  ",
           //   boxShadow: "var(--box-shadow)",
           // }}
@@ -84,7 +91,7 @@ export default function Server() {
             />
           </Box>
         </Container>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }

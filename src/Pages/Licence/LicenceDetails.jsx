@@ -29,7 +29,7 @@ export default function LicenseDetails() {
           backgroundColor: "var(--color)",
           // padding: "1rem",
           // margin: "2rem 0 0",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <Typography variant="h7" component="h5" gutterBottom>
@@ -50,7 +50,7 @@ export default function LicenseDetails() {
           padding: "1rem 1rem",
           // backgroundColor: "red",
           backgroundColor: "var(--color)",
-          color: "var(--text-grey)",
+          color: "var(--text-color)",
         }}
       >
         <TableContainer>
@@ -79,17 +79,17 @@ export default function LicenseDetails() {
                 <TableRow
                   key={index}
                   sx={{
-                    color: "var(--text-grey)",
+                    color: "var(--text-color)",
                     backgroundColor: "var(--color)",
                   }}
                 >
                   <TableCell sx={{ color: "var(--text-head)" }}>
                     {detail.product}
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     {detail.allowed}
                   </TableCell>
-                  <TableCell sx={{ color: "var(--text-grey)" }}>
+                  <TableCell sx={{ color: "var(--text-color)" }}>
                     {detail.inUse}
                   </TableCell>
                 </TableRow>
