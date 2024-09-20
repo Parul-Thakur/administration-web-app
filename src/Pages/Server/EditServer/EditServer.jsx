@@ -126,7 +126,7 @@ export default function EditServer() {
               color: "var(--text-color)",
             }}
           >
-           <Typography
+            <Typography
               variant="h8"
               component="h4"
               gutterBottom
@@ -440,18 +440,18 @@ export default function EditServer() {
               </Grid>
             </form>
           </Box>
+          <div>
+            <ActionButtonWithModal
+              isEditMode={isEditMode}
+              isModalOpen={isModalOpen}
+              handleSubmit={handleSubmit}
+              handleClose={handleClose}
+              updateText="Update"
+              addText="Update"
+              icon={PublishedWithChangesIcon}
+            />
+          </div>
         </Container>
-        <div>
-          <ActionButtonWithModal
-            isEditMode={isEditMode}
-            isModalOpen={isModalOpen}
-            handleSubmit={handleSubmit}
-            handleClose={handleClose}
-            updateText="Update"
-            addText="Update"
-            icon={PublishedWithChangesIcon}
-          />
-        </div>
       </motion.div>
     </>
   );

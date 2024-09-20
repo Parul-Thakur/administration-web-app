@@ -19,7 +19,7 @@ export default function ActionButtonWithModal({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: " 3rem 0 1rem",
+        padding: " 2rem 0 1rem",
       }}
     >
       <Box
