@@ -28,7 +28,7 @@ const CaletaSelect = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 60) {
-        setBgColor("white"); // Change to white after 100px scroll
+        setBgColor("var(--sidebar-color)"); // Change to white after 100px scroll
       } else {
         setBgColor("transparent"); // Revert to transparent before 100px
       }
