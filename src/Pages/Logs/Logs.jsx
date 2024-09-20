@@ -32,19 +32,37 @@ export default function Logs() {
   // Determine which table to display based on the current path
   const isCoreLogsPage = location.pathname === "/core-application-logs";
   const isOxpdLogsPage = location.pathname === "/oxpd-application-logs";
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Logs
       </Typography>
       <NavbarMini />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -103,7 +121,7 @@ export default function Logs() {
             </>
           )}
         </Container>
-      </div>
+      </motion.div>
     </>
   );
 }

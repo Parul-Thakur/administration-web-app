@@ -536,7 +536,7 @@ export default function DynamicRadioButton({ options, label }) {
             {/*======================= Active Directory Properties Section================================ */}
             <Box
               sx={{
-                backgroundColor: "var(--search-bg)",
+                backgroundColor: "var(--header-bg)",
                 padding: "1rem",
 
                 marginBottom: "-1px",
@@ -815,7 +815,7 @@ export default function DynamicRadioButton({ options, label }) {
             {/*======================= Active Directory Configuration Section================================ */}
             <Box
               sx={{
-                backgroundColor: "var(--search-bg)",
+                backgroundColor: "var(--header-bg)",
                 padding: "1rem",
 
                 marginBottom: "-1px",
@@ -914,7 +914,7 @@ export default function DynamicRadioButton({ options, label }) {
             {/*======================= Optional Fields Section================================ */}
             <Box
               sx={{
-                backgroundColor: "var(--search-bg)",
+                backgroundColor: "var(--header-bg)",
                 padding: "1rem",
 
                 marginBottom: "-1px",
@@ -1127,7 +1127,7 @@ export default function DynamicRadioButton({ options, label }) {
           <>
             <Box
               sx={{
-                backgroundColor: "var(--search-bg)",
+                backgroundColor: "var(--header-bg)",
                 padding: "1rem",
                 marginBottom: "-1px",
                 color: "var(--text-color)",
@@ -1255,7 +1255,7 @@ export default function DynamicRadioButton({ options, label }) {
             </Box>
             <Box
               sx={{
-                backgroundColor: "var(--search-bg)",
+                backgroundColor: "var(--header-bg)",
                 padding: "1rem",
                 marginBottom: "-1px",
                 color: "var(--text-color)",
@@ -1322,7 +1322,7 @@ export default function DynamicRadioButton({ options, label }) {
             {/*======================= IP Range Section================================ */}
             <Box
               sx={{
-                backgroundColor: "var(--search-bg)",
+                backgroundColor: "var(--header-bg)",
                 padding: "1rem",
 
                 marginBottom: "-1px",

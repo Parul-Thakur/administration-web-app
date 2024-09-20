@@ -4,7 +4,7 @@ import { userImportData } from "../ImportData";
 import { useParams } from "react-router-dom";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 import { Divider, Typography } from "@mui/material";
-
+import { motion } from "framer-motion";
 export default function EditUserImport() {
   const { userId } = useParams();
   const [userData, setUserData] = useState(null);
@@ -21,16 +21,29 @@ export default function EditUserImport() {
     );
     console.log("Updated user data:", updatedUsers);
   };
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
-       User Imports
+        User Imports
       </Typography>
       <Divider
         orientation="horizontal"
@@ -41,7 +54,12 @@ export default function EditUserImport() {
           opacity: "0.3",
         }}
       />
-      <div className="reportMain">
+      <motion.div
+        className="reportMain"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {userData ? (
           <UserImportForm
             isEditMode={true}
@@ -51,7 +69,7 @@ export default function EditUserImport() {
         ) : (
           <div>Loading...</div>
         )}
-      </div>
+      </motion.div>
     </>
   );
 }

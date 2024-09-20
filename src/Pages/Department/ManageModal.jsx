@@ -126,11 +126,11 @@ const ManageModal = ({
             )}
             startIcon={<AddCircleOutlineIcon />}
             sx={{
-              borderRadius: "15px",
-              fontSize: "0.8rem",
+              borderRadius: "20px",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",

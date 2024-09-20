@@ -23,6 +23,14 @@ export default function EditDevice() {
 
     console.log("Updated device data:", updatedDevices);
   };
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -30,12 +38,23 @@ export default function EditDevice() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Devices
       </Typography>
       <NavbarMini />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {deviceData ? (
           <DeviceForm
             isEditMode={true}
@@ -45,7 +64,7 @@ export default function EditDevice() {
         ) : (
           <div>Loading...</div>
         )}
-      </div>
+      </motion.div>
     </>
   );
 }

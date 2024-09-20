@@ -194,6 +194,7 @@ import {
   InputAdornment,
   Container,
   Grid,
+  Paper,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Visibility from "@mui/icons-material/Visibility";
@@ -228,19 +229,108 @@ const LoginForm = () => {
 
   return (
     <>
-      <Container maxWidth="md" sx={{ position: "relative" }}>
+      <Container>
+        <Box
+          sx={{
+            // overflow: "hidden",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            zIndex: 2,
+          }}
+        >
+          <img
+            src={logo}
+            alt="logo"
+            style={{ maxWidth: "4rem", height: "auto" }}
+          />
+          <Typography
+            variant="h1"
+            sx={{
+              fontSize: "2.5rem",
+              marginLeft: "10px",
+              fontWeight: "500",
+              color: "#356076",
+            }}
+          >
+            Caleta
+          </Typography>
+        </Box>
+
         {/* Big Semi-Circle on the Left */}
+
         <Box
           sx={{
             position: "fixed",
-            left: "-30vw",
-            width: "70vw",
-            height: "70vw",
-            bgcolor: "rgba(162, 196, 250, 0.2)",
-            borderRadius: "50%",
+            top: 0,
+            left: 0, 
+            width: "35vw", 
+            height: "50vw", 
+            bgcolor: "rgba(135, 206, 250, 0.08)",
+            borderTopRightRadius: "50%", 
+            borderBottomRightRadius: "50%",
             zIndex: 0,
-            overflow: "hidden",
             boxShadow: "var(--box-shadow)",
+          }}
+        />
+
+        {/* triangle */}
+        <Box
+          sx={{
+            // overflow: "hidden",
+            position: "fixed",
+            bottom: "10vw",
+            right: "20vw",
+            width: 0,
+            height: 0,
+            borderLeft: "7vw solid transparent",
+            borderRight: "7vw solid transparent",
+            borderBottom: "24vh solid #4682A9",
+            zIndex: 0,
+            transform: "rotate(45deg)",
+            animation: "rotateAnimation 50s infinite ease-in-out",
+            "@keyframes rotateAnimation": {
+              "0%": {
+                transform: "rotate(45deg)",
+              },
+              "50%": {
+                transform: "rotate(180deg)",
+              },
+              "100%": {
+                transform: "rotate(45deg)",
+              },
+            },
+          }}
+        />
+   {/* triangle */}
+   <Box
+          sx={{
+            overflow: "hidden",
+            position: "fixed",
+            top: "40vh",
+            left: "30vw",
+            zIndex: 1,
+            transform: "rotate(-25deg)",
+            width: 0,
+            height: 0,
+            borderLeft: "2vw solid transparent",
+            borderRight: "2vw solid transparent",
+            borderBottom: "8vh solid #4682A9",
+            animation: "rotateAnimation 10s infinite ease-in-out",
+            "@keyframes rotateAnimation": {
+              "0%": {
+                transform: "rotate(0deg)",
+              },
+              "50%": {
+                transform: "rotate(180deg)",
+              },
+              "100%": {
+                transform: "rotate(0deg)",
+              },
+            },
           }}
         />
         <style>
@@ -272,7 +362,7 @@ const LoginForm = () => {
         >
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <path
-              fill="rgba(162, 196, 250, 0.5)"
+              fill="rgba(112, 197, 223, 0.68)"
               d="M41.7,-68.9C55.1,-64.5,67.9,-55.5,67,-43.3C66.2,-31,51.8,-15.5,50.1,-0.9C48.5,13.6,59.7,27.3,58.6,36.1C57.4,44.9,43.9,48.8,32.1,57.2C20.3,65.5,10.2,78.2,-2,81.6C-14.1,85,-28.2,79.2,-35.1,68C-42.1,56.8,-41.8,40.4,-50.5,28.2C-59.3,16,-76.9,8,-80.5,-2.1C-84.1,-12.1,-73.6,-24.3,-61.5,-30.7C-49.5,-37.2,-35.9,-37.9,-25.4,-44.1C-14.9,-50.2,-7.4,-61.6,3.3,-67.4C14.1,-73.2,28.3,-73.3,41.7,-68.9Z"
               transform="translate(100 100)"
             />
@@ -288,18 +378,20 @@ const LoginForm = () => {
             zIndex: 0,
             width: "20vw",
             height: "20vw",
-            bgcolor: "#5b83d8",
+            bgcolor: "#4682A9",
             borderRadius: "50%",
             boxShadow: "var(--box-shadow)",
+            zIndex: 2,
             "&::after": {
               content: '""',
               position: "absolute",
               width: "5vw",
               height: "5vw",
-              bgcolor: "black",
+              bgcolor: "rgba(116, 155, 194, 0.63)",
               borderRadius: "50%",
               top: "10vw",
               right: "18vw",
+              zIndex: 2,
             },
           }}
         />
@@ -308,8 +400,8 @@ const LoginForm = () => {
         <Box
           sx={{
             position: "fixed",
-            bottom: "30vh",
-            right: "15vw",
+            bottom: "40vh",
+            right: "0vw",
             zIndex: 1,
             boxShadow: "var(--box-shadow)",
             "&::before": {
@@ -317,24 +409,26 @@ const LoginForm = () => {
               position: "absolute",
               width: "5vw",
               height: "5vw",
-              bgcolor: "var(--btn-bg)",
-              borderRadius: "50%",
-              top: "5vw",
-              right: "5vw",
-            },
-            "&::after": {
-              animation: "bounce 4s ease-in-out infinite",
-              content: '""',
-              position: "absolute",
-              width: "4vw",
-              height: "4vw",
-              bgcolor: "var(--card1)",
+              bgcolor: "rgba(112, 197, 223, 0.68)",
               borderRadius: "50%",
               top: "2vw",
-              right: "3vw",
+              right: "0vw",
+            },
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              width: "3vw",
+              height: "3vw",
+              bgcolor: "rgba(116, 155, 194, 0.63)",
+              borderRadius: "50%",
+              top: "7vw",
+              right: "0vw",
+              animation: "bounce 4s ease-in-out infinite",
             },
           }}
         />
+
+     
 
         <Grid
           container
@@ -346,29 +440,24 @@ const LoginForm = () => {
         >
           <Grid
             item
-            // xs={12}
-            // sm={10}
-            // md={8}
-            // lg={6}
-            // xlg={6}
+            component={Paper}
+            elevation={2}
             sx={{
               width: {
                 xs: "100%",
-                sm: "400px",
-                md: "500px",
-                lg: "600px",
-                xl: "700px",
-                xlg: "800px",
+                md: "400px",
+                xl: "500px",
+                xlg: "700px",
               },
               padding: {
                 xs: "2rem",
                 sm: "3rem",
                 md: "3rem 0rem",
               },
-              boxShadow: "var(--box-shadow)",
               borderRadius: "1rem",
               backgroundColor: "var(--color)",
               zIndex: 1,
+              overflow: "hidden",
             }}
           >
             <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -385,8 +474,8 @@ const LoginForm = () => {
                   color: "var(--text-color)",
                 }}
               >
-                Secure Web{" "}
-                <span style={{ color: "var(--btn-bg)" }}>Interface</span>
+                Welcome to
+                <span style={{ color: "#4682A9" }}> Caleta</span>
               </Typography>
               <Typography
                 variant="body1"
@@ -397,10 +486,10 @@ const LoginForm = () => {
                     sm: ".8rem",
                   },
                   fontWeight: "bold",
-                  color: "var(--text-color)",
+                  color: "#5E6668",
                 }}
               >
-                PIN Authentication
+                Sign in by entering the information below
               </Typography>
             </Box>
 
@@ -469,7 +558,7 @@ const LoginForm = () => {
                   variant="contained"
                   onClick={handleSignIn}
                   sx={{
-                    backgroundColor: "var(--btn-bg)",
+                    backgroundColor: "#356076",
                     padding: {
                       xs: "0.75rem",
                       sm: ".5rem 0",
@@ -480,11 +569,29 @@ const LoginForm = () => {
                     },
                     fontWeight: "600",
                     borderRadius: "10px",
-                    transition: "background-color 0.3s, transform 0.2s ease",
+                    "&:hover": {
+                      backgroundColor: "#356076", // Hover effect
+                    },
                   }}
                 >
                   Continue
                 </Button>
+                <Typography
+                  variant="body1"
+                  gutterBottom
+                  mt={4}
+                  sx={{
+                    fontSize: {
+                      xs: ".7rem", // Smaller text size for mobile
+                      sm: ".8rem",
+                    },
+                    fontWeight: "bold",
+                    color: "#5E6668",
+                  }}
+                >
+                  Forgot your password?{" "}
+                  <span style={{ color: "#4682A9" }}> Reset Password</span>
+                </Typography>
               </Box>
             </Box>
           </Grid>

@@ -19,7 +19,7 @@ import About from "../About/About";
 import LicenseInfo from "../Licence/LicenseInfo";
 import LicenseFeature from "../Licence/LicenseFeature";
 import LicenseDetails from "../Licence/LicenceDetails";
-
+import { motion } from "framer-motion";
 // Define the width of the internal drawer/sidebar
 const internalDrawerWidth = 240;
 const icons = {
@@ -46,14 +46,27 @@ export default function LLA() {
         return <LicenseInfo />;
     }
   };
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         License
       </Typography>
@@ -67,7 +80,12 @@ export default function LLA() {
         }}
       />
 
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container style={{ padding: 0, margin: "0 0 3rem" }}>
           <Box
             sx={{
@@ -188,7 +206,7 @@ export default function LLA() {
             </Box>
           </Box>
         </Container>
-      </div>
+      </motion.div>
     </>
   );
 }

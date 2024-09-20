@@ -12,12 +12,62 @@ import {
   InputAdornment,
   IconButton,
 } from "@mui/material";
+import { devicesGroupsData } from "../../Devices/devicesData";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import CustomTable from "../../../Components/CustomTable/CustomTable";
+import { motion } from "framer-motion";
 
 function UserGroup() {
+  const [data, setData] = useState(devicesGroupsData);
   const [formData, setFormData] = useState({
     accessKey: "",
   });
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "Group Name",
+        accessor: "name",
+      },
+      {
+        Header: "Action",
+        accessor: "id",
+        Cell: ({ row }) => (
+          <Button
+            variant="outlined"
+            sx={{
+              fontSize: "0.8rem",
+              color: "var(--text-color)",
+              borderColor: "var(--btn-bg)",
+              transition: "transform 0.2s ease",
+              "&:hover": {
+                borderColor: "red",
+                transform: "translateY(5px)",
+                color: "red",
+              },
+            }}
+            // onClick={() => handleExitGroup(row.original.name)}
+          >
+            <ExitToAppIcon
+              sx={{
+                fontSize: "1rem",
+                marginRight: ".5rem",
+              }}
+            />
+            Exit
+          </Button>
+        ),
+      },
+    ],
+    []
+  );
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -28,12 +78,23 @@ function UserGroup() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Users
       </Typography>
       <NavbarMini />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -49,7 +110,15 @@ function UserGroup() {
                 color: "var(--text-color)",
               }}
             >
-              <Typography variant="h10" component="h4" gutterBottom>
+              <Typography
+                variant="h8"
+                component="h4"
+                gutterBottom
+                style={{
+                  fontWeight: 500,
+                  fontSize: ".875rem",
+                }}
+              >
                 Group
               </Typography>
             </Box>
@@ -155,7 +224,7 @@ function UserGroup() {
                   </Box>
                 </FormControl>
               </Grid>
-              <Typography
+              {/* <Typography
                 variant="body2"
                 sx={{
                   fontSize: "0.8rem",
@@ -166,11 +235,22 @@ function UserGroup() {
                 }}
               >
                 No groups found
-              </Typography>
+              </Typography> */}
+            </Box>
+            {/* ==============================GROUPS TABLE============================================================ */}
+            <Box sx={{ marginTop: "5rem" }}>
+              <CustomTable
+                columns={columns}
+                data={data}
+                localStorageKey="DevicesGroupsData"
+                setData={setData}
+                isDeviceGroupsPage={true}
+                // handleExitGroup={handleExitGroup}
+              />
             </Box>
           </form>
         </Container>
-      </div>
+      </motion.div>
     </div>
   );
 }

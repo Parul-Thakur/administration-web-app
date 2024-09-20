@@ -1,11 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 
-import { Container, Typography, Box } from "@mui/material";
-
+import { Container, Typography, Box, Button } from "@mui/material";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import CustomTable from "../../../Components/CustomTable/CustomTable";
+import { printDocData } from "../Users/UserData";
+import { motion } from "framer-motion";
 function PrintDocs() {
+  const [data, setData] = useState(printDocData);
+  const [formData, setFormData] = useState({
+    accessKey: "",
+  });
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+  const columns = React.useMemo(
+    () => [
+      { Header: "Document Name", accessor: "docName" },
+      { Header: "Received at", accessor: "receivedAt" },
+      {
+        Header: "Select",
+        Cell: ({ row }) => (
+          <Button
+            variant="contained"
+            color="primary"
+            // onClick={() => handleAddUser(row.original)}
+            // disabled={selectedUsers.some(
+            //   (u) => u.userlogon === row.original.userlogon
+            // )}
+            startIcon={<AddCircleOutlineIcon />}
+            sx={{
+              borderRadius: "20px",
+              fontSize: "0.7rem",
+              backgroundColor: "var(--btn-bg)",
+              color: "var(--btn-text)",
+              padding: "0.5rem 1rem",
+              transition: "transform 0.2s ease",
+              "&:hover": {
+                transform: "translateY(-2px)",
+              },
+            }}
+          >
+            Add
+          </Button>
+        ),
+      },
+    ]
+    // [selectedUsers]
+  );
+
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
   return (
     <div>
@@ -13,57 +63,62 @@ function PrintDocs() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Users
       </Typography>
       <NavbarMini />
 
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
           style={{ padding: 0, margin: "0 0 3rem" }}
         >
-          <form onSubmit={handleSubmit}>
-            {/* User Details Section */}
-            <Box
-              sx={{
-                backgroundColor: "var(--background-color)",
-                padding: "1rem",
-                margin: "2rem 0 0",
-                color: "var(--text-color)",
+          {/* User Details Section */}
+          <Box
+            sx={{
+              backgroundColor: "var(--background-color)",
+              padding: "1rem",
+              margin: "2rem 0 0",
+              color: "var(--text-color)",
+            }}
+          >
+            <Typography
+              variant="h8"
+              component="h4"
+              gutterBottom
+              style={{
+                fontWeight: 500,
+                fontSize: ".875rem",
               }}
             >
-              <Typography variant="h10" component="h4" gutterBottom>
-                Print Documents
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                padding: "3rem",
-                backgroundColor: "var(--color)",
-                color: "var(--text-color)",
-                borderRadius: " 1rem  ",
-                boxShadow: "var(--box-shadow)",
-              }}
-            >
-              <Typography
-                variant="body2"
-                sx={{
-                  fontSize: "0.8rem",
-                  color: "var(--text-color)",
-                  padding: "5rem 0 0 ",
-                  backgroundColor: "var(--color)",
-                  textAlign: "center",
-                }}
-              >
-                No documents available
-              </Typography>
-            </Box>
-          </form>
+              Print Documents
+            </Typography>
+          </Box>
+
+          <Box>
+            <CustomTable
+              setData={setData}
+              data={data}
+              columns={columns}
+              localStorageKey="printDocData"
+              isAccessPage={true}
+            />
+          </Box>
         </Container>
-      </div>
+      </motion.div>
     </div>
   );
 }

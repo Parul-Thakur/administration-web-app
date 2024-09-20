@@ -16,11 +16,19 @@ import NavbarMini from "../../Components/NavbarMini/NavbarMini";
 import CustomTable from "../../Components/CustomTable/CustomTable";
 import { devicesGroupsData } from "./devicesData";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import { motion } from "framer-motion";
 
 export default function DeviceGroups() {
   const [data, setData] = useState(devicesGroupsData);
   console.log(data);
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   const [formData, setFormData] = useState({
     groupsJoin: "",
   });
@@ -82,12 +90,23 @@ export default function DeviceGroups() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Devices
       </Typography>
       <NavbarMini isEditMode={true} />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -231,7 +250,7 @@ export default function DeviceGroups() {
             </Box>
           </form>
         </Container>
-      </div>
+      </motion.div>
     </div>
   );
 }

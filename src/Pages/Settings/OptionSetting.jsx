@@ -72,7 +72,13 @@ export default function OptionSetting() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Settings
       </Typography>
@@ -96,7 +102,15 @@ export default function OptionSetting() {
               color: "var(--text-color)",
             }}
           >
-            <Typography variant="h8" component="h4" gutterBottom>
+            <Typography
+              variant="h8"
+              component="h4"
+              gutterBottom
+              style={{
+                fontWeight: 500,
+                fontSize: ".875rem",
+              }}
+            >
               Options
             </Typography>
           </Box>
@@ -490,29 +504,32 @@ export default function OptionSetting() {
                           </Grid>
 
                           <Grid item xs={12}>
+                            {/* First line with "Send System Email To" */}
                             <Grid container alignItems="center" spacing={1}>
-                              <Grid item xs={3} md={3}>
+                              <Grid item xs={12}>
                                 <Typography
                                   variant="h7"
                                   component="h4"
                                   sx={{
                                     fontSize: "0.8rem",
                                     fontWeight: "400",
-                                    // marginRight: ".5rem",
                                     color: "var(--text-color)",
                                   }}
                                 >
                                   Send System Email To
                                 </Typography>
                               </Grid>
+                            </Grid>
+
+                            {/* Second line with checkboxes */}
+                            <Grid
+                              container
+                              alignItems="center"
+                              spacing={1}
+                              sx={{ marginTop: "0.5rem" }}
+                            >
                               {sendMail.map((type) => (
-                                <Grid
-                                  item
-                                  xs={6}
-                                  md={1.5}
-                                  key={type}
-                                  // sx={{ padding: "1rem 0" }}
-                                >
+                                <Grid item xs={6} md={2.4} key={type}>
                                   <FormControlLabel
                                     control={
                                       <Checkbox
@@ -521,7 +538,6 @@ export default function OptionSetting() {
                                         onChange={handleChange}
                                         sx={{
                                           color: "var(--text-color)",
-
                                           "&.Mui-checked": {
                                             color: "var(--btn-bg)",
                                           },
@@ -535,7 +551,6 @@ export default function OptionSetting() {
                                       color: "var(--text-color)",
                                       display: "flex",
                                       alignItems: "center",
-
                                       "& .MuiFormControlLabel-label": {
                                         padding: "0",
                                       },

@@ -84,13 +84,13 @@ const Breadcrumb = () => {
         variant="body2"
         sx={{
           color: "var(--text-head)",
-          fontWeight: "bold",
-          fontSize: "1rem",
+          fontWeight: 500,
+          fontSize: ".875rem",
           display: "flex",
           alignItems: "center",
-          gap: ".6rem",
+          // gap: ".6rem",
           cursor: "pointer",
-          margin:"5rem 5rem 0",
+          margin:"1rem 10rem 0",
         }}
         onClick={() => navigate(-1)} // Navigate to the previous page
       >

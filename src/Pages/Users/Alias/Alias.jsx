@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 import ClearIcon from "@mui/icons-material/Clear";
+import { aliasData } from "../Users/UserData";
 import {
   Container,
   Grid,
@@ -12,28 +13,83 @@ import {
   InputAdornment,
   IconButton,
 } from "@mui/material";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import CustomTable from "../../../Components/CustomTable/CustomTable";
+import { motion } from "framer-motion";
 
 function Alias() {
+  const [data, setData] = useState(aliasData);
   const [formData, setFormData] = useState({
     accessKey: "",
   });
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
+  const columns = React.useMemo(
+    () => [
+      { Header: "Alias", accessor: "alias" },
+      {
+        Header: "Select",
+        Cell: ({ row }) => (
+          <Button
+            variant="contained"
+            color="primary"
+            // onClick={() => handleAddUser(row.original)}
+            // disabled={selectedUsers.some(
+            //   (u) => u.userlogon === row.original.userlogon
+            // )}
+            startIcon={<AddCircleOutlineIcon />}
+            sx={{
+              borderRadius: "20px",
+              fontSize: "0.7rem",
+              backgroundColor: "var(--btn-bg)",
+              color: "var(--btn-text)",
+              padding: "0.5rem 1rem",
+              transition: "transform 0.2s ease",
+              "&:hover": {
+                transform: "translateY(-2px)",
+              },
+            }}
+          >
+            Add
+          </Button>
+        ),
+      },
+    ]
+    // [selectedUsers]
+  );
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <div>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Users
       </Typography>
       <NavbarMini />
 
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -49,8 +105,16 @@ function Alias() {
                 color: "var(--text-color)",
               }}
             >
-              <Typography variant="h10" component="h4" gutterBottom>
-                User Details
+              <Typography
+                variant="h8"
+                component="h4"
+                gutterBottom
+                style={{
+                  fontWeight: 500,
+                  fontSize: ".875rem",
+                }}
+              >
+                Alias
               </Typography>
             </Box>
             <Box
@@ -155,7 +219,7 @@ function Alias() {
                   </Box>
                 </FormControl>
               </Grid>
-              <Typography
+              {/* <Typography
                 variant="body2"
                 sx={{
                   fontSize: "0.8rem",
@@ -166,11 +230,20 @@ function Alias() {
                 }}
               >
                 No alias found
-              </Typography>
+              </Typography> */}
+            </Box>
+            <Box mt={5}>
+              <CustomTable
+                setData={setData}
+                data={data}
+                columns={columns}
+                localStorageKey={aliasData}
+                isAccessPage={true}
+              />
             </Box>
           </form>
         </Container>
-      </div>
+      </motion.div>
     </div>
   );
 }

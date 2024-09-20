@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import {
   useTable,
-  useSortBy,
   useGlobalFilter,
   usePagination,
 } from "react-table";
-import "../CustomTable/CustomTable.css";
+import "./Table.css"
 import SearchIcon from "@mui/icons-material/Search";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Button from "@mui/material/Button";
@@ -69,19 +66,9 @@ export default function Table({
   const rowEnd = Math.min(rowStart + page.length - 1, tableData.length);
 
   return (
-    <div className="customTableMain">
-      {showSearch && (
-        <div className="searchContainer">
-          <input
-            value={filterInput}
-            onChange={handleFilterChange}
-            placeholder={searchPlaceholder}
-            className="searchInput"
-          />
-          <SearchIcon className="search-icon" />
-        </div>
-      )}
-      <table {...getTableProps()} className="customTable">
+    <div className="tableMain">
+     
+      <table {...getTableProps()} className="table">
         <thead>
           {headerGroups.map((headerGroup, i) => (
             <tr {...headerGroup.getHeaderGroupProps()} key={`headerGroup-${i}`}>

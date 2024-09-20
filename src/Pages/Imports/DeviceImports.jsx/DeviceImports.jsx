@@ -28,25 +28,38 @@ export default function DeviceImports() {
     ],
     []
   );
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
-    // <motion.div
-    //   initial={{ y: "-50%", opacity: 0, scale: 0.8 }}
-    //   animate={{ y: "0%", opacity: 1, scale: 1 }}
-    //   exit={{ y: "50%", opacity: 0, scale: 1.2 }}
-    //   transition={{ duration: 0.8, ease: "easeInOut" }}
-    // >
     <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 2rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Device Imports
       </Typography>
       <NavbarMini />
 
-      <div className="reportMain">
+      <motion.div
+        className="reportMain"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -65,13 +78,13 @@ export default function DeviceImports() {
             </Typography>
           </Box>
           <Box
-            sx={{
-              padding: "3rem",
-              backgroundColor: "var(--color)",
-              color: "var(--text-color)",
-              borderRadius: " 1rem  ",
-              boxShadow: "var(--box-shadow)",
-            }}
+          // sx={{
+          //   padding: "3rem",
+          //   backgroundColor: "var(--color)",
+          //   color: "var(--text-color)",
+          //   borderRadius: " 1rem  ",
+          //   boxShadow: "var(--box-shadow)",
+          // }}
           >
             <CustomTable
               columns={columns}
@@ -82,7 +95,7 @@ export default function DeviceImports() {
             />
           </Box>
         </Container>
-      </div>
+      </motion.div>
     </>
     // </motion.div>
   );

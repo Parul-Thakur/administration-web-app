@@ -1,8 +1,8 @@
 .customTableMain {
-  /* box-shadow: var(--box-shadow); */
+  box-shadow: var(--box-shadow);
   background-color: var(--color);
   border-radius: 10px;
-  padding: 0 0 1rem;
+
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -11,9 +11,9 @@
   cursor: pointer;
 }
 .customTable th .MuiSvgIcon-root {
-  font-size: 1.5rem; /* Adjust size */
+  font-size: 1.5rem;
   vertical-align: middle;
-  fill: currentColor; /* Ensure the icon inherits text color */
+  fill: currentColor;
 }
 .sortable-header:hover .sort-indicator {
   visibility: visible;
@@ -33,22 +33,33 @@
   table-layout: auto;
 }
 
-.customTable th,
-.customTable td {
-  padding: 1rem 2rem;
+.customTable th {
+  line-height: 16px;
+  padding: 0.2rem 2rem;
   text-align: left;
   border-bottom: 0.5px solid var(--grey);
   position: relative;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.customTable td {
+  line-height: 24px;
+  padding: .8rem 2rem;
+  text-align: left;
+  border-bottom: 0.5px solid var(--grey);
+  position: relative;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .customTable th {
-  background-color: var(--search-bg);
+  background-color: var(--header-bg);
   cursor: pointer;
-  color: var(--text-head);
-  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.75rem;
 }
 
 .customTable th span {
@@ -57,27 +68,29 @@
 
 .customTable tr {
   color: var(--text-color);
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
+
 }
 
 .customTable tr:hover {
-  background-color: var(--search-bg);
+  background-color: var(--header-bg);
 }
 
 .searchContainer {
   position: relative;
-  height: 5rem;
-  background-color: var(--search-bg);
+  height: 4rem;
+  background-color: var(--header-bg);
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjust to position button and search bar */
-  padding: 0 1rem; /* Add some padding for better spacing */
+  justify-content: space-between;
+  padding: 0 1rem;
 }
 
 .searchInput {
-  background-color: var(--grey);
+  color:var(--text-color);
+  background-color: var(--search-bg);
   margin-right: 1rem;
-  padding: 1rem 3rem;
+  padding: 0.7rem 3rem;
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -86,9 +99,9 @@
 }
 
 .searchInput:focus {
-  background-color: var(--color);
-  outline: none;
+  border: 1px solid var(--btn-bg);
 }
+
 
 .searchInput::placeholder {
   color: var(--text-color);
@@ -168,14 +181,14 @@ tr:hover .more-options {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 2rem 1rem 0;
+  margin: 1.5rem 1rem;
   font-size: 0.8rem;
   gap: 0.5rem;
   color: var(--text-color);
 }
 
 .pagination button {
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.6rem;
   font-size: 0.8rem;
   cursor: pointer;
   border: none;

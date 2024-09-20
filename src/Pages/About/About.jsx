@@ -107,7 +107,7 @@ export default function About() {
             component={Paper}
             sx={{
               marginBottom: 3,
-              backgroundColor: "var(--search-bg)",
+              backgroundColor: "var(--header-bg)",
               padding: "1rem",
             }}
           >
@@ -152,7 +152,7 @@ export default function About() {
             component={Paper}
             sx={{
               marginBottom: 3,
-              backgroundColor: "var(--search-bg)",
+              backgroundColor: "var(--header-bg)",
               padding: "1rem",
             }}
           >

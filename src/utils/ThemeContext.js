@@ -5,12 +5,12 @@ import React, { createContext, useContext, useState } from 'react';
 const ThemeContext = createContext();
 const breakpoints = {
   values: {
-    xs: 0,    // Extra small devices (phones, 0px and up)
-    sm: 600,  // Small devices (tablets, 600px and up)
-    md: 1024,  // Medium devices (small desktops, 900px and up)
-    lg: 1400, // Large devices (desktops, 1200px and up)
-    xl: 1920, // Extra large devices (large desktops, 1536px and up)
-    xlg: 2200, // Custom breakpoint (extra large desktops, 1800px and up)
+    xs: 0,    
+    sm: 600,  
+    md: 1024,  
+    lg: 1400, 
+    xl: 1950, 
+    xlg: 2200, 
   },
 };
 const theme1 = createTheme({

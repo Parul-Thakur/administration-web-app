@@ -97,7 +97,7 @@ export default function Settings() {
               gutterBottom
               style={{
                 fontWeight: 500,
-                fontSize:".875rem"
+                fontSize: ".875rem",
               }}
             >
               Server Configuration

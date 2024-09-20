@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 import DeviceImportForm from "../DeviceImportForm";
 import { Divider, Typography } from "@mui/material";
-
+import { motion } from "framer-motion";
 export default function EditDeviceImport() {
   const { deviceId } = useParams();
   const [deviceData, setDeviceData] = useState(null);
@@ -21,14 +21,27 @@ export default function EditDeviceImport() {
     );
     console.log("Updated device data:", updatedDevices);
   };
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Device Imports
       </Typography>
@@ -42,7 +55,12 @@ export default function EditDeviceImport() {
         }}
       />
 
-      <div className="reportMain">
+      <motion.div
+        className="reportMain"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {deviceData ? (
           <DeviceImportForm
             isEditMode={true}
@@ -52,7 +70,7 @@ export default function EditDeviceImport() {
         ) : (
           <div>Loading...</div>
         )}
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -47,7 +47,8 @@ function CustomTable({
   isOrgPage = false,
   isDeviceGroupsPage = false,
   isDCGPage = false,
-  entityType
+  isAccessPage = false,
+  entityType,
 }) {
   // const [tableData, setTableData] = useState(
   //   Array.isArray(data)
@@ -70,7 +71,7 @@ function CustomTable({
   const initialSortBy = JSON.parse(
     localStorage.getItem(`${localStorageKey}_sortBy`)
   ) || [{ id: "id", asc: false }];
-  
+
   const [sortBy, setSortBy] = useState(initialSortBy);
   useEffect(() => {
     localStorage.setItem(`${localStorageKey}_sortBy`, JSON.stringify(sortBy));
@@ -117,17 +118,23 @@ function CustomTable({
   //   setTableData(newData);
   //   localStorage.setItem(localStorageKey, JSON.stringify(newData));
   // };
+  const [rowToDelete, setRowToDelete] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleDeleteRow = (rowId) => {
-    const newData = tableData.filter((row) => row.id !== rowId);
+    setRowToDelete(rowId); // Set the row to delete
+    setIsModalOpen(true); // Open the modal for confirmation
+  };
+
+  const confirmDelete = () => {
+    const newData = tableData.filter((row) => row.id !== rowToDelete);
     setTableData(newData);
-    // Save the updated data back to localStorage
     localStorage.setItem(localStorageKey, JSON.stringify(newData));
+    setIsModalOpen(false); // Close the modal
   };
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(tableData));
   }, [tableData, localStorageKey]);
 
-  
   const handleReportEditRow = (rowId) => {
     const reportType = isTemplateReportPage ? "template" : "schedule";
     navigate(`/edit-report/${reportType}/edit/${rowId}`);
@@ -167,8 +174,7 @@ function CustomTable({
     setSelectedEntity(entity);
     console.log(entity);
     console.error();
-   
-    
+
     setIsViewOpen(true);
   };
 
@@ -313,7 +319,11 @@ function CustomTable({
           onClick: () => handleEditRow(activeRowId),
         },
       ]
-    : isPrintQueue || isCustomPage || isOrgPage || isDeviceGroupsPage
+    : isPrintQueue ||
+      isCustomPage ||
+      isOrgPage ||
+      isDeviceGroupsPage ||
+      isAccessPage
     ? [
         {
           label: "Delete",
@@ -409,10 +419,10 @@ function CustomTable({
             variant="contained"
             onClick={() => navigate("/users/add-user")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -427,10 +437,10 @@ function CustomTable({
             variant="contained"
             onClick={() => navigate("/devices/add-device")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -445,10 +455,10 @@ function CustomTable({
             variant="contained"
             onClick={() => navigate("/user-imports/add-user")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -463,10 +473,10 @@ function CustomTable({
             variant="contained"
             // onClick={() => navigate("/user-imports/add-user")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -481,10 +491,10 @@ function CustomTable({
             variant="contained"
             onClick={() => navigate("/device-imports/add-device")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -499,10 +509,10 @@ function CustomTable({
             variant="contained"
             onClick={() => navigate("/email-templates/add-template")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -517,10 +527,10 @@ function CustomTable({
             variant="contained"
             onClick={() => navigate("/pricing-configuration/add-price")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -530,15 +540,32 @@ function CustomTable({
             Add Price Scheme
           </Button>
         )}
+        {isAccessPage && (
+          <Button
+            variant="contained"
+            sx={{
+              fontSize: "0.7rem",
+              backgroundColor: "var(--btn-bg)",
+              color: "var(--btn-text)",
+              padding: "0.5rem 1rem",
+              transition: "transform 0.2s ease",
+              "&:hover": {
+                transform: "translateY(-2px)",
+              },
+            }}
+          >
+            Select All
+          </Button>
+        )}
         {(isScheduledReportPage || isTemplateReportPage) && (
           <Button
             variant="contained"
             onClick={() => navigate("/add-report")}
             sx={{
-              fontSize: "0.8rem",
+              fontSize: "0.7rem",
               backgroundColor: "var(--btn-bg)",
               color: "var(--btn-text)",
-              padding: "0.5rem 1.5rem",
+              padding: "0.5rem 1rem",
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
@@ -651,15 +678,16 @@ function CustomTable({
         entityType={entityType}
         updateEntities={handleUpdateEntities}
       />
-      {/* <Modal
-        open={openModal}
-        onClose={handleCancel}
-        onConfirm={handleConfirm}
-        title="Confirm Action"
-        message={`Are you sure you want to assign price scheme to this: ${
-          tableData.find((row) => row.id === activeRowId)?.hostname || "unknown"
-        }?`}
-      /> */}
+      <SaveModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)} // Close modal without action
+        buttonText="Delete"
+        modalTitle="Confirm Deletion"
+        modalContent="Are you sure you want to delete this item?"
+        pageType="delete"
+        isNoNav={true}
+        onConfirm={confirmDelete} // Execute the deletion on confirmation
+      />
 
       <div className="pagination">
         <select value={pageSize} onChange={handlePageSizeChange}>

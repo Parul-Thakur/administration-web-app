@@ -379,11 +379,7 @@ export default function CashierForm() {
       </Box>
 
       {isTableVisible && (
-        <Box
-          sx={{
-            padding: "0 2rem 5rem",
-          }}
-        >
+        <Box mt={5}>
           <Table
             columns={columns}
             data={data}

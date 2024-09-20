@@ -50,7 +50,13 @@ export default function WinAuth() {
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Settings
       </Typography>
@@ -75,7 +81,15 @@ export default function WinAuth() {
               color: "var(--text-color)",
             }}
           >
-            <Typography variant="h8" component="h4" gutterBottom>
+             <Typography
+              variant="h8"
+              component="h4"
+              gutterBottom
+              style={{
+                fontWeight: 500,
+                fontSize: ".875rem",
+              }}
+            >
               Windows Authentication Details
             </Typography>
           </Box>
@@ -84,7 +98,7 @@ export default function WinAuth() {
               padding: "3rem",
               backgroundColor: "var(--color)",
               color: "var(--text-color)",
-              borderRadius: " 1rem  ",
+              borderRadius: "1rem",
               boxShadow: "var(--box-shadow)",
             }}
           >
@@ -112,7 +126,6 @@ export default function WinAuth() {
                       },
                     }}
                     sx={{
-                      fontSize: "0.8rem",
                       "& .MuiOutlinedInput-root": {
                         "& fieldset": {
                           borderColor: "var(--grey)",
@@ -122,7 +135,7 @@ export default function WinAuth() {
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)", // Focused border color
+                        borderColor: "var(--primary-color)",
                       },
                     }}
                   />
@@ -149,7 +162,6 @@ export default function WinAuth() {
                       },
                     }}
                     sx={{
-                      fontSize: "0.8rem",
                       "& .MuiOutlinedInput-root": {
                         "& fieldset": {
                           borderColor: "var(--grey)",
@@ -159,128 +171,124 @@ export default function WinAuth() {
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)", // Focused border color
+                        borderColor: "var(--primary-color)",
                       },
                     }}
                   />
                 </Grid>
-                <Grid container spacing={2} direction="column">
-                  <Grid item>
-                    <Typography
-                      variant="body2"
-                      sx={{
+
+                {/* Windows Authentication Section */}
+                <Grid item xs={12}>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                      padding: "2rem 0 1rem",
+                      textAlign: "left",
+                    }}
+                  >
+                    Test Windows Authentication
+                  </Typography>
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                  <TextField
+                    fullWidth
+                    size="small"
+                    label="Enter Username"
+                    variant="outlined"
+                    name="username"
+                    value={formData.username}
+                    onChange={handleChange}
+                    InputProps={{
+                      style: {
                         fontSize: "0.8rem",
                         color: "var(--text-color)",
-                        padding: "2rem 0 1rem 2rem",
-                        backgroundColor: "var(--color)",
-                        textAlign: "left",
-                      }}
-                    >
-                      Test Windows Authentication
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Grid container spacing={2}>
-                      <Grid item xs={12} md={5}>
-                        <TextField
-                          fullWidth
-                          size="small"
-                          label="Enter username"
-                          variant="outlined"
-                          name="username"
-                          value={formData.username}
-                          onChange={handleChange}
-                          InputProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          InputLabelProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          sx={{
-                            fontSize: "0.8rem",
-                            "& .MuiOutlinedInput-root": {
-                              "& fieldset": {
-                                borderColor: "var(--grey)",
-                              },
-                              "&:hover fieldset": {
-                                borderColor: "var(--primary-color)",
-                              },
-                            },
-                            "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                              borderColor: "var(--primary-color)", // Focused border color
-                            },
-                          }}
-                        />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField
-                          fullWidth
-                          size="small"
-                          label="Enter Password"
-                          variant="outlined"
-                          name="testPassword"
-                          value={formData.testPassword}
-                          onChange={handleChange}
-                          InputProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          InputLabelProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          sx={{
-                            fontSize: "0.8rem",
-                            "& .MuiOutlinedInput-root": {
-                              "& fieldset": {
-                                borderColor: "var(--grey)",
-                              },
-                              "&:hover fieldset": {
-                                borderColor: "var(--primary-color)",
-                              },
-                            },
-                            "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                              borderColor: "var(--primary-color)", // Focused border color
-                            },
-                          }}
-                        />
-                      </Grid>
-                      <Grid item xs={12} md={3}>
-                        <Button
-                          variant="outlined"
-                          sx={{
-                            fontSize: "0.8rem",
-                            color: "var(--text-color)",
-                            borderColor: "var(--btn-bg)",
-                            padding: "0.5rem 1.5rem",
-                            transition: "transform 0.2s ease",
-                            "&:hover": {
-                              borderColor: "var(--primary-color)",
-                              transform: "translateY(5px)",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          // onClick={handleCancel}
-                        >
-                          Devices 2FA
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Grid>
+                      },
+                    }}
+                    InputLabelProps={{
+                      style: {
+                        fontSize: "0.8rem",
+                        color: "var(--text-color)",
+                      },
+                    }}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "var(--grey)",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "var(--primary-color)",
+                        },
+                      },
+                      "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "var(--primary-color)",
+                      },
+                    }}
+                  />
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                  <TextField
+                    fullWidth
+                    size="small"
+                    label="Enter Password"
+                    variant="outlined"
+                    name="testPassword"
+                    value={formData.testPassword}
+                    onChange={handleChange}
+                    InputProps={{
+                      style: {
+                        fontSize: "0.8rem",
+                        color: "var(--text-color)",
+                      },
+                    }}
+                    InputLabelProps={{
+                      style: {
+                        fontSize: "0.8rem",
+                        color: "var(--text-color)",
+                      },
+                    }}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                          borderColor: "var(--grey)",
+                        },
+                        "&:hover fieldset": {
+                          borderColor: "var(--primary-color)",
+                        },
+                      },
+                      "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "var(--primary-color)",
+                      },
+                    }}
+                  />
+                </Grid>
+
+                <Grid item xs={12} md={4}>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                      borderColor: "var(--btn-bg)",
+                      padding: "0.5rem 1.5rem",
+                      transition: "transform 0.2s ease",
+                      "&:hover": {
+                        borderColor: "var(--primary-color)",
+                        transform: "translateY(5px)",
+                        color: "var(--text-color)",
+                      },
+                    }}
+                  >
+                    Devices 2FA
+                  </Button>
                 </Grid>
               </Grid>
             </form>
           </Box>
+
           <Box
             sx={{
               display: "flex",

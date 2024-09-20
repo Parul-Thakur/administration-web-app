@@ -40,11 +40,12 @@ function Layout() {
           marginTop: "0px",
         }}
       >
+        {/* {showBreadcrumb && <Breadcrumb />} */}
         {/* CaletaSelect Component at the top */}
         <CaletaSelect />
 
         {/* Breadcrumb and page content */}
-        {/* {showBreadcrumb && <Breadcrumb />} */}
+      
         <Outlet />
       </Box>
 

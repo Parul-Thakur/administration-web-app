@@ -20,19 +20,27 @@ export default function EmailTemplate() {
     ],
     []
   );
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
-    <motion.div
-      initial={{ y: "-50%", opacity: 0, scale: 0.8 }}
-      animate={{ y: "0%", opacity: 1, scale: 1 }}
-      exit={{ y: "50%", opacity: 0, scale: 1.2 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-    >
+    <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Email Tempelate
       </Typography>
@@ -45,7 +53,12 @@ export default function EmailTemplate() {
           opacity: "0.3",
         }}
       />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <Container
           // component={Paper}
           elevation={3}
@@ -64,13 +77,13 @@ export default function EmailTemplate() {
             </Typography>
           </Box>
           <Box
-            sx={{
-              padding: "3rem",
-              backgroundColor: "var(--color)",
-              color: "var(--text-color)",
-              borderRadius: " 1rem  ",
-              boxShadow: "var(--box-shadow)",
-            }}
+            // sx={{
+            //   padding: "3rem",
+            //   backgroundColor: "var(--color)",
+            //   color: "var(--text-color)",
+            //   borderRadius: " 1rem  ",
+            //   boxShadow: "var(--box-shadow)",
+            // }}
           >
             <CustomTable
               columns={columns}
@@ -81,7 +94,7 @@ export default function EmailTemplate() {
             />
           </Box>
         </Container>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }

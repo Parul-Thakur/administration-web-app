@@ -12,62 +12,60 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import successUpdate from "../Images/sync.png";
 import successAdd from "../Images/window.png";
 import successDelete from "../Images/SuccessDelete.png";
-import errorImage from "../Images/ErrorImage.png"; // Error image
-import Notification from "./Notification"; // Notification component
-import { useNavigate } from "react-router-dom"; // For navigation
+import errorImage from "../Images/ErrorImage.png"; 
+import Notification from "./Notification"; 
+import { useNavigate } from "react-router-dom"; 
 
 const SaveModal = ({
   isOpen,
   onClose,
-  buttonText,
+  buttonText = "OKAY", // Default value for buttonText
   modalTitle,
   modalContent,
   pageType,
   isNoNav,
   isError,
+  onConfirm, 
 }) => {
   const [notificationOpen, setNotificationOpen] = useState(false);
-  const [loading, setLoading] = useState(false); // Loader state
-  const [notificationMessage, setNotificationMessage] = useState(""); // State for notification message
+  const [loading, setLoading] = useState(false); 
+  const [notificationMessage, setNotificationMessage] = useState(""); 
   const navigate = useNavigate();
 
   const handleConfirm = () => {
-    setLoading(true); // Show the loader
-    onClose(); // Close the modal
+    setLoading(true); 
 
-    // Determine the message based on pageType and isError
-    const getMessage = () => {
-      if (isError) return "Please complete all required fields.";
-      switch (pageType) {
-        case "edit":
-          return "Updated Successfully.";
-        case "add":
-          return "Added Successfully.";
-        case "delete":
-          return "Deleted Successfully.";
-        default:
-          return "Action Completed Successfully.";
-      }
-    };
+    // Perform action, like deleting the row
+    onConfirm();
 
-    const notificationMessage = getMessage();
+    setTimeout(() => {
+      setLoading(false); 
+      onClose(); // Close after loader is finished
 
-    setTimeout(
-      () => {
-        setLoading(false); // Hide the loader
-        setNotificationMessage(notificationMessage);
-        setNotificationOpen(true);
-
-        // Navigate after the notification
-        if (!isNoNav && !isError) {
-          setTimeout(() => navigate(-1), 1000); // Navigate back after 1 second
+      // Notification message
+      const getMessage = () => {
+        if (isError) return "Please complete all required fields.";
+        switch (pageType) {
+          case "edit":
+            return "Updated Successfully.";
+          case "add":
+            return "Added Successfully.";
+          case "delete":
+            return "Deleted Successfully.";
+          default:
+            return "Action Completed Successfully.";
         }
-      },
-      isError ? 2000 : 3000
-    ); // 2000ms for error, 3000ms for other cases
+      };
+
+      setNotificationMessage(getMessage());
+      setNotificationOpen(true);
+
+      if (!isNoNav && !isError) {
+        setTimeout(() => navigate(-1), 1000); 
+      }
+    }, isError ? 2000 : 3000);
   };
 
-  // Determine the image, title, and content based on pageType or error state
   const getModalContent = () => {
     if (isError) {
       return {
@@ -99,8 +97,7 @@ const SaveModal = ({
         return {
           image: successAdd,
           title: modalTitle || "Action Successful",
-          content:
-            modalContent || "The action has been successfully completed.",
+          content: modalContent || "The action has been successfully completed.",
         };
     }
   };
@@ -128,7 +125,6 @@ const SaveModal = ({
             transform: "translate(-41%, -25%)",
             width: "80%",
             maxWidth: "400px",
-            height: "auto",
             bgcolor: "var(--sidebar-color)",
             boxShadow: "var(--box-shadow)",
             p: 4,
@@ -140,26 +136,10 @@ const SaveModal = ({
           }}
         >
           <Box sx={{ width: "60%", mb: 2 }}>
-            <img
-              src={image}
-              alt={isError ? "Error" : "Success"}
-              style={{ width: "100%", borderRadius: "8px" }}
-            />
+            <img src={image} alt={isError ? "Error" : "Success"} style={{ width: "100%", borderRadius: "8px" }} />
           </Box>
-          <Typography
-            id="modal-title"
-            variant="h6"
-            component="h2"
-            sx={{ fontWeight: "bold" }}
-          >
-            {title}
-          </Typography>
-          <Typography
-            id="modal-description"
-            sx={{ mt: 2, textAlign: "center" }}
-          >
-            {content}
-          </Typography>
+          <Typography id="modal-title" variant="h6" sx={{ fontWeight: "bold" }}>{title}</Typography>
+          <Typography id="modal-description" sx={{ mt: 2, textAlign: "center" }}>{content}</Typography>
           <Box mt={5} display="flex" justifyContent="space-between">
             <Button
               variant="contained"
@@ -169,16 +149,13 @@ const SaveModal = ({
                 color: "var(--btn-text)",
                 padding: "0.5rem 1.5rem",
                 transition: "transform 0.2s ease",
-                "&:hover": {
-                  transform: "translateY(-2px)",
-                },
+                "&:hover": { transform: "translateY(-2px)" },
               }}
               onClick={handleConfirm}
             >
-              OKAY
+              {buttonText} {/* Dynamic buttonText */}
             </Button>
             <Button
-              type="button"
               variant="outlined"
               sx={{
                 marginLeft: "4rem",
@@ -186,43 +163,22 @@ const SaveModal = ({
                 color: "var(--btn-bg)",
                 border: "1px solid var(--btn-bg)",
                 transition: "transform 0.2s ease",
-                "&:hover": {
-                  transform: "translateY(-2px)",
-                },
+                "&:hover": { transform: "translateY(-2px)" },
               }}
               onClick={onClose}
             >
-              <CancelIcon
-                sx={{
-                  fontSize: "1rem",
-                  marginRight: "0.5rem",
-                  color: "var(--btn-bg)",
-                }}
-              />
+              <CancelIcon sx={{ fontSize: "1rem", marginRight: "0.5rem", color: "var(--btn-bg)" }} />
               Cancel
             </Button>
           </Box>
         </Box>
       </Modal>
-      {/* Loader */}
       {loading && (
-        <Backdrop
-          open={loading}
-          sx={{
-            zIndex: (theme) => theme.zIndex.drawer + 1,
-            color: "#fff",
-            backdropFilter: "blur(5px)",
-          }}
-        >
+        <Backdrop open={loading} sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, color: "#fff", backdropFilter: "blur(5px)" }}>
           <CircularProgress color="inherit" />
         </Backdrop>
       )}
-      {/* Notification Component */}
-      <Notification
-        open={notificationOpen}
-        message={notificationMessage} // Pass dynamic message
-        onClose={() => setNotificationOpen(false)}
-      />
+      <Notification open={notificationOpen} message={notificationMessage} onClose={() => setNotificationOpen(false)} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Menu,
@@ -8,11 +8,13 @@ import {
   ListItemIcon,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { motion } from "framer-motion";
 import LockIcon from "@mui/icons-material/Lock";
+
 const CaletaSelect = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
+  const [bgColor, setBgColor] = useState("transparent"); // Initial background color
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -22,16 +24,40 @@ const CaletaSelect = () => {
     setAnchorEl(null);
   };
 
+  // Handle scroll to change background color
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 60) {
+        setBgColor("white"); // Change to white after 100px scroll
+      } else {
+        setBgColor("transparent"); // Revert to transparent before 100px
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "flex-start",
-        padding: ".5rem 1.5rem",
         alignItems: "center",
         gap: "1rem",
-        zIndex: "1",
+        zIndex: "10",
         position: "fixed",
+        width: "100%",
+        backgroundColor: bgColor, // Dynamic background color
+        boxShadow:
+          bgColor === "white" ? "0 4px 12px rgba(0, 0, 0, 0.1)" : "none", // Shadow when bg is white
+        padding: ".5rem 1.5rem",
+        top: 0,
+        transition: "background-color 0.3s ease", // Smooth transition
       }}
     >
       <>
@@ -41,21 +67,21 @@ const CaletaSelect = () => {
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
-          endIcon={<ArrowDropDownIcon />} // Dropdown arrow icon
+          endIcon={<ArrowDropDownIcon />}
           sx={{
             backgroundColor: "transparent",
             textTransform: "none",
-            color: "var(--text-head)",
+            color: bgColor === "white" ? "black" : "var(--text-head)", // Text color change based on bg
             "&:hover": {
-              color: "var(--text-color)", // Hover effect
+              color: "var(--text-color)",
             },
-            // Color for text
           }}
         >
           <Typography variant="body1" sx={{ fontWeight: 500 }}>
             Caleta Core
           </Typography>
         </Button>
+
         <Menu
           id="caleta-dropdown-menu"
           anchorEl={anchorEl}
@@ -66,12 +92,12 @@ const CaletaSelect = () => {
           }}
           sx={{
             "& .MuiMenu-paper": {
-              backgroundColor: "var(--color)", // Custom background color
-              color: "var(--text-color)", // Custom text color
-              padding: "10px", // Remove padding from the menu
+              backgroundColor: "var(--color)",
+              color: "var(--text-color)",
+              padding: "10px",
             },
             "& .MuiMenu-list": {
-              padding: 0, // Remove padding from the list items container
+              padding: 0,
             },
           }}
         >
@@ -84,18 +110,17 @@ const CaletaSelect = () => {
             Caleta Core
           </MenuItem>
 
-          {/* Caleta Web with Lock Icon */}
           <MenuItem onClick={handleClose} disabled>
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: "8px", // Adjust the gap between the text and the icon
+                gap: "8px",
               }}
             >
               Caleta Web
               <ListItemIcon sx={{ minWidth: "auto" }}>
-                <LockIcon fontSize="xs" />
+                <LockIcon fontSize="small" />
               </ListItemIcon>
             </Box>
           </MenuItem>

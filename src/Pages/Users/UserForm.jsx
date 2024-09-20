@@ -148,7 +148,15 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
               color: "var(--text-color)",
             }}
           >
-            <Typography variant="h10" component="h4" gutterBottom>
+            <Typography
+              variant="h8"
+              component="h4"
+              gutterBottom
+              style={{
+                fontWeight: 500,
+                fontSize: ".875rem",
+              }}
+            >
               User Details
             </Typography>
           </Box>
@@ -772,7 +780,14 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
               color: "var(--text-color)",
             }}
           >
-            <Typography variant="h10" component="h4" gutterBottom>
+              <Typography
+              variant="h8"
+              component="h4"
+              gutterBottom
+              style={{
+                fontWeight: 500,
+                fontSize: ".875rem",
+              }}>
               Settings
             </Typography>
           </Box>

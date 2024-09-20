@@ -8,6 +8,7 @@ import {
   Paper,
   Box,
   CardMedia,
+  Container,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import BarChart from "../../Components/BarChart/BarChart.jsx";
@@ -249,21 +250,24 @@ const DashboardContent = () => {
       </Grid>
 
       {/* Tables */}
-      <Grid container spacing={2} style={{ marginTop: 40 }}>
+      <Grid container style={{ marginTop: 20 }}>
         <Grid item xs={12} md={6}>
-          <Paper
-            elevation={3}
+          <Container
             style={{
-              padding: "2rem",
-              backgroundColor: "var(--color)",
               display: "flex",
               flexDirection: "column",
               height: "100%",
+              width: "100%",
             }}
           >
             <Typography
-              variant="h6"
-              style={{ marginBottom: "2rem", color: "var(--text-head)" }}
+              variant="subtitle1"
+              gutterBottom
+              style={{
+                color: "var(--text-head)",
+                fontWeight: "bold",
+                paddingBottom: "1rem ",
+              }}
             >
               Last Completed Jobs
             </Typography>
@@ -275,22 +279,25 @@ const DashboardContent = () => {
                 showSearch={false}
               />
             </div>
-          </Paper>
+          </Container>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Paper
-            elevation={3}
+          <Container
             style={{
-              padding: "2rem",
-              backgroundColor: "var(--color)",
               display: "flex",
               flexDirection: "column",
               height: "100%",
+              width: "100%",
             }}
           >
             <Typography
-              variant="h6"
-              style={{ marginBottom: "2rem", color: "var(--text-head)" }}
+              variant="subtitle1"
+              gutterBottom
+              style={{
+                color: "var(--text-head)",
+                fontWeight: "bold",
+                paddingBottom: "1rem ",
+              }}
             >
               Last Received Print Documents
             </Typography>
@@ -302,7 +309,7 @@ const DashboardContent = () => {
                 showSearch={false}
               />
             </div>
-          </Paper>
+          </Container>
         </Grid>
       </Grid>
     </div>

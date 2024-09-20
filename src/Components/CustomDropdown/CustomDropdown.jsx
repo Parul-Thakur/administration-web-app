@@ -1,8 +1,15 @@
-import React from 'react';
-import { Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import React from "react";
+import { Menu, MenuItem, ListItemIcon, ListItemText } from "@mui/material";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-function CustomDropdown({ anchorEl, activeRow, rowIndex, onMenuClick, onClose, options }) {
+function CustomDropdown({
+  anchorEl,
+  activeRow,
+  rowIndex,
+  onMenuClick,
+  onClose,
+  options,
+}) {
   return (
     <div className="more-options">
       <MoreVertIcon onClick={onMenuClick} />
@@ -11,10 +18,11 @@ function CustomDropdown({ anchorEl, activeRow, rowIndex, onMenuClick, onClose, o
         keepMounted
         open={Boolean(anchorEl && activeRow === rowIndex)}
         onClose={onClose}
-        // Custom styles for the Menu background
         sx={{
-          '& .MuiPaper-root': {
-            backgroundColor: 'var(--background-color)', // Your custom background color
+          "& .MuiPaper-root": {
+            backgroundColor: "var(--background-color)", // Custom background color
+            margin: 0, // Remove margins (if any)
+            padding: 0, // Remove padding
           },
         }}
       >
@@ -22,18 +30,21 @@ function CustomDropdown({ anchorEl, activeRow, rowIndex, onMenuClick, onClose, o
           <MenuItem
             key={index}
             onClick={option.onClick}
-            // Custom styles for MenuItem background
             sx={{
-              '&:hover': {
-                backgroundColor: 'var(--hover2)', // Your custom hover color
+              "&:hover": {
+                backgroundColor: "var(--hover2)",
               },
-              backgroundColor: 'var(--background-color)', // Default background color
-              color: 'var(--text-color)', // Text color
+              backgroundColor: "var(--background-color)",
+              color: "var(--text-color)",
+              padding: "4px 8px", // Adjust padding for MenuItem
+              minHeight: "auto", // Remove default minimum height
+              height: "auto", // Ensure height fits content
             }}
           >
             <ListItemIcon
               sx={{
-                color: 'var(--text-color)', // Icon color
+                color: "var(--text-color)",
+                minWidth: "30px", // Adjust icon padding
               }}
             >
               {option.icon}
@@ -41,7 +52,9 @@ function CustomDropdown({ anchorEl, activeRow, rowIndex, onMenuClick, onClose, o
             <ListItemText
               primary={option.label}
               sx={{
-                color: 'var(--text-color)', // Text color
+                color: "var(--text-color)", // Text color
+                margin: 0, // Remove margin
+                padding: 0, // Ensure no padding
               }}
             />
           </MenuItem>

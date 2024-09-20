@@ -7,19 +7,27 @@ export default function AddEmailTemplate() {
   const handleAddEmail = (formData) => {
     console.log("User data submitted:", formData);
   };
-
+  const tableVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
-    <motion.div
-      initial={{ y: "-50%", opacity: 0, scale: 0.8 }}
-      animate={{ y: "0%", opacity: 1, scale: 1 }}
-      exit={{ y: "50%", opacity: 0, scale: 1.2 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-    >
+    <>
       <Typography
         variant="h4"
         component="h4"
         gutterBottom
-        style={{ padding: 0, margin: "4rem 2rem 0rem" }}
+        style={{
+          padding: 0,
+          margin: "3rem 2rem 0rem",
+          color: "var(--text-head)",
+          fontWeight: 500,
+          fontFamily: "var(--font-family)",
+        }}
       >
         Email Tempelate
       </Typography>
@@ -32,9 +40,14 @@ export default function AddEmailTemplate() {
           opacity: "0.3",
         }}
       />
-      <div className="main">
+      <motion.div
+        className="main"
+        variants={tableVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <EmailTempForm isEditMode={false} onSubmit={handleAddEmail} />
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }

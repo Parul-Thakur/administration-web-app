@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 export default function Login() {
   return (
     <motion.div
-      initial={{ y: -300, opacity: 0, scale: 0.8 }} // Start from above the screen, smaller scale, and transparent
-      animate={{ y: 0, opacity: 1, scale: 1 }} // Animate to original position, full opacity, and scale up
-      exit={{ y: 300, opacity: 0, scale: 1.2 }} // Exit by moving down, fading out, and scaling up
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      initial={{ opacity: 0, y: 20 }} // Initial state: invisible and slightly translated down
+      animate={{ opacity: 1, y: 0 }} // Final state: fully visible and in its original position
+      exit={{ opacity: 0, y: 20 }} // State when the component exits (optional)
+      transition={{ duration: 1 }} // Duration of the animation
     >
       <LoginForm />
     </motion.div>
