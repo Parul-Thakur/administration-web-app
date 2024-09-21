@@ -12,6 +12,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Divider,
 } from "@mui/material";
 import ReportRadioBtn from "./ReportRadiobtn";
 import { useParams } from "react-router-dom";
@@ -109,7 +110,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
     orderBy: "",
     reportType: "R1",
     usageBy: "B1",
-    usageOptions: "B3",
+    usageOptions: "",
     period: "P1",
     subgroup: "S1",
     export: "E1",
@@ -197,79 +198,92 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
         <form onSubmit={handleSubmit}>
           <Box
             sx={{
-              padding: "2rem 2rem",
-              border: "1px solid var(--grey)",
-              // backgroundColor: "var(--color)",
+              marginBottom: "2rem",
+              padding: "3rem",
+              backgroundColor: "var(--color)",
               color: "var(--text-color)",
               borderRadius: " 1rem  ",
-              // boxShadow: "var(--box-shadow)",
+              boxShadow: "var(--box-shadow)",
             }}
           >
-            <Box
-              sx={{
-                padding: "3rem",
-                backgroundColor: "var(--color)",
-                color: "var(--text-color)",
-                borderRadius: " 1rem  ",
-                boxShadow: "var(--box-shadow)",
-              }}
-            >
-              <Box>
-                <Typography
-                  variant="h6"
-                  component="h4"
-                  gutterBottom
-                  sx={{
-                    color: "var(--text-head)",
-                    fontSize: "0.8rem",
-                    paddingBottom: "1rem",
-                  }}
-                >
-                  Report
-                </Typography>
-                <Grid item xs={12} md={12}>
-                  <ReportRadioBtn
-                    options={ReportType}
-                    label="Type"
-                    name="reportType"
-                    selectedValue={formData.reportType}
-                    handleChange={handleChange}
-                    disabledOptions={disabledReportTypes}
-                  />
-                </Grid>
-              </Box>
-              {formData.reportType === "R2" && (
-                <Box
-                  sx={{
-                    margin: "2rem 1rem ",
-                    padding: "1rem 2rem 0",
-                    border: "1px solid var(--hover)",
-                    color: "var(--text-color)",
-                    borderRadius: "10px",
-                    backgroundColor: "var(--color)",
-                  }}
-                >
-                  <Box sx={{ marginBottom: "2rem" }}>
-                    <Typography
-                      variant="h6"
-                      component="h4"
-                      gutterBottom
-                      sx={{
-                        color: "var(--text-head)",
-                        fontSize: "0.8rem",
-                        paddingBottom: "1rem",
+            <Box>
+              <Grid item xs={12} md={12}>
+                <ReportRadioBtn
+                  options={ReportType}
+                  label="Report Type"
+                  name="reportType"
+                  selectedValue={formData.reportType}
+                  handleChange={handleChange}
+                  disabledOptions={disabledReportTypes}
+                />
+              </Grid>
+            </Box>
+            {formData.reportType === "R2" && (
+              <Box
+                sx={{
+                  margin: "2rem 1rem ",
+                  padding: "1rem 2rem 0",
+                  border: "1px solid var(--hover)",
+                  color: "var(--text-color)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
+                }}
+              >
+                <Box sx={{ marginBottom: "2rem" }}>
+                  <Typography
+                    variant="h6"
+                    component="h4"
+                    gutterBottom
+                    sx={{
+                      color: "var(--text-head)",
+                      fontSize: "0.8rem",
+                      paddingBottom: "1rem",
+                    }}
+                  >
+                    Scheduling Configuration
+                  </Typography>
+                  <Grid item xs={12} md={6} sx={{ margin: "1rem 0 2rem" }}>
+                    <TextField
+                      fullWidth
+                      size="small"
+                      label="Name*"
+                      variant="outlined"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      InputProps={{
+                        style: {
+                          fontSize: "0.8rem",
+                          color: "var(--text-color)",
+                        },
                       }}
-                    >
-                      Scheduling Configuration
-                    </Typography>
-                    <Grid item xs={12} md={6} sx={{ margin: "1rem 0 2rem" }}>
+                      InputLabelProps={{
+                        style: {
+                          fontSize: "0.8rem",
+                          color: "var(--text-color)",
+                        },
+                      }}
+                      sx={{ fontSize: "0.8rem" }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={12}>
+                    <ReportRadioBtn
+                      options={Destination}
+                      label="Destination*"
+                      name="destination"
+                      selectedValue={formData.destination}
+                      handleChange={handleChange}
+                    />
+                  </Grid>
+                  {formData.destination === "D1" && (
+                    <Grid item xs={12} md={12} sx={{ margin: "1rem 0 2rem" }}>
                       <TextField
                         fullWidth
                         size="small"
-                        label="Name*"
+                        label="Email Address(es)*"
                         variant="outlined"
-                        name="name"
-                        value={formData.name}
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
                         InputProps={{
                           style: {
@@ -286,24 +300,17 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         sx={{ fontSize: "0.8rem" }}
                       />
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                      <ReportRadioBtn
-                        options={Destination}
-                        label="Destination*"
-                        name="destination"
-                        selectedValue={formData.destination}
-                        handleChange={handleChange}
-                      />
-                    </Grid>
-                    {formData.destination === "D1" && (
-                      <Grid item xs={12} md={12} sx={{ margin: "1rem 0 2rem" }}>
+                  )}
+                  {formData.destination === "D2" && (
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={3} sx={{ margin: "1rem 0 2rem" }}>
                         <TextField
                           fullWidth
                           size="small"
-                          label="Email Address(es)*"
+                          label="Network Path*"
                           variant="outlined"
-                          name="email"
-                          value={formData.email}
+                          name="path"
+                          value={formData.path}
                           onChange={handleChange}
                           InputProps={{
                             style: {
@@ -320,282 +327,94 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                           sx={{ fontSize: "0.8rem" }}
                         />
                       </Grid>
-                    )}
-                    {formData.destination === "D2" && (
-                      <Grid container spacing={2}>
-                        <Grid
-                          item
-                          xs={12}
-                          md={3}
-                          sx={{ margin: "1rem 0 2rem" }}
-                        >
-                          <TextField
-                            fullWidth
-                            size="small"
-                            label="Network Path*"
-                            variant="outlined"
-                            name="path"
-                            value={formData.path}
-                            onChange={handleChange}
-                            InputProps={{
-                              style: {
-                                fontSize: "0.8rem",
-                                color: "var(--text-color)",
-                              },
-                            }}
-                            InputLabelProps={{
-                              style: {
-                                fontSize: "0.8rem",
-                                color: "var(--text-color)",
-                              },
-                            }}
-                            sx={{ fontSize: "0.8rem" }}
-                          />
-                        </Grid>
-                        <Grid
-                          item
-                          xs={12}
-                          md={3}
-                          sx={{ margin: "1rem 0 2rem" }}
-                        >
-                          <TextField
-                            fullWidth
-                            size="small"
-                            label="Username*"
-                            variant="outlined"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            InputProps={{
-                              style: {
-                                fontSize: "0.8rem",
-                                color: "var(--text-color)",
-                              },
-                            }}
-                            InputLabelProps={{
-                              style: {
-                                fontSize: "0.8rem",
-                                color: "var(--text-color)",
-                              },
-                            }}
-                            sx={{ fontSize: "0.8rem" }}
-                          />
-                        </Grid>
-                        <Grid
-                          item
-                          xs={12}
-                          md={3}
-                          sx={{ margin: "1rem 0 2rem" }}
-                        >
-                          <TextField
-                            fullWidth
-                            size="small"
-                            label="Password*"
-                            variant="outlined"
-                            name="pass"
-                            value={formData.pass}
-                            onChange={handleChange}
-                            type="password"
-                            InputProps={{
-                              style: {
-                                fontSize: "0.8rem",
-                                color: "var(--text-color)",
-                              },
-                            }}
-                            InputLabelProps={{
-                              style: {
-                                fontSize: "0.8rem",
-                                color: "var(--text-color)",
-                              },
-                            }}
-                            sx={{ fontSize: "0.8rem" }}
-                          />
-                        </Grid>
-                        <Grid
-                          item
-                          xs={12}
-                          md={3}
-                          sx={{ margin: "1rem 0 2rem" }}
-                        >
-                          <Button
-                            variant="contained"
-                            sx={{
+                      <Grid item xs={12} md={3} sx={{ margin: "1rem 0 2rem" }}>
+                        <TextField
+                          fullWidth
+                          size="small"
+                          label="Username*"
+                          variant="outlined"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          InputProps={{
+                            style: {
+                              fontSize: "0.8rem",
                               color: "var(--text-color)",
-                              backgroundColor: "var(--hover)",
-                              fontSize: "0.7rem",
-                              padding: "0.4rem 1.5rem",
-                              transition: "transform 0.2s ease",
-                              "&:hover": {
-                                backgroundColor: "var(--primary-color)",
-                                transform: "translateY(5px)",
-                              },
-                            }}
-                            // onClick={handleSubmit}
-                          >
-                            Verify Access
-                          </Button>
-                        </Grid>
+                            },
+                          }}
+                          InputLabelProps={{
+                            style: {
+                              fontSize: "0.8rem",
+                              color: "var(--text-color)",
+                            },
+                          }}
+                          sx={{ fontSize: "0.8rem" }}
+                        />
                       </Grid>
-                    )}
-                    <Grid item xs={12} md={12}>
-                      <ReportRadioBtn
-                        options={Frequency}
-                        label="Frequency*"
-                        name="frequency"
-                        selectedValue={formData.frequency}
-                        handleChange={handleChange}
-                      />
+                      <Grid item xs={12} md={3} sx={{ margin: "1rem 0 2rem" }}>
+                        <TextField
+                          fullWidth
+                          size="small"
+                          label="Password*"
+                          variant="outlined"
+                          name="pass"
+                          value={formData.pass}
+                          onChange={handleChange}
+                          type="password"
+                          InputProps={{
+                            style: {
+                              fontSize: "0.8rem",
+                              color: "var(--text-color)",
+                            },
+                          }}
+                          InputLabelProps={{
+                            style: {
+                              fontSize: "0.8rem",
+                              color: "var(--text-color)",
+                            },
+                          }}
+                          sx={{ fontSize: "0.8rem" }}
+                        />
+                      </Grid>
+                      <Grid item xs={12} md={3} sx={{ margin: "1rem 0 2rem" }}>
+                        <Button
+                          variant="contained"
+                          sx={{
+                            color: "var(--text-color)",
+                            backgroundColor: "var(--hover)",
+                            fontSize: "0.7rem",
+                            padding: "0.4rem 1.5rem",
+                            transition: "transform 0.2s ease",
+                            "&:hover": {
+                              backgroundColor: "var(--primary-color)",
+                              transform: "translateY(5px)",
+                            },
+                          }}
+                          // onClick={handleSubmit}
+                        >
+                          Verify Access
+                        </Button>
+                      </Grid>
                     </Grid>
+                  )}
+                  <Grid item xs={12} md={12}>
+                    <ReportRadioBtn
+                      options={Frequency}
+                      label="Frequency*"
+                      name="frequency"
+                      selectedValue={formData.frequency}
+                      handleChange={handleChange}
+                    />
+                  </Grid>
 
-                    <Grid container spacing={2} sx={{ margin: ".2rem 0" }}>
-                      <Grid item xs={12} md={4}>
-                        <TextField
-                          fullWidth
-                          label="Start Date"
-                          type="date"
-                          name="fromDate"
-                          value={formData.fromDate}
-                          onChange={handleChange}
-                          InputProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          InputLabelProps={{
-                            shrink: true,
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          sx={{
-                            // flex: 1,
-                            fontSize: "0.8rem",
-                            "& .MuiOutlinedInput-root": {
-                              "& fieldset": {
-                                borderColor: "var(--grey)",
-                              },
-                              "&:hover fieldset": {
-                                borderColor: "var(--primary-color)",
-                              },
-                            },
-                            "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                              borderColor: "var(--primary-color)",
-                            },
-                          }}
-                        />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField
-                          fullWidth
-                          label="End Date"
-                          type="date"
-                          name="fromDate"
-                          value={formData.fromDate}
-                          onChange={handleChange}
-                          InputProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          InputLabelProps={{
-                            shrink: true,
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          sx={{
-                            fontSize: "0.8rem",
-                            "& .MuiOutlinedInput-root": {
-                              "& fieldset": {
-                                borderColor: "var(--grey)",
-                              },
-                              "&:hover fieldset": {
-                                borderColor: "var(--primary-color)",
-                              },
-                            },
-                            "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                              borderColor: "var(--primary-color)",
-                            },
-                          }}
-                        />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField
-                          fullWidth
-                          label="Time"
-                          type="time"
-                          name="fromDate"
-                          value={formData.fromDate}
-                          onChange={handleChange}
-                          InputProps={{
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          InputLabelProps={{
-                            shrink: true,
-                            style: {
-                              fontSize: "0.8rem",
-                              color: "var(--text-color)",
-                            },
-                          }}
-                          sx={{
-                            fontSize: "0.8rem",
-                            "& .MuiOutlinedInput-root": {
-                              "& fieldset": {
-                                borderColor: "var(--grey)",
-                              },
-                              "&:hover fieldset": {
-                                borderColor: "var(--primary-color)",
-                              },
-                            },
-                            "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                              borderColor: "var(--primary-color)",
-                            },
-                          }}
-                        />
-                      </Grid>
-                    </Grid>
-                  </Box>
-                </Box>
-              )}
-              {formData.reportType === "R3" && (
-                <Box
-                  sx={{
-                    margin: "2rem 1rem ",
-                    padding: "1rem 2rem 0",
-                    border: "1px solid var(--hover)",
-                    color: "var(--text-color)",
-                    borderRadius: "10px",
-                    backgroundColor: "var(--color)",
-                  }}
-                >
-                  <Box sx={{ marginBottom: "2rem" }}>
-                    <Typography
-                      variant="h6"
-                      component="h4"
-                      gutterBottom
-                      sx={{
-                        color: "var(--text-head)",
-                        fontSize: "0.8rem",
-                        paddingBottom: "1rem",
-                      }}
-                    >
-                      Template Configuration
-                    </Typography>
-                    <Grid item xs={12} md={4} sx={{ margin: "1rem 0 2rem" }}>
+                  <Grid container spacing={2} sx={{ margin: ".2rem 0" }}>
+                    <Grid item xs={12} md={4}>
                       <TextField
                         fullWidth
-                        size="small"
-                        label="Username*"
-                        variant="outlined"
-                        name="name"
-                        value={formData.name}
+                        label="Start Date"
+                        type="date"
+                        name="fromDate"
+                        value={formData.fromDate}
                         onChange={handleChange}
                         InputProps={{
                           style: {
@@ -604,31 +423,170 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                           },
                         }}
                         InputLabelProps={{
+                          shrink: true,
                           style: {
                             fontSize: "0.8rem",
                             color: "var(--text-color)",
                           },
                         }}
-                        sx={{ fontSize: "0.8rem" }}
+                        sx={{
+                          // flex: 1,
+                          fontSize: "0.8rem",
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              borderColor: "var(--grey)",
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "var(--primary-color)",
+                            },
+                          },
+                          "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "var(--primary-color)",
+                          },
+                        }}
                       />
                     </Grid>
-                  </Box>
+                    <Grid item xs={12} md={4}>
+                      <TextField
+                        fullWidth
+                        label="End Date"
+                        type="date"
+                        name="fromDate"
+                        value={formData.fromDate}
+                        onChange={handleChange}
+                        InputProps={{
+                          style: {
+                            fontSize: "0.8rem",
+                            color: "var(--text-color)",
+                          },
+                        }}
+                        InputLabelProps={{
+                          shrink: true,
+                          style: {
+                            fontSize: "0.8rem",
+                            color: "var(--text-color)",
+                          },
+                        }}
+                        sx={{
+                          fontSize: "0.8rem",
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              borderColor: "var(--grey)",
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "var(--primary-color)",
+                            },
+                          },
+                          "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "var(--primary-color)",
+                          },
+                        }}
+                      />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                      <TextField
+                        fullWidth
+                        label="Time"
+                        type="time"
+                        name="fromDate"
+                        value={formData.fromDate}
+                        onChange={handleChange}
+                        InputProps={{
+                          style: {
+                            fontSize: "0.8rem",
+                            color: "var(--text-color)",
+                          },
+                        }}
+                        InputLabelProps={{
+                          shrink: true,
+                          style: {
+                            fontSize: "0.8rem",
+                            color: "var(--text-color)",
+                          },
+                        }}
+                        sx={{
+                          fontSize: "0.8rem",
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              borderColor: "var(--grey)",
+                            },
+                            "&:hover fieldset": {
+                              borderColor: "var(--primary-color)",
+                            },
+                          },
+                          "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                            borderColor: "var(--primary-color)",
+                          },
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
                 </Box>
-              )}
-            </Box>
+              </Box>
+            )}
+            {formData.reportType === "R3" && (
+              <Box
+                sx={{
+                  margin: "2rem 1rem ",
+                  padding: "1rem 2rem 0",
+                  border: "1px solid var(--hover)",
+                  color: "var(--text-color)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
+                }}
+              >
+                <Box sx={{ marginBottom: "2rem" }}>
+                  <Typography
+                    variant="h6"
+                    component="h4"
+                    gutterBottom
+                    sx={{
+                      color: "var(--text-head)",
+                      fontSize: "0.8rem",
+                      paddingBottom: "1rem",
+                    }}
+                  >
+                    Template Configuration
+                  </Typography>
+                  <Grid item xs={12} md={4} sx={{ margin: "1rem 0 2rem" }}>
+                    <TextField
+                      fullWidth
+                      size="small"
+                      label="Username*"
+                      variant="outlined"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      InputProps={{
+                        style: {
+                          fontSize: "0.8rem",
+                          color: "var(--text-color)",
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: {
+                          fontSize: "0.8rem",
+                          color: "var(--text-color)",
+                        },
+                      }}
+                      sx={{ fontSize: "0.8rem" }}
+                    />
+                  </Grid>
+                </Box>
+              </Box>
+            )}
 
             {/*================================= Usage and period Box *=============================================*/}
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem 1rem",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -670,12 +628,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem 1rem",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 {formData.reportType === "R1" && (
@@ -687,7 +645,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                       sx={{
                         color: "var(--text-head)",
                         fontSize: "0.8rem",
-                        paddingBottom: "1rem",
+                        // paddingBottom: "1rem",
                       }}
                     >
                       Period
@@ -698,8 +656,9 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                       selectedValue={formData.period}
                       handleChange={handleChange}
                     />
-                    {formData.period === "P10" && (
-                      <Box sx={{ marginTop: "1rem" }}>
+                    {(formData.period === "P1" ||
+                      formData.period === "P10") && (
+                      <Box sx={{ marginTop: "2rem" }}>
                         <Typography
                           variant="h6"
                           component="h4"
@@ -719,7 +678,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             name="fromDate"
                             value={formData.fromDate}
                             onChange={handleChange}
-                            disabled={formData.period !== "P10"}
+                            disabled={formData.period === "P1"}
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
@@ -756,7 +715,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             name="toDate"
                             value={formData.toDate}
                             onChange={handleChange}
-                            disabled={formData.period !== "P10"}
+                            disabled={formData.period === "P1"}
                             InputProps={{
                               style: {
                                 fontSize: "0.8rem",
@@ -824,13 +783,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                 <Box
                   sx={{
                     flex: 1,
-                    margin: "2rem 0 0",
-                    // width: "50%",
-                    padding: "3rem",
-                    backgroundColor: "var(--color)",
+                    margin: "2rem 0rem 1rem",
+                    padding: "1rem 2rem",
+                    border: "1px solid var(--hover)",
                     color: "var(--text-color)",
-                    borderRadius: " 1rem  ",
-                    boxShadow: "var(--box-shadow)",
+                    borderRadius: "10px",
+                    backgroundColor: "var(--color)",
                   }}
                 >
                   <Box sx={{ marginBottom: "2rem" }}>
@@ -847,7 +805,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                       Subgroup
                     </Typography>
 
-                    <Grid item xs={12} md={12}>
+                    <Grid item xs={12} md={4}>
                       <ReportRadioBtn
                         label="By*"
                         name="subgroup"
@@ -856,7 +814,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         options={getSubgroupOptions()}
                       />
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ marginTop: "1.5rem" }}>
+                    <Grid item xs={12} md={4} sx={{ marginTop: "1.5rem" }}>
                       <TextField
                         fullWidth
                         size="small"
@@ -904,13 +862,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                 <Box
                   sx={{
                     flex: 1,
-                    margin: "2rem 0 0",
-                    // width: "50%",
-                    padding: "3rem",
-                    backgroundColor: "var(--color)",
+                    margin: "2rem 0rem ",
+                    padding: "1rem 2rem",
+                    border: "1px solid var(--hover)",
                     color: "var(--text-color)",
-                    borderRadius: " 1rem  ",
-                    boxShadow: "var(--box-shadow)",
+                    borderRadius: "10px",
+                    backgroundColor: "var(--color)",
                   }}
                 >
                   <Box sx={{ marginBottom: "2rem" }}>
@@ -927,7 +884,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                       Detailed*
                     </Typography>
 
-                    <Grid item xs={12} md={12}>
+                    <Grid item xs={12} md={4}>
                       <ReportRadioBtn
                         label="By*"
                         name="detailed"
@@ -936,7 +893,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         options={DetailedOptions}
                       />
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ marginTop: "1.5rem" }}>
+                    <Grid item xs={12} md={4} sx={{ marginTop: "1.5rem" }}>
                       <TextField
                         fullWidth
                         size="small"
@@ -984,13 +941,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1006,8 +962,8 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   >
                     Job Type
                   </Typography>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
+                  <Grid container spacing={2} >
+                    <Grid item xs={12} md={3}>
                       <FormControlLabel
                         control={
                           <Checkbox
@@ -1037,7 +993,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         }}
                       />
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={3}>
                       <FormControlLabel
                         control={
                           <Checkbox
@@ -1067,7 +1023,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         }}
                       />
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={3}>
                       <FormControlLabel
                         control={
                           <Checkbox
@@ -1097,7 +1053,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                         }}
                       />
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={3}>
                       <FormControlLabel
                         control={
                           <Checkbox
@@ -1136,13 +1092,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1225,13 +1180,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1314,13 +1268,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1401,76 +1354,17 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                 </Box>
               </Box>
             </Box>
-            {/* Price Options and Limit  */}
+            {/* Price Options   */}
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
               <Box
                 sx={{
-                  flex: { xs: "0 0 100%", xl: "0 0 30%" },
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  flex: 1,
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
-                }}
-              >
-                <Box sx={{ marginBottom: "2rem" }}>
-                  <Typography
-                    variant="h6"
-                    component="h4"
-                    gutterBottom
-                    sx={{
-                      color: "var(--text-head)",
-                      fontSize: "0.8rem",
-                      paddingBottom: "1rem",
-                    }}
-                  >
-                    Price Options
-                  </Typography>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={12}>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            checked={formData.includeprice}
-                            onChange={handleChange}
-                            name="includeprice"
-                            sx={{
-                              color: "var(--text-color)",
-                              "&.Mui-checked": {
-                                color: "var(--btn-bg)",
-                              },
-                            }}
-                          />
-                        }
-                        label="Include Price"
-                        labelPlacement="end"
-                        sx={{
-                          color: "var(--text-color)",
-                          display: "flex",
-                          alignItems: "center",
-                          "& .MuiFormControlLabel-label": {
-                            padding: "0",
-                          },
-                          "& .MuiTypography-root": {
-                            fontSize: "0.8rem",
-                          },
-                        }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Box>
-              </Box>
-              <Box
-                sx={{
-                  flex: { xs: "0 0 100%", xxl: "0 0 68%", lg: "0 0 66%" },
-                  margin: "2rem 0 0",
-                  padding: "3rem",
+                  borderRadius: "10px",
                   backgroundColor: "var(--color)",
-                  color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1487,7 +1381,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     Limit
                   </Typography>
 
-                  <Grid item xs={12} md={12}>
+                  <Grid item xs={12} md={3}>
                     <ReportRadioBtn
                       options={Limit}
                       selectedValue={formData.limit}
@@ -1499,19 +1393,73 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                 </Box>
               </Box>
             </Box>
-
-            {/* Order and Export Box */}
+            {/* Order and Export Box and Limit */}
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
+                }}
+              >
+                <Box sx={{ marginBottom: "2rem" }}>
+                  <Typography
+                    variant="h6"
+                    component="h4"
+                    gutterBottom
+                    sx={{
+                      color: "var(--text-head)",
+                      fontSize: "0.8rem",
+                      paddingBottom: "1rem",
+                    }}
+                  >
+                    Price Options
+                  </Typography>
+                  <Grid item xs={12} md={3}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          checked={formData.includeprice}
+                          onChange={handleChange}
+                          name="includeprice"
+                          sx={{
+                            color: "var(--text-color)",
+                            "&.Mui-checked": {
+                              color: "var(--btn-bg)",
+                            },
+                          }}
+                        />
+                      }
+                      label="Include Price"
+                      labelPlacement="end"
+                      sx={{
+                        color: "var(--text-color)",
+                        display: "flex",
+                        alignItems: "center",
+                        "& .MuiFormControlLabel-label": {
+                          padding: "0",
+                        },
+                        "& .MuiTypography-root": {
+                          fontSize: "0.8rem",
+                        },
+                      }}
+                    />
+                  </Grid>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  flex: 1,
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
+                  color: "var(--text-color)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1528,7 +1476,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     Order
                   </Typography>
 
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={12} md={3}>
                     <FormControl fullWidth variant="outlined">
                       <InputLabel
                         style={{
@@ -1584,17 +1532,15 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   </Grid>
                 </Box>
               </Box>
-
               <Box
                 sx={{
                   flex: 1,
-                  margin: "2rem 0 0",
-                  // width: "50%",
-                  padding: "3rem",
-                  backgroundColor: "var(--color)",
+                  margin: "2rem 0rem ",
+                  padding: "1rem 2rem",
+                  border: "1px solid var(--hover)",
                   color: "var(--text-color)",
-                  borderRadius: " 1rem  ",
-                  boxShadow: "var(--box-shadow)",
+                  borderRadius: "10px",
+                  backgroundColor: "var(--color)",
                 }}
               >
                 <Box sx={{ marginBottom: "2rem" }}>
@@ -1611,7 +1557,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                     Export
                   </Typography>
 
-                  <Grid item xs={12} md={12}>
+                  <Grid item xs={12} md={3}>
                     <ReportRadioBtn
                       options={Export}
                       label="As"
@@ -1624,6 +1570,15 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
               </Box>
             </Box>
           </Box>
+          <Divider
+            orientation="horizontal"
+            flexItem
+            sx={{
+              margin: " 0.5rem",
+              backgroundColor: "var(--text-head)",
+              opacity: "0.3",
+            }}
+          />
           <div>
             <ActionButtonWithModal
               isEditMode={isEditMode}

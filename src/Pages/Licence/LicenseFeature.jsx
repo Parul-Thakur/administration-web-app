@@ -1,13 +1,8 @@
-import React from "react";
-
-import {
-  Box,
-  Divider,
-  FormControlLabel,
-  Grid,
-  Typography,
-} from "@mui/material";
+import React, { useState } from "react";
+import { Box, Divider, FormControlLabel, Grid, Typography } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+
+// List of features
 const sendMail = [
   "API",
   "Advanced Reports",
@@ -22,14 +17,31 @@ const sendMail = [
   "Web Interface",
   "iOS App",
 ];
+
+// Features enabled/disabled state (true = enabled, false = disabled)
+const initialStatus = {
+ " API": true,
+  "Advanced Reports": false,
+  "Android App": true,
+  "Custom Print": false,
+  "Email Print": true,
+  "Multi-server": true,
+  "Pay to Print": false,
+  "Remote Print": true,
+  "Reprint": true,
+  "Statistics": false,
+  "Web Interface": true,
+  "iOS App": true,
+};
+
 export default function LicenseFeature() {
+  const [featureStatus] = useState(initialStatus); // State to manage feature status
+
   return (
     <>
       <Box
         sx={{
           backgroundColor: "var(--color)",
-          // padding: "1rem",
-          // margin: "2rem 0 0",
           color: "var(--text-color)",
         }}
       >
@@ -49,7 +61,6 @@ export default function LicenseFeature() {
       <Box
         sx={{
           padding: "1rem",
-          // backgroundColor: "red",
           backgroundColor: "var(--color)",
           color: "var(--text-color)",
         }}
@@ -57,7 +68,7 @@ export default function LicenseFeature() {
         <Grid item xs={12}>
           <Grid container spacing={1}>
             {sendMail.map((type) => (
-              <Grid item xs={6} key={type} sx={{ padding: "1rem " }}>
+              <Grid item xs={6} key={type} sx={{ padding: "1rem" }}>
                 <FormControlLabel
                   control={
                     <span
@@ -68,24 +79,22 @@ export default function LicenseFeature() {
                         width: "2rem",
                         height: "2rem",
                         borderRadius: "50%",
-                        backgroundColor: "var(--btn-bg)",
-                        color: "var(--color)",
+                        backgroundColor: featureStatus[type] ? "green" : "red", // Green for enabled, red for disabled
+                        color: "white",
                       }}
                     >
                       <CheckCircleIcon
                         style={{
                           fontSize: "1.5rem",
-                          backgroundColor: "var(--btn-bg)",
                         }}
                       />
-                      {/* Checkmark icon */}
                     </span>
                   }
                   label={type}
                   labelPlacement="end"
                   sx={{
-                    // backgroundColor: "var(--hover)",
-                    border: "1px solid var(--btn-bg)",
+                    border: "1px solid",
+                    borderColor: featureStatus[type] ? "green" : "red", // Border color based on status
                     borderRadius: "2rem",
                     padding: ".5rem 1rem",
                     display: "flex",

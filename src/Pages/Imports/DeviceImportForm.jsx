@@ -12,6 +12,7 @@ import {
   FormControlLabel,
   Typography,
   Box,
+  Divider,
 } from "@mui/material";
 import ReportRadioBtn from "../Reports/ReportRadiobtn";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
@@ -279,6 +280,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
         </Box>
         <Box
           sx={{
+            marginBottom: "2rem",
             padding: "3rem",
             backgroundColor: "var(--color)",
             color: "var(--text-color)",
@@ -999,7 +1001,15 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
             </>
           )}
         </Box>
-
+        <Divider
+        orientation="horizontal"
+        flexItem
+        sx={{
+          margin: " 0.5rem",
+          backgroundColor: "var(--text-head)",
+          opacity: "0.3",
+        }}
+      />
         {/* Form Actions */}
         <div>
           <ActionButtonWithModal

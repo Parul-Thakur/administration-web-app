@@ -153,7 +153,8 @@ export default function EditServer() {
             </Typography> */}
           <Box
             sx={{
-              padding: "3rem 2rem",
+              marginBottom: "2rem",
+              padding: "3rem ",
               backgroundColor: "var(--color)",
               color: "var(--text-color)",
               borderRadius: "1rem  ",
@@ -165,7 +166,7 @@ export default function EditServer() {
               sx={{
                 fontSize: "0.8rem",
                 color: "var(--text-color)",
-                marginBottom: "2rem", // Adjust margin for proper spacing
+                padding: "0rem 0rem 2rem ",
               }}
             >
               Identification
@@ -440,6 +441,15 @@ export default function EditServer() {
               </Grid>
             </form>
           </Box>
+          <Divider
+            orientation="horizontal"
+            flexItem
+            sx={{
+              margin: " 0.5rem",
+              backgroundColor: "var(--text-head)",
+              opacity: "0.3",
+            }}
+          />
           <div>
             <ActionButtonWithModal
               isEditMode={isEditMode}

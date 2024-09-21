@@ -9,11 +9,13 @@ import {
   InputLabel,
   OutlinedInput,
   InputAdornment,
+  Divider,
 } from "@mui/material";
 // import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 // import SaveModal from "../../Components/SaveModal";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
+import EuroSymbolIcon from '@mui/icons-material/EuroSymbol';
 
 export default function PriceSchemeForm({
   isEditMode,
@@ -77,59 +79,72 @@ export default function PriceSchemeForm({
   const renderMoneyFields = (labels) => {
     return (
       <Grid container spacing={2}>
-        {labels.map((rowLabels, rowIndex) => (
-          <Grid container item spacing={2} key={rowIndex}>
-            {rowLabels.map((label, colIndex) => (
-              <Grid item xs={6} key={colIndex}>
-                <FormControl
-                  fullWidth
-                  sx={{
-                    m: 1,
-                    border: "1px solid var(--grey)",
-                    borderRadius: "4px",
-                  }}
-                >
-                  <InputLabel
-                    htmlFor={`outlined-adornment-amount-${rowIndex}-${colIndex}`}
-                    sx={{
-                      fontSize: "0.8rem",
-                      color: "var(--text-color)",
-                    }}
-                  >
-                    {label}
-                  </InputLabel>
-                  <OutlinedInput
-                    id={`outlined-adornment-amount-${rowIndex}-${colIndex}`}
-                    startAdornment={
-                      <InputAdornment position="start">$</InputAdornment>
-                    }
-                    label={label}
-                    placeholder="0.00"
-                    sx={{
-                      fontSize: "0.8rem",
-                      "& .MuiOutlinedInput-input": {
-                        fontSize: "0.8rem",
-                        color: "var(--text-color)",
-                      },
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "var(--grey)",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
-                        },
-                      },
-                      "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
-                      },
-                    }}
-                  />
-                </FormControl>
-              </Grid>
-            ))}
-          </Grid>
-        ))}
-      </Grid>
+      {labels.map((rowLabels, rowIndex) => (
+        <Grid container item spacing={2} key={rowIndex}>
+          {rowLabels.map((label, colIndex) => (
+            <Grid item xs={6} key={colIndex}>
+              <TextField
+                fullWidth
+                size="small"
+                label={label}
+                variant="outlined"
+                name={`outlined-adornment-amount-${rowIndex}-${colIndex}`}
+                placeholder="Enter amount"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <EuroSymbolIcon
+                        sx={{
+                          color: "var(--text-color)",
+                          fontSize: "0.8rem",
+                        }}
+                      />
+                    </InputAdornment>
+                  ),
+                  style: {
+                    fontSize: "0.8rem",
+                    color: "var(--text-color)",
+                  },
+                  inputProps: {
+                    placeholder: "0.00",
+                    style: {
+                      MozAppearance: "textfield",
+                    },
+                  },
+                }}
+                InputLabelProps={{
+                  style: {
+                    fontSize: "0.8rem",
+                    color: "var(--text-color)",
+                  },
+                }}
+                sx={{
+                  fontSize: "0.8rem",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "var(--grey)",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "var(--primary-color)",
+                    },
+                  },
+                  "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "var(--primary-color)",
+                  },
+                  "& input[type=number]": {
+                    "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
+                      WebkitAppearance: "none",
+                      margin: 0,
+                    },
+                  },
+                }}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      ))}
+    </Grid>
+    
     );
   };
   return (
@@ -156,6 +171,7 @@ export default function PriceSchemeForm({
       <form>
         <Box
           sx={{
+            marginBottom: "2rem",
             padding: "3rem",
             backgroundColor: "var(--color)",
             color: "var(--text-color)",
@@ -310,6 +326,15 @@ export default function PriceSchemeForm({
             </Grid>
           </Grid>
         </Box>
+        <Divider
+          orientation="horizontal"
+          flexItem
+          sx={{
+            margin: " 0.5rem",
+            backgroundColor: "var(--text-head)",
+            opacity: "0.3",
+          }}
+        />
         <div>
           <ActionButtonWithModal
             isEditMode={isEditMode}
@@ -317,7 +342,7 @@ export default function PriceSchemeForm({
             handleSubmit={handleSubmit}
             handleClose={handleClose}
             updateText="Update"
-            addText="Add "
+            addText="Add Configuration"
             // icon={PersonAddAlt1Icon}
           />
         </div>

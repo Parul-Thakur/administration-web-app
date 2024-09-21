@@ -115,9 +115,10 @@ export const data1 = [
     pages: 15,
     time: '3 min ago',
   },
+
 ];
 
-// export const columns1 = [
+
 //   {
 //     Header: 'Job Type',
 //     accessor: 'type',
@@ -192,6 +193,12 @@ export const data2 = [
     name: 'Edward Norton',
     filename: 'diagram.svg',
     time: '3 min ago',
+  },
+  {
+    id: 6,
+    name: 'Emily White',
+    filename: 'add.svg',
+    time: '1 min ago',
   },
 ];
 

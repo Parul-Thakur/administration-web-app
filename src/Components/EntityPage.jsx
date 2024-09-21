@@ -168,6 +168,7 @@ function EntityPage({
                   padding: "0.5rem 1.5rem",
                   transition: "transform 0.2s ease",
                   "&:hover": {
+                    backgroundColor: "var(--btn-bg)",
                     transform: "translateY(-2px)",
                   },
                 }}

@@ -3,7 +3,9 @@ import UserForm from "../UserForm";
 import UserData from "../Users/UserData";
 import { useParams } from "react-router-dom";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
-import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { IconButton, Typography, Box } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { motion } from "framer-motion";
 
 const EditUser = () => {
@@ -35,6 +37,11 @@ const EditUser = () => {
       transition: { duration: 1, ease: "easeOut" },
     },
   };
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); // Navigate back to the previous page
+  };
   return (
     <>
       <Typography
@@ -59,6 +66,9 @@ const EditUser = () => {
         initial="hidden"
         animate="visible"
       >
+        <IconButton onClick={handleBack}>
+          <ArrowBackIcon sx={{ color: "var(--text-color)", margin:0 }} />
+        </IconButton>
         {userData ? (
           <UserForm
             isEditMode={true}

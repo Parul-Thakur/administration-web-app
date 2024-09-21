@@ -19,13 +19,12 @@ import { useNavigate } from "react-router-dom";
 const SaveModal = ({
   isOpen,
   onClose,
-  buttonText = "OKAY", // Default value for buttonText
+  buttonText = "OKAY",
   modalTitle,
   modalContent,
   pageType,
   isNoNav,
   isError,
-  onConfirm, 
 }) => {
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [loading, setLoading] = useState(false); 
@@ -33,33 +32,25 @@ const SaveModal = ({
   const navigate = useNavigate();
 
   const handleConfirm = () => {
+    // Close the modal first
+    onClose();
+
     setLoading(true); 
 
-    // Perform action, like deleting the row
-    onConfirm();
-
+    // Simulate a network request or processing
     setTimeout(() => {
       setLoading(false); 
-      onClose(); // Close after loader is finished
 
-      // Notification message
+      // Set the notification message
       const getMessage = () => {
         if (isError) return "Please complete all required fields.";
-        switch (pageType) {
-          case "edit":
-            return "Updated Successfully.";
-          case "add":
-            return "Added Successfully.";
-          case "delete":
-            return "Deleted Successfully.";
-          default:
-            return "Action Completed Successfully.";
-        }
+        return "Added Successfully."; // Change this as needed based on your context
       };
 
       setNotificationMessage(getMessage());
       setNotificationOpen(true);
 
+      // Navigate if no error
       if (!isNoNav && !isError) {
         setTimeout(() => navigate(-1), 1000); 
       }
@@ -153,7 +144,7 @@ const SaveModal = ({
               }}
               onClick={handleConfirm}
             >
-              {buttonText} {/* Dynamic buttonText */}
+              {buttonText}
             </Button>
             <Button
               variant="outlined"

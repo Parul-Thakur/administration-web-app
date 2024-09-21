@@ -8,10 +8,12 @@ import {
   Button,
   Typography,
   Box,
+  Divider,
 } from "@mui/material";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import SaveModal from "../../Components/SaveModal";
+import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
 
 export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
   const [formData, setFormData] = useState({
@@ -107,6 +109,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
       </Typography> */}
       <Box
         sx={{
+          
           padding: "3rem",
           backgroundColor: "var(--color)",
           color: "var(--text-color)",
@@ -289,7 +292,7 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
           color: "var(--text-color)",
           borderRadius: "1rem ",
           boxShadow: "var(--box-shadow)",
-          margin: "2rem 0 0",
+          margin: "2rem 0 ",
         }}
       >
         <Grid container spacing={5}>
@@ -456,56 +459,27 @@ export default function EmailTempForm({ isEditMode, existingData, onSubmit }) {
           </Grid>
         </Box>
       </Box>
-
-      {/* Form Actions */}
-      <Box
+      <Divider
+        orientation="horizontal"
+        flexItem
         sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: " 3rem 0 1rem",
+          margin: " 0.5rem",
+          backgroundColor: "var(--text-head)",
+          opacity: "0.3",
         }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "0 2rem",
-          }}
-        >
-          <Button
-            // variant="contained"
-            sx={{
-              fontSize: "0.8rem",
-              color: "var(--text-color)",
-              padding: "0.5rem 1.5rem",
-              transition: "transform 0.2s ease",
-              borderRadius: "1rem",
-              "&:hover": {
-                backgroundColor: "var(--grey)", // Hover effect
-              },
-            }}
-            onClick={handleSubmit}
-          >
-            {isEditMode ? "Update" : "Save"}
-          </Button>
-
-          <SaveModal
-            isOpen={isModalOpen}
-            onClose={handleClose}
-            modalTitle={isEditMode ? "Confirm Update" : "Confirm Addition"}
-            modalContent={
-              isEditMode
-                ? "Are you sure you want to update this item? Please ensure the changes are correct before proceeding."
-                : "Are you sure you want to add this item? Please review the details before confirming."
-            }
-            pageType={isEditMode ? "edit" : "add"}
-            isNoNav={false}
-            isError={false}
+      />
+      {/* Form Actions */}
+      <div>
+          <ActionButtonWithModal
+            isEditMode={isEditMode}
+            isModalOpen={isModalOpen}
+            handleSubmit={handleSubmit}
+            handleClose={handleClose}
+            updateText="Update"
+            addText="Add Configuration"
+            // icon={PersonAddAlt1Icon}
           />
-        </Box>
-      </Box>
+        </div>
     </Container>
   );
 }

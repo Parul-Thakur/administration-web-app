@@ -41,7 +41,7 @@ ChartJS.register(
 );
 
 export default function Statistics() {
-  const [selectedChart, setSelectedChart] = useState("bar");
+  const [selectedChart, setSelectedChart] = useState("pie");
   const [selectedYear, setSelectedYear] = useState("2023");
   const [selectedDataScenario, setSelectedDataScenario] = useState("scenario1");
 
@@ -414,8 +414,9 @@ export default function Statistics() {
                     },
                   }}
                 >
-                  <MenuItem value="bar">Bar Chart</MenuItem>
+                  {" "}
                   <MenuItem value="pie">Pie Chart</MenuItem>
+                  <MenuItem value="bar">Bar Chart</MenuItem>
                   <MenuItem value="line">Line Chart</MenuItem>
                   <MenuItem value="radar">Radar Chart</MenuItem>
                   <MenuItem value="doughnut">Doughnut Chart</MenuItem>

@@ -22,7 +22,8 @@ function CustomDropdown({
           "& .MuiPaper-root": {
             backgroundColor: "var(--background-color)", // Custom background color
             margin: 0, // Remove margins (if any)
-            padding: 0, // Remove padding
+           paddingTop: 0,
+
           },
         }}
       >

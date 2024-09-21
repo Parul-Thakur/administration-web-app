@@ -120,7 +120,7 @@ const CaletaSelect = () => {
             >
               Caleta Web
               <ListItemIcon sx={{ minWidth: "auto" }}>
-                <LockIcon fontSize="small" />
+                <LockIcon fontSize="small" sx={{ color: "var(--text-color)" }} />
               </ListItemIcon>
             </Box>
           </MenuItem>

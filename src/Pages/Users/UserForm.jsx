@@ -15,6 +15,7 @@ import {
   Typography,
   Box,
   InputAdornment,
+  Divider,
 } from "@mui/material";
 import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
@@ -780,20 +781,22 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
               color: "var(--text-color)",
             }}
           >
-              <Typography
+            <Typography
               variant="h8"
               component="h4"
               gutterBottom
               style={{
                 fontWeight: 500,
                 fontSize: ".875rem",
-              }}>
+              }}
+            >
               Settings
             </Typography>
           </Box>
 
           <Box
             sx={{
+              marginBottom: "2rem",
               padding: "3rem",
               backgroundColor: "var(--color)",
               color: "var(--text-color)",
@@ -936,7 +939,15 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
               </FormControl>
             </Grid>
           </Box>
-
+          <Divider
+            orientation="horizontal"
+            flexItem
+            sx={{
+              margin: " 0.5rem",
+              backgroundColor: "var(--text-head)",
+              opacity: "0.3",
+            }}
+          />
           {/* Form Actions */}
           <div>
             <ActionButtonWithModal

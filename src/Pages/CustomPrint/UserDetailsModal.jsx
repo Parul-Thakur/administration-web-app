@@ -5,12 +5,27 @@ import CloseIcon from "@mui/icons-material/Close";
 import CustomTable from "../../Components/CustomTable/CustomTable";
 
 const UserDetailsModal = ({ open, onClose, data, columns }) => {
-  console.log(Array.isArray(data), data);
   if (!open) return null;
+
   return (
-    <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
-      <DialogTitle>
-      List of all delegated users
+    <Dialog
+      open={open}
+      onClose={onClose}
+      fullWidth
+      maxWidth="md"
+      sx={{
+        "& .MuiDialog-paper": {
+          backgroundColor: "var(--background-color)", 
+        },
+      }}
+    >
+      <DialogTitle
+        sx={{
+          backgroundColor: "var(--background-color)", 
+          color: "var(--text-color)", 
+        }}
+      >
+        List of all delegated users
         <IconButton
           edge="end"
           color="inherit"
@@ -21,7 +36,12 @@ const UserDetailsModal = ({ open, onClose, data, columns }) => {
           <CloseIcon />
         </IconButton>
       </DialogTitle>
-      <DialogContent dividers>
+      <DialogContent
+        dividers
+        sx={{
+          backgroundColor: "var(--background-color)", 
+        }}
+      >
         <CustomTable
           columns={columns}
           data={data}

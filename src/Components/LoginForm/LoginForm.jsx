@@ -266,11 +266,11 @@ const LoginForm = () => {
           sx={{
             position: "fixed",
             top: 0,
-            left: 0, 
-            width: "35vw", 
-            height: "50vw", 
+            left: 0,
+            width: "35vw",
+            height: "100vh",
             bgcolor: "rgba(135, 206, 250, 0.08)",
-            borderTopRightRadius: "50%", 
+            borderTopRightRadius: "50%",
             borderBottomRightRadius: "50%",
             zIndex: 0,
             boxShadow: "var(--box-shadow)",
@@ -305,20 +305,18 @@ const LoginForm = () => {
             },
           }}
         />
-   {/* triangle */}
-   <Box
+        {/* triangle */}
+        <Box
           sx={{
             overflow: "hidden",
             position: "fixed",
             top: "40vh",
             left: "30vw",
             zIndex: 1,
-            transform: "rotate(-25deg)",
-            width: 0,
-            height: 0,
-            borderLeft: "2vw solid transparent",
-            borderRight: "2vw solid transparent",
-            borderBottom: "8vh solid #4682A9",
+            transform: "rotate(0deg)", // Initial rotation
+            width: "5vw", // Set width and height to make it a square
+            height: "5vw", // Same as width to make it square
+            backgroundColor: "#4682A9", // Color of the square
             animation: "rotateAnimation 10s infinite ease-in-out",
             "@keyframes rotateAnimation": {
               "0%": {
@@ -333,6 +331,7 @@ const LoginForm = () => {
             },
           }}
         />
+
         <style>
           <style>
             {`
@@ -427,8 +426,6 @@ const LoginForm = () => {
             },
           }}
         />
-
-     
 
         <Grid
           container
@@ -535,8 +532,19 @@ const LoginForm = () => {
                   }}
                   InputProps={{
                     endAdornment: (
-                      <InputAdornment position="end">
-                        <IconButton onClick={handleClickShowPassword}>
+                      <InputAdornment
+                        position="end"
+                        sx={{
+                          marginRight: "0", // Ensure no extra margin is added
+                          visibility: "visible", // Force visibility if there are issues
+                        }}
+                      >
+                        <IconButton
+                          onClick={handleClickShowPassword}
+                          sx={{
+                            padding: "6px", // Ensure consistent padding across browsers
+                          }}
+                        >
                           {showPassword ? <Visibility /> : <VisibilityOff />}
                         </IconButton>
                       </InputAdornment>

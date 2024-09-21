@@ -18,16 +18,16 @@ export default function ActionButtonWithModal({
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        padding: " 2rem 0 1rem",
+        justifyContent: "right",
+        // padding: " 2rem 0 1rem",
       }}
     >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          padding: "0 2rem",
+          justifyContent: "right",
+          // padding: "0 2rem",
         }}
       >
         <Button
@@ -39,7 +39,7 @@ export default function ActionButtonWithModal({
             transition: "transform 0.2s ease",
             borderRadius: "1rem",
             "&:hover": {
-              backgroundColor: "var(--grey)", // Hover effect
+              backgroundColor: "var(--hover3)", // Hover effect
              
             },
           }}

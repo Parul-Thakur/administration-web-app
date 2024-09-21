@@ -36,17 +36,16 @@ export default function ReportRadioBtn({
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
-          gap: "1rem",
+          flexDirection: "column",
+          // gap: "1rem",
         }}
       >
         <FormLabel
           component="legend"
           sx={{
-            fontSize: "0.7rem",
+            fontSize: "0.8rem",
             color: "var(--text-color)",
-            marginRight: "2rem",
-            flexWrap: "wrap",
+            marginBottom: "1rem",
           }}
         >
           {label}
@@ -58,9 +57,9 @@ export default function ReportRadioBtn({
           value={localValue}
           onChange={handleRadioChange}
           sx={{
-            gap: "2rem 2rem",
-            fontSize: "0.8rem",
-            //  flexWrap: 'nowrap'
+            marginLeft:"1rem",
+            gap: " 2rem",
+            fontSize: "0.875rem",
           }}
         >
           {options.map((option) =>
@@ -75,7 +74,6 @@ export default function ReportRadioBtn({
                   onChange={handleRadioChange}
                   value={option.value}
                   sx={{
-                    // padding: "0 1rem ",
                     width: ".5rem",
                     height: ".5rem",
                     "& .MuiSvgIcon-root": {

@@ -690,13 +690,20 @@ export default function CustomPrint() {
               </Grid>
             </Box>
           </form>
+          <Divider
+            orientation="horizontal"
+            flexItem
+            sx={{
+              margin: " 0.5rem",
+              backgroundColor: "var(--text-head)",
+              opacity: "0.3",
+            }}
+          />
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "right",
-
-              padding: "2rem",
             }}
           >
             <Button
@@ -708,7 +715,7 @@ export default function CustomPrint() {
                 transition: "transform 0.2s ease",
                 borderRadius: "1rem",
                 "&:hover": {
-                  backgroundColor: "var(--grey)",
+                  backgroundColor: "var(--hover3)",
                 },
               }}
               onClick={handleSubmit}
@@ -736,6 +743,17 @@ export default function CustomPrint() {
           //   boxShadow: "var(--box-shadow)",
           // }}
           >
+            <Box
+              sx={{
+                backgroundColor: "var(--background-color)",
+                padding: "1rem",
+                color: "var(--text-color)",
+              }}
+            >
+              <Typography variant="h8" component="h4" gutterBottom>
+                List of all printed items
+              </Typography>
+            </Box>
             <CustomTable
               columns={columns}
               data={data}

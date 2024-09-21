@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import DynamicRadioButton from "../../Components/DynamicRadioButton ";
 import { userData } from "./ImportData";
 import {
   Container,
@@ -11,16 +10,16 @@ import {
   Select,
   Checkbox,
   FormControlLabel,
-  Button,
   Typography,
   Box,
-  OutlinedInput,
-  InputAdornment,
   Autocomplete,
+  Divider,
 } from "@mui/material";
 
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
 import ReportRadioBtn from "../Reports/ReportRadiobtn";
+
+
 const disabledaccounts = ["Import", " Do not Import", "Import and Lock"];
 const newusersemailtemplate = ["HR", "Finance", "IT", "Marketing"];
 const imports = ["None", "Pre Pay", "Invoice"];
@@ -354,6 +353,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
 
         <Box
           sx={{
+            marginBottom: "2rem",
             padding: "3rem",
             backgroundColor: "var(--color)",
             color: "var(--text-color)",
@@ -1574,7 +1574,15 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
             </>
           )}
         </Box>
-
+        <Divider
+          orientation="horizontal"
+          flexItem
+          sx={{
+            margin: " 0.5rem",
+            backgroundColor: "var(--text-head)",
+            opacity: "0.3",
+          }}
+        />
         {/* Form Actions */}
         <div>
           <ActionButtonWithModal

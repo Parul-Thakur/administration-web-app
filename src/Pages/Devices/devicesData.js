@@ -5,7 +5,7 @@ const devicesData = [
     hostname: 'device1',
     assetno: 'ASSET001',
     server: 'ServerA',
-    status: 'active'
+    status: 'Active'
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const devicesData = [
     hostname: 'device2',
     assetno: 'ASSET002',
     server: 'ServerB',
-    status: 'inactive'
+    status: 'Inactive'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const devicesData = [
     hostname: 'device3',
     assetno: 'ASSET003',
     server: 'ServerC',
-    status: 'active'
+    status: 'Active'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const devicesData = [
     hostname: 'device4',
     assetno: 'ASSET004',
     server: 'ServerD',
-    status: 'active'
+    status: 'Active'
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const devicesData = [
     hostname: 'device5',
     assetno: 'ASSET005',
     server: 'ServerE',
-    status: 'active'
+    status: 'Active'
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const devicesData = [
     hostname: 'device6',
     assetno: 'ASSET006',
     server: 'ServerF',
-    status: 'inactive'
+    status: 'Inactive'
   },
   // Add more device objects as needed
 ];

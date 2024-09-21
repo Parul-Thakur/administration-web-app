@@ -10,17 +10,20 @@ import {
   InputAdornment,
   Typography,
   Button,
+  Divider,
 } from "@mui/material";
 import React, { useEffect, useMemo, useState } from "react";
 import { singleUserLogons, multipleUserLogons, groups } from "./userData";
 import Table from "../../Components/Table/Table";
 import SaveModal from "../../Components/SaveModal";
 import ReportRadioBtn from "../Reports/ReportRadiobtn";
-
+import EuroSymbolIcon from "@mui/icons-material/EuroSymbol";
 export default function CashierForm() {
   const [selectedToValue, setSelectedToValue] = useState("1");
   const [selectedTypeValue, setSelectedTypeValue] = useState("4");
   const [formData, setFormData] = useState({
+    value1: "",
+    value2: "",
     searchuser: "",
     to: "1",
     type: "4",
@@ -240,93 +243,46 @@ export default function CashierForm() {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            {formData.userBalance !== null && (
-              <FormControl
-                // fullWidth
-                sx={{
-                  border: "1px solid var(--grey)",
-                  borderRadius: "4px",
-                }}
-              >
-                <InputLabel htmlFor="outlined-adornment-amount">
-                  Account Balance
-                </InputLabel>
-                <OutlinedInput
-                  id="outlined-adornment-amount"
-                  startAdornment={
-                    <InputAdornment position="start">
-                      ${userBalance}
-                    </InputAdornment>
-                  }
-                  label="Value"
-                  // placeholder="0.00"
-                  sx={{
-                    fontSize: "0.8rem",
-                    height: "2rem",
-                    "& .MuiOutlinedInput-input": {
-                      fontSize: "0.8rem",
-                      color: "var(--text-color)",
-                    },
-                    "& .MuiOutlinedInput-root": {
-                      "& fieldset": {
-                        borderColor: "var(--grey)",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
-                      },
-                    },
-                    "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)",
-                    },
-                  }}
-                />
-              </FormControl>
-            )}
-          </Grid>
-        </Grid>
-      </Box>
-      <Box
-        sx={{
-          boxShadow: "var(--box-shadow)",
-          borderRadius: "8px",
-          padding: "2rem ",
-          backgroundColor: "var(--color)",
-        }}
-      >
-        <ReportRadioBtn
-          label="Type*"
-          options={option2}
-          selectedValue={selectedTypeValue}
-          handleChange={handleTypeChange}
-          name="type"
-        />
-        <Grid item xs={12} md={6} mt={5}>
-          <FormControl
-            // fullWidth
-            sx={{
-              // margin: "4rem 0 0",
-              border: "1px solid var(--grey)",
-              borderRadius: "4px",
-              width: "50%",
-
-              // backgroundColor:"red"
-            }}
-          >
-            <InputLabel htmlFor="outlined-adornment-amount">Value</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-amount"
-              startAdornment={
-                <InputAdornment position="start">$</InputAdornment>
-              }
+            <TextField
+              fullWidth
+              size="small"
               label="Value"
+              variant="outlined"
+              name="value1"
+              value={formData.value1}
+              onChange={handleToChange}
+              type="number"
               placeholder="0.00"
-              sx={{
-                fontSize: "0.8rem",
-                height: "2rem",
-                "& .MuiOutlinedInput-input": {
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EuroSymbolIcon
+                      sx={{
+                        color: "var(--text-color)",
+                        fontSize: ".8rem",
+                      }}
+                    />
+                  </InputAdornment>
+                ),
+                style: {
                   fontSize: "0.8rem",
                   color: "var(--text-color)",
                 },
+                inputProps: {
+                  placeholder: "0.00", // This will work as the placeholder for the input
+                  style: {
+                    MozAppearance: "textfield",
+                  },
+                },
+              }}
+              InputLabelProps={{
+                style: {
+                  fontSize: "0.8rem",
+                  color: "var(--text-color)",
+                },
+              }}
+              sx={{
+                fontSize: "0.8rem",
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
                     borderColor: "var(--grey)",
@@ -338,16 +294,116 @@ export default function CashierForm() {
                 "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
                   borderColor: "var(--primary-color)",
                 },
+                "& input[type=number]": {
+                  "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button":
+                    {
+                      WebkitAppearance: "none",
+                      margin: 0,
+                    },
+                },
               }}
             />
-          </FormControl>
+          </Grid>
         </Grid>
       </Box>
       <Box
         sx={{
+          boxShadow: "var(--box-shadow)",
+          borderRadius: "8px",
+          marginBottom: "2rem",
+          padding: "2rem ",
+          backgroundColor: "var(--color)",
+        }}
+      >
+        <ReportRadioBtn
+          label="Type*"
+          options={option2}
+          selectedValue={selectedTypeValue}
+          handleChange={handleTypeChange}
+          name="type"
+        />
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            marginTop: "4rem",
+          }}
+        >
+          <TextField
+            fullWidth
+            size="small"
+            label="Value"
+            variant="outlined"
+            name="value2"
+            value={formData.value2}
+            onChange={handleTypeChange}
+            type="number"
+            placeholder="0.00"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <EuroSymbolIcon
+                    sx={{
+                      color: "var(--text-color)",
+                      fontSize: ".8rem",
+                    }}
+                  />
+                </InputAdornment>
+              ),
+              style: {
+                fontSize: "0.8rem",
+                color: "var(--text-color)",
+              },
+              inputProps: {
+                placeholder: "0.00", // This will work as the placeholder for the input
+                style: {
+                  MozAppearance: "textfield",
+                },
+              },
+            }}
+            InputLabelProps={{
+              style: {
+                fontSize: "0.8rem",
+                color: "var(--text-color)",
+              },
+            }}
+            sx={{
+              fontSize: "0.8rem",
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "var(--grey)",
+                },
+                "&:hover fieldset": {
+                  borderColor: "var(--primary-color)",
+                },
+              },
+              "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                borderColor: "var(--primary-color)",
+              },
+              "& input[type=number]": {
+                "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
+                  WebkitAppearance: "none",
+                  margin: 0,
+                },
+              },
+            }}
+          />
+        </Grid>
+      </Box>
+      <Divider
+        orientation="horizontal"
+        flexItem
+        sx={{
+          margin: " 0.5rem",
+          backgroundColor: "var(--text-head)",
+          opacity: "0.3",
+        }}
+      />
+      <Box
+        sx={{
           display: "flex",
-          justifyContent: "center",
-          marginTop: "2rem",
+          justifyContent: "right",
         }}
       >
         <Button
@@ -359,7 +415,7 @@ export default function CashierForm() {
             transition: "transform 0.2s ease",
             borderRadius: "1rem",
             "&:hover": {
-              backgroundColor: "var(--grey)", // Hover effect
+              backgroundColor: "var(--hover3)",
             },
           }}
           onClick={handleSubmit}

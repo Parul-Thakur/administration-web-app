@@ -14,6 +14,7 @@
   --btn-text: #ffffff;
   --hover: #a8c7fa;
   --hover2: #c4d6f4;
+  --hover3:#ebedf2;
   --drop-bg: #e3ecfa;
   --text-color: rgb(4, 30, 73, 0.7);
   --text-color2: #ffffff;
@@ -50,6 +51,7 @@ body.dark {
   --btn-text: #000000;
   --hover: #0842a0;
   --hover2: #203655;
+  --hover3:#122332;
   --drop-bg: #10243a;
   --text-color: rgb(211, 227, 253, 0.7);
   --text-color2: #ffffff;

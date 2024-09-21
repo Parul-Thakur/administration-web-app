@@ -155,11 +155,11 @@ tr:hover .more-options {
   visibility: visible;
 }
 
-.custom-menu {
+/* .custom-menu {
   width: 20rem;
   height: 20rem;
   background-color: transparent;
-}
+} */
 
 .status-indicator {
   display: inline-block;

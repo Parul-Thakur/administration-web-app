@@ -12,6 +12,7 @@ import {
   Button,
   Typography,
   Box,
+  Divider,
 } from "@mui/material";
 import AddToQueueIcon from "@mui/icons-material/AddToQueue";
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
@@ -722,6 +723,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
           </Box>
           <Box
             sx={{
+              marginBottom: "2rem",
               padding: "3rem",
               backgroundColor: "var(--color)",
               color: "var(--text-color)",
@@ -830,6 +832,15 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
               </FormControl>
             </Grid>
           </Box>
+          <Divider
+        orientation="horizontal"
+        flexItem
+        sx={{
+          margin: " 0.5rem",
+          backgroundColor: "var(--text-head)",
+          opacity: "0.3",
+        }}
+      />
           <div>
             <ActionButtonWithModal
               isEditMode={isEditMode}
