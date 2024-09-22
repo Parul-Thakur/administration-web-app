@@ -145,7 +145,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
             sx={{
               backgroundColor: "var(--background-color)",
               padding: "1rem",
-              margin: "2rem 0 0",
+
               color: "var(--text-color)",
             }}
           >
@@ -320,7 +320,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                 />
               </Grid>
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -374,7 +374,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                 </FormControl>
               </Grid>
               {/* <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                 <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -458,7 +458,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                 </FormControl>
               </Grid> */}
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -515,7 +515,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                 </FormControl>
               </Grid>
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -662,7 +662,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                 </>
               )}
               <Grid item xs={12} md={6}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -850,7 +850,7 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <Box
                   sx={{
                     marginTop: "2rem",

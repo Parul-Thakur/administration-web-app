@@ -290,7 +290,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
         >
           <Grid container spacing={4}>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "0.8rem",
@@ -344,7 +344,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
               </FormControl>
             </Grid>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "0.8rem",
@@ -398,7 +398,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
               </FormControl>
             </Grid>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "0.8rem",
@@ -605,7 +605,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
               />
             </Grid>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "0.8rem",
@@ -1002,14 +1002,14 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
           )}
         </Box>
         <Divider
-        orientation="horizontal"
-        flexItem
-        sx={{
-          margin: " 0.5rem",
-          backgroundColor: "var(--text-head)",
-          opacity: "0.3",
-        }}
-      />
+          orientation="horizontal"
+          flexItem
+          sx={{
+            margin: " 0.5rem",
+            backgroundColor: "var(--text-head)",
+            opacity: "0.3",
+          }}
+        />
         {/* Form Actions */}
         <div>
           <ActionButtonWithModal

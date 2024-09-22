@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
-
-import { Container, Typography, Box, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Container, Typography, Box, Button, IconButton } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import CustomTable from "../../../Components/CustomTable/CustomTable";
 import { printDocData } from "../Users/UserData";
@@ -13,6 +14,11 @@ function PrintDocs() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/users/");
   };
   const columns = React.useMemo(
     () => [
@@ -74,7 +80,11 @@ function PrintDocs() {
         Users
       </Typography>
       <NavbarMini />
-
+      <IconButton onClick={handleBack} disableRipple>
+        <ArrowBackIcon
+          sx={{ color: "var(--text-color)", margin: "2rem  0 0 5rem" }}
+        />
+      </IconButton>
       <motion.div
         className="main"
         variants={tableVariants}
@@ -91,7 +101,7 @@ function PrintDocs() {
             sx={{
               backgroundColor: "var(--background-color)",
               padding: "1rem",
-              margin: "2rem 0 0",
+              // margin: "2rem 0 0",
               color: "var(--text-color)",
             }}
           >

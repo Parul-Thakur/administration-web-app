@@ -9,24 +9,19 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { motion } from "framer-motion";
 
 const EditUser = () => {
-  const { userId } = useParams(); // Extract userId from the route parameters
+  const { userId } = useParams(); 
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    // Convert userId to a number before searching
     const id = parseInt(userId, 10);
-    // Fetch user data based on userId from the local file
     const user = UserData.find((user) => user.id === id);
     setUserData(user);
   }, [userId]);
 
   const handleUpdateUser = (formData) => {
-    // Update user data locally
     const updatedUsers = UserData.map((user) =>
       user.id === userData.id ? { ...user, ...formData } : user
     );
-
-    // Log the updated data (you may want to save this back to a file or state in a real app)
     console.log("Updated user data:", updatedUsers);
   };
   const tableVariants = {
@@ -40,7 +35,7 @@ const EditUser = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate(-1); // Navigate back to the previous page
+    navigate("/users/"); 
   };
   return (
     <>
@@ -59,16 +54,17 @@ const EditUser = () => {
         Users
       </Typography>
       <NavbarMini />
-
+      <IconButton onClick={handleBack} disableRipple>
+        <ArrowBackIcon
+          sx={{ color: "var(--text-color)", margin: "2rem  0 0 5rem" }}
+        />
+      </IconButton>
       <motion.div
         className="main"
         variants={tableVariants}
         initial="hidden"
         animate="visible"
       >
-        <IconButton onClick={handleBack}>
-          <ArrowBackIcon sx={{ color: "var(--text-color)", margin:0 }} />
-        </IconButton>
         {userData ? (
           <UserForm
             isEditMode={true}

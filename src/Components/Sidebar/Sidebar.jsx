@@ -124,10 +124,10 @@ const Sidebar = ({ open, toggleDrawer }) => {
         open={open}
         // onClose={toggleSidebar}
         sx={{
-          width: open ? (is1440pxOrSmaller ? "60px" : "17%") : "4%",
+          width: open ? (is1440pxOrSmaller ? "60px" : "15%") : "4%",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: open ? (is1440pxOrSmaller ? "60px" : "17%") : "4%",
+            width: open ? (is1440pxOrSmaller ? "60px" : "15%") : "4%",
             boxSizing: "border-box",
             transition: "width 0.3s",
 

@@ -90,7 +90,7 @@ export default function DeviceSetting() {
               color: "var(--text-color)",
             }}
           >
-             <Typography
+            <Typography
               variant="h8"
               component="h4"
               gutterBottom
@@ -114,7 +114,7 @@ export default function DeviceSetting() {
             <form>
               <Grid container spacing={4}>
                 <Grid item xs={12} md={6}>
-                  <FormControl fullWidth variant="outlined">
+                  <FormControl fullWidth variant="outlined" size="small">
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",

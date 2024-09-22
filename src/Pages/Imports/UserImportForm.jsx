@@ -19,7 +19,6 @@ import {
 import ActionButtonWithModal from "../../Components/ActionButtonWithModal/ActionButtonWithModal";
 import ReportRadioBtn from "../Reports/ReportRadiobtn";
 
-
 const disabledaccounts = ["Import", " Do not Import", "Import and Lock"];
 const newusersemailtemplate = ["HR", "Finance", "IT", "Marketing"];
 const imports = ["None", "Pre Pay", "Invoice"];
@@ -220,7 +219,7 @@ export default function UserImportForm({ isEditMode, existingData, onSubmit }) {
               />
             </Grid>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "0.8rem",

@@ -453,7 +453,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                 </>
               )}
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -507,7 +507,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                 </FormControl>
               </Grid>
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -561,7 +561,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
                 </FormControl>
               </Grid>
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -616,7 +616,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
               </Grid>
 
               <Grid item xs={12} md={4}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <InputLabel
                     style={{
                       fontSize: "0.8rem",
@@ -780,7 +780,7 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
 
             {/* ==============================status======================= */}
             <Grid item xs={12} md={6}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <Box
                   sx={{
                     marginTop: "2rem",
@@ -833,14 +833,14 @@ export default function DeviceForm({ isEditMode, existingData, onSubmit }) {
             </Grid>
           </Box>
           <Divider
-        orientation="horizontal"
-        flexItem
-        sx={{
-          margin: " 0.5rem",
-          backgroundColor: "var(--text-head)",
-          opacity: "0.3",
-        }}
-      />
+            orientation="horizontal"
+            flexItem
+            sx={{
+              margin: " 0.5rem",
+              backgroundColor: "var(--text-head)",
+              opacity: "0.3",
+            }}
+          />
           <div>
             <ActionButtonWithModal
               isEditMode={isEditMode}

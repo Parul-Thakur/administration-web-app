@@ -210,7 +210,7 @@ function PrintQueues() {
                   />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <FormControl fullWidth variant="outlined">
+                  <FormControl fullWidth variant="outlined" size="small">
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",

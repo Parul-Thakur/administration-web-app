@@ -16,12 +16,18 @@ import { devicesGroupsData } from "../../Devices/devicesData";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import CustomTable from "../../../Components/CustomTable/CustomTable";
 import { motion } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 function UserGroup() {
   const [data, setData] = useState(devicesGroupsData);
   const [formData, setFormData] = useState({
     accessKey: "",
   });
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/users/"); 
+  };
   const tableVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -89,6 +95,11 @@ function UserGroup() {
         Users
       </Typography>
       <NavbarMini />
+      <IconButton onClick={handleBack} disableRipple>
+        <ArrowBackIcon
+          sx={{ color: "var(--text-color)", margin: "2rem  0 0 5rem" }}
+        />
+      </IconButton>
       <motion.div
         className="main"
         variants={tableVariants}
@@ -106,7 +117,7 @@ function UserGroup() {
               sx={{
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
-                margin: "2rem 0 0",
+                // margin: "2rem 0 0",
                 color: "var(--text-color)",
               }}
             >
@@ -133,7 +144,7 @@ function UserGroup() {
             >
               {/* ==============================ADD ACCESS CODE============================================================ */}
               <Grid item xs={12} md={6}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <Box
                     sx={{
                       display: "flex",

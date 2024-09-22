@@ -11,10 +11,11 @@
 // ];
 
 
-import image1 from '../../Images/users.png';
-import image2 from '../../Images/device.png';
-import image3 from '../../Images/printed.png';
-import image4 from '../../Images/trees.png';
+
+import image1 from '../../Images/team.png';
+import image2 from '../../Images/responsive.png';
+import image3 from '../../Images/printer1.png';
+import image4 from '../../Images/go-green.png';
 
 
 export const cardData = [
@@ -43,4 +44,3 @@ export const cardData = [
     text: "Equivalent to 3 trees",
   },
 ];
-

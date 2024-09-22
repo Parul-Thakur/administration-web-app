@@ -354,7 +354,7 @@ export default function Statistics() {
           </Typography>
           <Grid container spacing={2} mb={5}>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "1rem",
@@ -425,7 +425,7 @@ export default function Statistics() {
             </Grid>
 
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "1rem",
@@ -496,7 +496,7 @@ export default function Statistics() {
               </FormControl>
             </Grid>
             <Grid item xs={12} md={4}>
-              <FormControl fullWidth variant="outlined">
+              <FormControl fullWidth variant="outlined" size="small">
                 <InputLabel
                   style={{
                     fontSize: "1rem",

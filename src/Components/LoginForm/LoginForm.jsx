@@ -242,6 +242,35 @@ const LoginForm = () => {
             zIndex: 2,
           }}
         >
+          <style>
+            {`
+          @keyframes bounce {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-20px);
+            }
+          }
+
+          @keyframes rotate {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+            @keyframes bounceLeftRight {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-10px); // Adjust this value to control the distance
+      }
+    }
+        `}
+          </style>
           <img
             src={logo}
             alt="logo"
@@ -261,7 +290,6 @@ const LoginForm = () => {
         </Box>
 
         {/* Big Semi-Circle on the Left */}
-
         <Box
           sx={{
             position: "fixed",
@@ -276,76 +304,86 @@ const LoginForm = () => {
             boxShadow: "var(--box-shadow)",
           }}
         />
+        {/* Decorative Blob in the bottom-left Corner */}
+        <Box
+          sx={{
+            animation: "bounce 3s ease-in-out infinite",
+            position: "fixed",
+            bottom: "-25vh",
+            left: "-10vw",
+            width: "30vw",
+            height: "30vw",
+            transform: "rotate(-15deg)",
+            zIndex: 2,
+          }}
+        >
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="rgba(112, 197, 223)"
+              d="M41.7,-68.9C55.1,-64.5,67.9,-55.5,67,-43.3C66.2,-31,51.8,-15.5,50.1,-0.9C48.5,13.6,59.7,27.3,58.6,36.1C57.4,44.9,43.9,48.8,32.1,57.2C20.3,65.5,10.2,78.2,-2,81.6C-14.1,85,-28.2,79.2,-35.1,68C-42.1,56.8,-41.8,40.4,-50.5,28.2C-59.3,16,-76.9,8,-80.5,-2.1C-84.1,-12.1,-73.6,-24.3,-61.5,-30.7C-49.5,-37.2,-35.9,-37.9,-25.4,-44.1C-14.9,-50.2,-7.4,-61.6,3.3,-67.4C14.1,-73.2,28.3,-73.3,41.7,-68.9Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </Box>
+        {/* left circle */}
+        <Box
+          sx={{
+            position: "fixed",
+            bottom: "-5vh",
+            left: "10vw",
+            zIndex: 0,
+            width: "10vw",
+            height: "10vw",
+            bgcolor: "#4682A9",
+            borderRadius: "50%",
+            boxShadow: "var(--box-shadow)",
 
-        {/* triangle */}
+            "&::after": {
+              content: '""',
+              position: "absolute",
+              width: "3vw",
+              height: "3vw",
+              bgcolor: "rgba(116, 155, 194, 0.63)",
+              borderRadius: "50%",
+              bottom: "2vw",
+              left: "10vw",
+              zIndex: 2,
+              animation: "bounceLeftRight 3s ease-in-out infinite",
+            },
+          }}
+        />
+        {/* center pentagon */}
+        <Box
+          sx={{
+            position: "fixed",
+            top: "12vw",
+            left: "33vw",
+            zIndex: 0,
+            width: "10vw",
+            height: "10vw",
+            bgcolor: "#4682A9",
+            clipPath: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
+
+            animation: "rotate 50s linear infinite",
+          }}
+        />
+        {/*center  triangle */}
         <Box
           sx={{
             // overflow: "hidden",
             position: "fixed",
             bottom: "10vw",
-            right: "20vw",
+            right: "33vw",
             width: 0,
             height: 0,
-            borderLeft: "7vw solid transparent",
-            borderRight: "7vw solid transparent",
-            borderBottom: "24vh solid #4682A9",
+            borderLeft: "5vw solid transparent",
+            borderRight: "5vw solid transparent",
+            borderBottom: "15vh solid #4682A9",
             zIndex: 0,
             transform: "rotate(45deg)",
-            animation: "rotateAnimation 50s infinite ease-in-out",
-            "@keyframes rotateAnimation": {
-              "0%": {
-                transform: "rotate(45deg)",
-              },
-              "50%": {
-                transform: "rotate(180deg)",
-              },
-              "100%": {
-                transform: "rotate(45deg)",
-              },
-            },
+            animation: "rotate 50s linear infinite",
           }}
         />
-        {/* triangle */}
-        <Box
-          sx={{
-            overflow: "hidden",
-            position: "fixed",
-            top: "40vh",
-            left: "30vw",
-            zIndex: 1,
-            transform: "rotate(0deg)", // Initial rotation
-            width: "5vw", // Set width and height to make it a square
-            height: "5vw", // Same as width to make it square
-            backgroundColor: "#4682A9", // Color of the square
-            animation: "rotateAnimation 10s infinite ease-in-out",
-            "@keyframes rotateAnimation": {
-              "0%": {
-                transform: "rotate(0deg)",
-              },
-              "50%": {
-                transform: "rotate(180deg)",
-              },
-              "100%": {
-                transform: "rotate(0deg)",
-              },
-            },
-          }}
-        />
-
-        <style>
-          <style>
-            {`
-          @keyframes bounce {
-            0%, 100% {
-              transform: translateY(0);
-            }
-            50% {
-              transform: translateY(-20px);
-            }
-          }
-        `}
-          </style>
-        </style>
         {/* Decorative Blob in the Top-Right Corner */}
         <Box
           sx={{
@@ -367,8 +405,7 @@ const LoginForm = () => {
             />
           </svg>
         </Box>
-
-        {/* Other Circles */}
+        {/* Right corner Circles */}
         <Box
           sx={{
             position: "fixed",
@@ -394,7 +431,6 @@ const LoginForm = () => {
             },
           }}
         />
-
         {/* Bottom Circle */}
         <Box
           sx={{
@@ -422,11 +458,10 @@ const LoginForm = () => {
               borderRadius: "50%",
               top: "7vw",
               right: "0vw",
-              animation: "bounce 4s ease-in-out infinite",
+              animation: "bounce 3s ease-in-out infinite",
             },
           }}
         />
-
         <Grid
           container
           justifyContent="center"
@@ -483,7 +518,7 @@ const LoginForm = () => {
                     sm: ".8rem",
                   },
                   fontWeight: "bold",
-                  color: "#5E6668",
+                  color: "var(--grey)",
                 }}
               >
                 Sign in by entering the information below
@@ -510,8 +545,31 @@ const LoginForm = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email address"
+                  InputProps={{
+                    style: {
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                    },
+                  }}
+                  InputLabelProps={{
+                    style: {
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                    },
+                  }}
                   sx={{
-                    marginBottom: "1.5rem",
+                    fontSize: "0.8rem",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "var(--grey)",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "var(--primary-color)",
+                      },
+                    },
+                    "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "var(--primary-color)", // Focused border color
+                    },
                   }}
                 />
               </Box>
@@ -527,10 +585,11 @@ const LoginForm = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter password"
-                  sx={{
-                    marginBottom: "1.5rem",
-                  }}
                   InputProps={{
+                    style: {
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                    },
                     endAdornment: (
                       <InputAdornment
                         position="end"
@@ -545,10 +604,38 @@ const LoginForm = () => {
                             padding: "6px", // Ensure consistent padding across browsers
                           }}
                         >
-                          {showPassword ? <Visibility /> : <VisibilityOff />}
+                          {showPassword ? (
+                            <Visibility
+                              sx={{ color: "var(--grey)", fontSize: "1.2rem" }}
+                            />
+                          ) : (
+                            <VisibilityOff
+                              sx={{ color: "var(--grey)", fontSize: "1.2rem" }}
+                            />
+                          )}
                         </IconButton>
                       </InputAdornment>
                     ),
+                  }}
+                  InputLabelProps={{
+                    style: {
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                    },
+                  }}
+                  sx={{
+                    fontSize: "0.8rem",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "var(--grey)",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "var(--primary-color)",
+                      },
+                    },
+                    "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "var(--primary-color)",
+                    },
                   }}
                 />
               </Box>

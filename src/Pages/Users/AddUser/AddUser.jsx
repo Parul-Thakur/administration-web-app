@@ -1,7 +1,10 @@
 import React from "react";
 import UserForm from "../UserForm";
-import { Divider, Typography } from "@mui/material";
+import { Divider, IconButton, Typography } from "@mui/material";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 const AddUser = () => {
   const handleAddUser = (formData) => {
     console.log("User data submitted:", formData);
@@ -13,6 +16,11 @@ const AddUser = () => {
       y: 0,
       transition: { duration: 1, ease: "easeOut" },
     },
+  };
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/users/"); 
   };
   return (
     <>
@@ -40,6 +48,11 @@ const AddUser = () => {
           opacity: "0.3",
         }}
       />
+       <IconButton onClick={handleBack} disableRipple>
+        <ArrowBackIcon
+          sx={{ color: "var(--text-color)", margin: "2rem  0 0 5rem" }}
+        />
+      </IconButton>
       <motion.div
         className="main"
         variants={tableVariants}

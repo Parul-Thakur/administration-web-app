@@ -115,7 +115,7 @@ export default function Settings() {
             >
               <Grid container spacing={4}>
                 <Grid item xs={12} md={4}>
-                  <FormControl fullWidth variant="outlined">
+                  <FormControl fullWidth variant="outlined" size="small">
                     <InputLabel
                       style={{
                         fontSize: "0.8rem",

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 import ClearIcon from "@mui/icons-material/Clear";
 import { motion } from "framer-motion";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {
   Container,
   Grid,
@@ -17,6 +18,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ReportRadioBtn from "../../Reports/ReportRadiobtn";
 import { accessCodes } from "../Users/UserData";
 import CustomTable from "../../../Components/CustomTable/CustomTable";
+import { useNavigate } from "react-router-dom";
 const code = [
   { value: "C1", label: "Permanent" },
   { value: "C2", label: "Temporary" },
@@ -27,7 +29,11 @@ function AccessCode() {
     accessKey: "",
   });
   const [selectedValue, setSelectedValue] = useState("C1");
+  const navigate = useNavigate();
 
+  const handleBack = () => {
+    navigate("/users/"); 
+  };
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -94,8 +100,13 @@ function AccessCode() {
       >
         Users
       </Typography>
+    
       <NavbarMini />
-
+      <IconButton onClick={handleBack} disableRipple>
+        <ArrowBackIcon
+          sx={{ color: "var(--text-color)", margin: "2rem  0 0 5rem" }}
+        />
+      </IconButton>
       <motion.div
         className="main"
         variants={tableVariants}
@@ -113,7 +124,7 @@ function AccessCode() {
               sx={{
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
-                margin: "2rem 0 0",
+                // margin: "2rem 0 0",
                 color: "var(--text-color)",
               }}
             >
@@ -148,7 +159,7 @@ function AccessCode() {
               />
               {/* ==============================ADD ACCESS CODE============================================================ */}
               <Grid item xs={12} md={6}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <Box
                     sx={{
                       marginTop: "2rem",

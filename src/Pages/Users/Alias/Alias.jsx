@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import NavbarMini from "../../../Components/NavbarMini/NavbarMini";
 import ClearIcon from "@mui/icons-material/Clear";
 import { aliasData } from "../Users/UserData";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Grid,
@@ -17,6 +19,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import CustomTable from "../../../Components/CustomTable/CustomTable";
 import { motion } from "framer-motion";
 
+
 function Alias() {
   const [data, setData] = useState(aliasData);
   const [formData, setFormData] = useState({
@@ -24,6 +27,11 @@ function Alias() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/users/"); 
   };
   const columns = React.useMemo(
     () => [
@@ -83,7 +91,11 @@ function Alias() {
         Users
       </Typography>
       <NavbarMini />
-
+      <IconButton onClick={handleBack} disableRipple>
+        <ArrowBackIcon
+          sx={{ color: "var(--text-color)", margin: "2rem  0 0 5rem" }}
+        />
+      </IconButton>
       <motion.div
         className="main"
         variants={tableVariants}
@@ -101,7 +113,7 @@ function Alias() {
               sx={{
                 backgroundColor: "var(--background-color)",
                 padding: "1rem",
-                margin: "2rem 0 0",
+                // margin: "2rem 0 0",
                 color: "var(--text-color)",
               }}
             >
@@ -128,7 +140,7 @@ function Alias() {
             >
               {/* ==============================ADD ACCESS CODE============================================================ */}
               <Grid item xs={12} md={6}>
-                <FormControl fullWidth variant="outlined">
+                <FormControl fullWidth variant="outlined" size="small">
                   <Box
                     sx={{
                       display: "flex",

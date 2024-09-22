@@ -962,7 +962,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   >
                     Job Type
                   </Typography>
-                  <Grid container spacing={2} >
+                  <Grid container spacing={2}>
                     <Grid item xs={12} md={3}>
                       <FormControlLabel
                         control={
@@ -1477,7 +1477,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                   </Typography>
 
                   <Grid item xs={12} md={3}>
-                    <FormControl fullWidth variant="outlined">
+                    <FormControl fullWidth variant="outlined" size="small">
                       <InputLabel
                         style={{
                           fontSize: "0.8rem",
