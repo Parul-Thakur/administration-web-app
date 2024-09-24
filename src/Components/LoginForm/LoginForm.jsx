@@ -357,7 +357,7 @@ const LoginForm = () => {
           sx={{
             position: "fixed",
             top: "12vw",
-            left: "33vw",
+            left: "25vw",
             zIndex: 0,
             width: "10vw",
             height: "10vw",
@@ -373,7 +373,7 @@ const LoginForm = () => {
             // overflow: "hidden",
             position: "fixed",
             bottom: "10vw",
-            right: "33vw",
+            right: "28vw",
             width: 0,
             height: 0,
             borderLeft: "5vw solid transparent",

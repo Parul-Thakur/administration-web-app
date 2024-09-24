@@ -12,7 +12,7 @@ import {
   IconButton,
   Divider,
 } from "@mui/material";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import SettingsSystemDaydreamIcon from "@mui/icons-material/SettingsSystemDaydream";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -114,6 +114,10 @@ const Sidebar = ({ open, toggleDrawer }) => {
       };
     }
   }, [location.pathname]);
+  const navigate = useNavigate();
+  const handleLogoClick = () => {
+    navigate("/");
+  };
   const isDashboardActive = location.pathname === "/dashboard";
   const isSettingsActive = location.pathname === "/settings";
   return (
@@ -168,10 +172,9 @@ const Sidebar = ({ open, toggleDrawer }) => {
               {open && (
                 <>
                   <ListItemIcon
-                    sx={{
-                      minWidth: "unset",
-                      //  marginRight: "0.5rem"
-                    }}
+                    sx={{ minWidth: "unset" }}
+                    onClick={handleLogoClick}
+                    style={{ cursor: "pointer" }}
                   >
                     <img src={logo} alt="logo" style={{ width: "2rem" }} />
                   </ListItemIcon>
@@ -190,7 +193,11 @@ const Sidebar = ({ open, toggleDrawer }) => {
               )}
 
               {!open && (
-                <ListItemIcon sx={{ minWidth: "unset" }}>
+                <ListItemIcon
+                  sx={{ minWidth: "unset" }}
+                  onClick={handleLogoClick}
+                  style={{ cursor: "pointer" }}
+                >
                   <img src={logo} alt="logo" style={{ width: "2rem" }} />
                 </ListItemIcon>
               )}
@@ -272,7 +279,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                           display: { xs: "none", sm: "block" },
                         }}
                       >
-                       Hanoi
+                        Hanoi
                       </Typography>
                     )}
                   </Box>
@@ -300,7 +307,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                       justifyContent: "center",
                       marginTop: open ? "0" : "0.5rem",
                       marginBottom: open ? "0" : "0.5rem",
-                      padding:"0.2rem 0.5rem",
+                      padding: "0.2rem 0.5rem",
                       backgroundColor: isDashboardActive
                         ? "var(--hover)" // Apply hover bg color when dashboard is active
                         : isSettingsActive
@@ -347,6 +354,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                       minWidth: "auto",
                       justifyContent: "center",
                       fontSize: ".7rem",
+                      color: "var(--text-head)",
                     }}
                   >
                     <AdminPanelSettingsIcon />
@@ -516,6 +524,7 @@ const Sidebar = ({ open, toggleDrawer }) => {
                       minWidth: "auto",
                       justifyContent: "center",
                       fontSize: ".7rem",
+                      color: "var(--text-head)",
                     }}
                   >
                     <SettingsSystemDaydreamIcon />
