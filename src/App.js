@@ -39,7 +39,10 @@ import EmailTemplate from "./Pages/CaletaCore/EmailTemplate/EmailTemplate";
 import AddEmailTemplate from "./Pages/CaletaCore/EmailTemplate/AddEmailTemplate";
 import EditEmailTemplate from "./Pages/CaletaCore/EmailTemplate/EditEmailTemplate";
 import { emailData } from "./Pages/CaletaCore/EmailTemplate/emailData";
-import { deviceImportData, userImportData } from "./Pages/CaletaCore/Imports/ImportData";
+import {
+  deviceImportData,
+  userImportData,
+} from "./Pages/CaletaCore/Imports/ImportData";
 import PricingConfig from "./Pages/CaletaCore/Pricing/PricingConfig";
 import AddPriceScheme from "./Pages/CaletaCore/Pricing/AddPriceScheme";
 import EditPriceScheme from "./Pages/CaletaCore/Pricing/EditPriceScheme";
@@ -66,6 +69,8 @@ import { pricingConfigData } from "./Pages/CaletaCore/Pricing/pricingData";
 import WebSetting from "./Pages/CaletaWeb/WebSetting/WebSetting";
 import Customization from "./Pages/CaletaWeb/Customization/Customiztion";
 import GeneralSetting from "./Pages/CaletaWeb/WebSetting/GeneralSetting";
+import CustomMenu from "./Pages/CaletaWeb/Customization/CustomMenu";
+import Lla from "./Pages/CaletaWeb/Lla/Lla";
 
 export default function App() {
   const location = useLocation();
@@ -79,13 +84,13 @@ export default function App() {
     <AnimatePresence mode="wait">
       <ScrollToTop />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Login/>} />
+        <Route path="/" element={<Login />} />
         <Route path="/" element={<Layout />}>
           <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <Dashboard/>
+                <Dashboard />
               </ProtectedRoute>
             }
           />
@@ -196,6 +201,8 @@ export default function App() {
           <Route path="/web/web-setting" element={<WebSetting />} />
           <Route path="/web/general-setting" element={<GeneralSetting />} />
           <Route path="/web/custom" element={<Customization />} />
+          <Route path="/web/custom-menu" element={<CustomMenu />} />
+          <Route path="/web/lla" element={<Lla />} />
         </Route>
       </Routes>
     </AnimatePresence>

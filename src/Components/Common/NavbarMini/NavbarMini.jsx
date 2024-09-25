@@ -36,6 +36,9 @@ const NavbarMini = () => {
   const isWebSettingPage =
     location.pathname.includes("/web/web-setting") ||
     location.pathname.includes("/web/general-setting");
+    const isWebCustomPage =
+    location.pathname.includes("/web/custom") ||
+    location.pathname.includes("/web/custom-menu");
   return (
     <nav className="navbarMini" style={{ width: "100%" }}>
       <ul className="miniLinks">
@@ -193,6 +196,25 @@ const NavbarMini = () => {
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 Azure App Details
+              </NavLink>
+            </li>
+          </>
+        ) : isWebCustomPage ? (
+          <>
+            <li>
+              <NavLink
+                to={`/web/custom`}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                 General
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={`/web/custom-menu`}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+               Custom Menu
               </NavLink>
             </li>
           </>

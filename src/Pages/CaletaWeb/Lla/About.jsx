@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -78,7 +79,7 @@ export default function About() {
                   variant="body2"
                   sx={{ color: "var(--text-head)", fontWeight: "bold" }}
                 >
-                  Caleta Secure Print
+                  Caleta Web Interface
                 </Typography>
               </Box>
 
@@ -90,12 +91,12 @@ export default function About() {
                   color: "var(--text-color)",
                 }}
               >
-                <Typography variant="body2">Release</Typography>
+                <Typography variant="body2">Version</Typography>
                 <Typography
                   variant="body2"
                   sx={{ color: "var(--text-head)", fontWeight: "bold" }}
                 >
-                  16
+                  1.0
                 </Typography>
               </Box>
             </Grid>
@@ -122,84 +123,25 @@ export default function About() {
                   <TableCell
                     sx={{ color: "var(--text-head)", fontWeight: "bold" }}
                   >
-                    Package
+                    Version
                   </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
                   <TableCell sx={{ color: "var(--text-color)" }}>
-                    Caleta Secure Print - Core
+                    Caleta Web Interface
                   </TableCell>
                   <TableCell sx={{ color: "var(--text-color)" }}>
-                    2.0.0.0-SNAPSHOT
+                    2.4.2-SNAPSHOT
                   </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    Caleta Secure Print - OXPd
-                  </TableCell>
-                  <TableCell sx={{ color: "var(--text-color)" }}>-</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
           </TableContainer>
         </motion.div>
 
-        {/* Table for System Information */}
-        <motion.div variants={tableVariants} initial="hidden" animate="visible">
-          <TableContainer
-            component={Paper}
-            sx={{
-              marginBottom: 3,
-              backgroundColor: "var(--header-bg)",
-              padding: "1rem",
-            }}
-          >
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell
-                    sx={{ color: "var(--text-head)", fontWeight: "bold" }}
-                  >
-                    System Information
-                  </TableCell>
-                  <TableCell
-                    sx={{ color: "var(--text-head)", fontWeight: "bold" }}
-                  >
-                    Value
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    System Uptime
-                  </TableCell>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    2h 58m
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    Max Occupied Memory (JVM)
-                  </TableCell>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    3 GB
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    Memory Usage
-                  </TableCell>
-                  <TableCell sx={{ color: "var(--text-color)" }}>
-                    84.82/140 MB
-                  </TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </motion.div>
+      
       </Box>
     </>
   );

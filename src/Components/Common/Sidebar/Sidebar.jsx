@@ -15,7 +15,7 @@ import {
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import SettingsSystemDaydreamIcon from "@mui/icons-material/SettingsSystemDaydream";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import TuneIcon from '@mui/icons-material/Tune';
+import TuneIcon from "@mui/icons-material/Tune";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ApiIcon from "@mui/icons-material/Api";
@@ -175,7 +175,11 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                 <>
                   <ListItemIcon
                     sx={{ minWidth: "unset" }}
-                    onClick={handleLogoClick}
+                    onClick={
+                      selectedApp === "caleta-core"
+                        ? handleLogoClick
+                        : undefined
+                    }
                     style={{ cursor: "pointer" }}
                   >
                     <img src={logo} alt="logo" style={{ width: "2rem" }} />
@@ -537,7 +541,7 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                       },
                       {
                         text: "Customization",
-                        icon: <TuneIcon/>,
+                        icon: <TuneIcon />,
                         path: "/web/custom",
                       },
                     ].map(({ text, icon, path }) => (
@@ -654,89 +658,94 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                 )}
               </ListItem>
               <Collapse in={openSystem} timeout="auto">
-              {selectedApp === "caleta-core" ? (
-                <>
-                {[
-                  { text: "License & more", icon: <InfoIcon />, path: "/lla" },
-                  {
-                    text: "Logs",
-                    icon: <BackupTableIcon />,
-                    path: "/core-application-logs",
-                  },
-                  { text: "API", icon: <ApiIcon />, path: "/api" },
-                ].map(({ text, icon, path }) => (
-                  <NavLink
-                    to={path}
-                    key={text}
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                    style={{ textDecoration: "none" }}
-                  >
-                    {({ isActive }) => (
-                      <ListItem
-                        sx={{
-                          color: isActive
-                            ? "var(--text-head)"
-                            : "var(--text-color)",
-                          backgroundColor: isActive
-                            ? "var(--hover)"
-                            : "transparent",
-                          borderRadius: isActive ? "20px" : "0",
-                          fontWeight: "bold",
-                          gap: "1rem",
-                          transition:
-                            "background-color 0.3s, transform 0.3s, border-radius 0.3s",
-                          "&:hover": {
-                            backgroundColor: "var(--hover2)",
-                            borderRadius: "20px",
-                            color: "var(--text-head)",
-                            // transform: "scale(1.05)",
-                            fontWeight: "bold",
-                          },
-                          padding: "0.1rem 1rem",
-                          justifyContent:
-                            openSystem && !is1440pxOrSmaller
-                              ? "center"
-                              : "flex-start",
-                        }}
+                {selectedApp === "caleta-core" ? (
+                  <>
+                    {[
+                      {
+                        text: "License & more",
+                        icon: <InfoIcon />,
+                        path: "/lla",
+                      },
+                      {
+                        text: "Logs",
+                        icon: <BackupTableIcon />,
+                        path: "/core-application-logs",
+                      },
+                      { text: "API", icon: <ApiIcon />, path: "/api" },
+                    ].map(({ text, icon, path }) => (
+                      <NavLink
+                        to={path}
+                        key={text}
+                        className={({ isActive }) =>
+                          isActive ? "nav-link active" : "nav-link"
+                        }
+                        style={{ textDecoration: "none" }}
                       >
-                        <ListItemIcon
-                          sx={{
-                            minWidth: "auto",
-                            color: "inherit",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          {React.cloneElement(icon, { sx: { fontSize: 20 } })}
-                        </ListItemIcon>
-                        {open && !is1440pxOrSmaller && (
-                          <ListItemText
-                            primary={text}
-                            primaryTypographyProps={{
-                              sx: {
-                                fontSize: "0.875rem",
-                                fontWeight: 500,
-                                display: { xs: "none", sm: "block" },
+                        {({ isActive }) => (
+                          <ListItem
+                            sx={{
+                              color: isActive
+                                ? "var(--text-head)"
+                                : "var(--text-color)",
+                              backgroundColor: isActive
+                                ? "var(--hover)"
+                                : "transparent",
+                              borderRadius: isActive ? "20px" : "0",
+                              fontWeight: "bold",
+                              gap: "1rem",
+                              transition:
+                                "background-color 0.3s, transform 0.3s, border-radius 0.3s",
+                              "&:hover": {
+                                backgroundColor: "var(--hover2)",
+                                borderRadius: "20px",
+                                color: "var(--text-head)",
+                                // transform: "scale(1.05)",
+                                fontWeight: "bold",
                               },
+                              padding: "0.1rem 1rem",
+                              justifyContent:
+                                openSystem && !is1440pxOrSmaller
+                                  ? "center"
+                                  : "flex-start",
                             }}
-                          />
+                          >
+                            <ListItemIcon
+                              sx={{
+                                minWidth: "auto",
+                                color: "inherit",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
+                              {React.cloneElement(icon, {
+                                sx: { fontSize: 20 },
+                              })}
+                            </ListItemIcon>
+                            {open && !is1440pxOrSmaller && (
+                              <ListItemText
+                                primary={text}
+                                primaryTypographyProps={{
+                                  sx: {
+                                    fontSize: "0.875rem",
+                                    fontWeight: 500,
+                                    display: { xs: "none", sm: "block" },
+                                  },
+                                }}
+                              />
+                            )}
+                          </ListItem>
                         )}
-                      </ListItem>
-                    )}
-                  </NavLink>
-                ))}
-                </>
+                      </NavLink>
+                    ))}
+                  </>
                 ) : selectedApp === "caleta-web" ? (
                   <>
-                  {[
+                    {[
                       {
-                        text: "Settings",
-                        icon: <SettingsIcon />,
-                        path: "/web/web-setting",
+                        text: "License & more",
+                        icon: <InfoIcon />,
+                        path: "/web/lla",
                       },
-                    
                     ].map(({ text, icon, path }) => (
                       <NavLink
                         to={path}

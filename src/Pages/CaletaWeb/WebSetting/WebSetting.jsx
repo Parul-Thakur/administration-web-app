@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import NavbarMini from "../../../Components/Common/NavbarMini/NavbarMini";
 import ReportRadioBtn from "../../CaletaCore/Reports/ReportRadiobtn";
-import ActionButtonWithModal from "../../../Components/Common/ActionButtonWithModal/ActionButtonWithModal";
+
 const azureType = [
   { value: "A1", label: "Email" },
   { value: "A2", label: "Files" },
@@ -112,20 +112,19 @@ export default function WebSetting() {
               }}
             >
               <Grid container spacing={4}>
-                <Grid item xs={12} md={12}>
+                <Grid item xs={12}>
                   <ReportRadioBtn
                     label="Azure Permission Type"
                     options={azureType}
                     selectedValue={formData.azureType}
                     handleChange={handleChange}
                     name="azureType"
-                    // customValue={formData.customValue}
-                    disabledOptions={["A2", "A3"]} // Disable options A2 and A3
+                    // disabledOptions={["A2", "A3"]} 
                   />
                 </Grid>
               </Grid>
               {formData.azureType === "A1" && (
-                <Grid container spacing={4}>
+                <Grid container spacing={4} mt={2}>
                   <Grid item xs={12} md={6}>
                     <TextField
                       fullWidth

@@ -34,7 +34,8 @@ const RightSidebar = () => {
   const { toggleTheme, theme } = useTheme();
 
   const handleLogout = () => {
-    localStorage.removeItem("userEmail");
+    // localStorage.removeItem("userEmail");
+    localStorage.clear(); 
     window.location.href = "/";
   };
 
