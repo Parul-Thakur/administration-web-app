@@ -1,78 +1,79 @@
 import React, { useEffect } from "react";
-import Layout from "./Components/Layout";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Login from "./Pages/Login/Login";
-import ProtectedRoute from "./utils/ProtectedRoutes";
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import Server from "./Pages/Server/Server";
-import serverData from "./Pages/Server/ServerData";
-import AddUser from "./Pages/Users/AddUser/AddUser";
-import AccessCode from "./Pages/Users/AccessCode/AccessCode";
-import Alias from "./Pages/Users/Alias/Alias";
-import PrintDocs from "./Pages/Users/PrintDocs/PrintDocs";
-import EditUser from "./Pages/Users/EditUser/EditUser";
-import Devices from "./Pages/Devices/Devices";
-import EditDevice from "./Pages/Devices/EditDevice";
-import {devicesData} from "./Pages/Devices/devicesData";
-import DeviceGroups from "./Pages/Devices/DeviceGroups";
-import AddDevice from "./Pages/Devices/AddDevice";
 import { useTheme } from "./utils/ThemeContext";
-import EditPage from "./Pages/Server/EditServer/EditServer";
-import PrintQueues from "./Pages/PrintQueues/PrintQueues";
-import Department from "./Pages/Department/Department";
-import UserGroup from "./Pages/Users/UserGroup/UserGroup";
-import OrganizationalUnit from "./Pages/OrganizationalUnit/OrganizationalUnit";
-import CostCodes from "./Pages/Cost Codes/CostCodes";
-import DeviceImports from "./Pages/Imports/DeviceImports.jsx/DeviceImports";
-import UserImports from "./Pages/Imports/UserImports/UserImports";
-import EditUserImport from "./Pages/Imports/EditUserImport/EditUserImport";
-import { deviceImportData, userImportData } from "./Pages/Imports/ImportData";
-import AddUserImport from "./Pages/Imports/AddUserImport/AddUserImport";
-import AddDeviceImport from "./Pages/Imports/AddDeviceImport/AddDeviceImport";
-import EditDeviceImport from "./Pages/Imports/EditDeviceImport/EditDeviceImport";
-// import ScheduledReports from "./Pages/Reports/ScheduledReports/ScheduledReports";
-// import AddScheduledReports from "./Pages/Reports/AddScheduledReports/AddScheduledReports";
-// import TemplateReport from "./Pages/Reports/TemplateReports/TemplateReports";
-// import AddTemplateReports from "./Pages/Reports/AddTemplateReports/AddTemplateReports";
-// import { scheduledData, templateData } from "./Pages/Reports/ReportData";
-// import EditTemplateReport from "./Pages/Reports/EditTemplateReports/EditTemplateReports";
-// import EditScheduledReport from "./Pages/Reports/EditScheduledReport/EditScheduledReports";
-import AddReports from "./Pages/Reports/AddReports";
-import Statistics from "./Pages/Statistics/Statistics";
-import EmailTemplate from "./Pages/EmailTemplate/EmailTemplate";
-import emailData from "./Pages/EmailTemplate/emailData";
-import AddEmailTemplate from "./Pages/EmailTemplate/AddEmailTemplate";
-import EditEmailTemplate from "./Pages/EmailTemplate/EditEmailTemplate";
-import PricingConfig from "./Pages/Pricing/PricingConfig";
-import AssignPricingConfig from "./Pages/Pricing/AssignPricingConfig";
-import { pricingConfigData } from "./Pages/Pricing/pricingData";
-import EditPriceScheme from "./Pages/Pricing/EditPriceScheme";
-import AddPriceScheme from "./Pages/Pricing/AddPriceScheme";
-import Cashier from "./Pages/Cashier/Cashier";
-import CustomPrint from "./Pages/CustomPrint/CustomPrint";
-import Settings from "./Pages/Settings/Settings";
-import Logs from "./Pages/Logs/Logs";
-import About from "./Pages/About/About";
-import Groups from "./Pages/Groups/Groups";
-import Report from "./Pages/Reports/Report";
-import EditReport from "./Pages/Reports/EditReport";
-import ScrollToTop from "./utils/ScrollToTop";
-import Users from "./Pages/Users/Users/Users";
-import UserData from "./Pages/Users/Users/UserData";
 import "./App.css";
-import DeviceSetting from "./Pages/Settings/DeviceSetting";
-import OptionSetting from "./Pages/Settings/OptionSetting";
-import WinAuth from "./Pages/Settings/WinAuth";
-import LicenseInfo from "./Pages/Licence/LicenseInfo";
-import LicenseDetails from "./Pages/Licence/LicenceDetails";
-import LicenseFeature from "./Pages/Licence/LicenseFeature";
-import LLA from "./Pages/LLA/LLA";
-import Api from "./Pages/API/Api";
-import AzureDetails from "./Pages/Settings/AzureDetails";
+import Login from "./Pages/CaletaCore/Login/Login";
+import Layout from "./Components/Common/Layout";
+import Dashboard from "./Pages/CaletaCore/Dashboard/Dashboard";
+import Server from "./Pages/CaletaCore/Server/Server";
+import EditServer from "./Pages/CaletaCore/Server/EditServer";
+import serverData from "./Pages/CaletaCore/Server/ServerData";
+import Users from "./Pages/CaletaCore/Users/Users";
+import AddUser from "./Pages/CaletaCore/Users/AddUser";
+import AccessCode from "./Pages/CaletaCore/Users/AccessCode";
+import EditUser from "./Pages/CaletaCore/Users/EditUser";
+import Alias from "./Pages/CaletaCore/Users/Alias";
+import UserGroup from "./Pages/CaletaCore/Users/UserGroup";
+import PrintDocs from "./Pages/CaletaCore/Users/PrintDocs";
+import Devices from "./Pages/CaletaCore/Devices/Devices";
+import AddDevice from "./Pages/CaletaCore/Devices/Devices";
+import EditDevice from "./Pages/CaletaCore/Devices/EditDevice";
+import DeviceGroups from "./Pages/CaletaCore/Devices/DeviceGroups";
+import PrintQueues from "./Pages/CaletaCore/PrintQueues/PrintQueues";
+import Department from "./Pages/CaletaCore/Department/Department";
+import Groups from "./Pages/CaletaCore/Groups/Groups";
+import CostCodes from "./Pages/CaletaCore/Cost Codes/CostCodes";
+import OrganizationalUnit from "./Pages/CaletaCore/OrganizationalUnit/OrganizationalUnit";
+import UserImports from "./Pages/CaletaCore/Imports/UserImports";
+import AddUserImport from "./Pages/CaletaCore/Imports/AddUserImport";
+import EditUserImport from "./Pages/CaletaCore/Imports/EditUserImport";
+import DeviceImports from "./Pages/CaletaCore/Imports/DeviceImports";
+import AddDeviceImport from "./Pages/CaletaCore/Imports/AddDeviceImport";
+import EditDeviceImport from "./Pages/CaletaCore/Imports/EditDeviceImport";
+import Report from "./Pages/CaletaCore/Reports/Report";
+import AddReport from "./Pages/CaletaCore/Reports/AddReport";
+import EditReport from "./Pages/CaletaCore/Reports/EditReport";
+import Statistics from "./Pages/CaletaCore/Statistics/Statistics";
+import EmailTemplate from "./Pages/CaletaCore/EmailTemplate/EmailTemplate";
+import AddEmailTemplate from "./Pages/CaletaCore/EmailTemplate/AddEmailTemplate";
+import EditEmailTemplate from "./Pages/CaletaCore/EmailTemplate/EditEmailTemplate";
+import { emailData } from "./Pages/CaletaCore/EmailTemplate/emailData";
+import {
+  deviceImportData,
+  userImportData,
+} from "./Pages/CaletaCore/Imports/ImportData";
+import PricingConfig from "./Pages/CaletaCore/Pricing/PricingConfig";
+import AddPriceScheme from "./Pages/CaletaCore/Pricing/AddPriceScheme";
+import EditPriceScheme from "./Pages/CaletaCore/Pricing/EditPriceScheme";
+import AssignPricingConfig from "./Pages/CaletaCore/Pricing/AssignPricingConfig";
+import Cashier from "./Pages/CaletaCore/Cashier/CashierForm";
+import CustomPrint from "./Pages/CaletaCore/CustomPrint/CustomPrint";
+import Settings from "./Pages/CaletaCore/Settings/Settings";
+import DeviceSetting from "./Pages/CaletaCore/Settings/DeviceSetting";
+import OptionSetting from "./Pages/CaletaCore/Settings/OptionSetting";
+import WinAuth from "./Pages/CaletaCore/Settings/WinAuth";
+import AzureDetails from "./Pages/CaletaCore/Settings/AzureDetails";
+import LicenseInfo from "./Pages/CaletaCore/Licence/LicenseInfo";
+import LicenseDetails from "./Pages/CaletaCore/Licence/LicenceDetails";
+import LicenseFeature from "./Pages/CaletaCore/Licence/LicenseFeature";
+import Logs from "./Pages/CaletaCore/Logs/Logs";
+import About from "./Pages/CaletaCore/About/About";
+import LLA from "./Pages/CaletaCore/LLA/LLA";
+import Api from "./Pages/CaletaCore/API/Api";
+import UserData from "./Pages/CaletaCore/Users/UserData";
+import ScrollToTop from "./utils/ScrollToTop";
+import ProtectedRoute from "./utils/ProtectedRoutes";
+import { devicesData } from "./Pages/CaletaCore/Devices/devicesData";
+import { pricingConfigData } from "./Pages/CaletaCore/Pricing/pricingData";
+import WebSetting from "./Pages/CaletaWeb/WebSetting/WebSetting";
+import Customization from "./Pages/CaletaWeb/Customization/Customiztion";
+import GeneralSetting from "./Pages/CaletaWeb/WebSetting/GeneralSetting";
+import CustomMenu from "./Pages/CaletaWeb/Customization/CustomMenu";
+import Lla from "./Pages/CaletaWeb/Lla/Lla";
 
 export default function App() {
-  const location = useLocation(); 
+  const location = useLocation();
   const { theme } = useTheme();
 
   useEffect(() => {
@@ -96,7 +97,7 @@ export default function App() {
           <Route path="/server" element={<Server />} />
           <Route
             path="/server/edit/:serverId"
-            element={<EditPage data={serverData} />}
+            element={<EditServer data={serverData} />}
           />
           <Route path="/users" element={<Users />} />
           <Route path="/users/add-user" element={<AddUser />} />
@@ -152,24 +153,12 @@ export default function App() {
           />
 
           <Route path="/reports/scheduled-reports" element={<Report />} />
-          <Route path="/add-report" element={<AddReports />} />
-          {/* <Route
-            path="/scheduled-reports/add-report"
-            element={<AddScheduledReports />}
-          /> */}
+          <Route path="/add-report" element={<AddReport />} />
           <Route
             path="/edit-report/:reportType/edit/:userId"
             element={<EditReport />}
           />
           <Route path="/reports/template-reports" element={<Report />} />
-          {/* <Route
-            path="/template-reports/add-template"
-            element={<AddTemplateReports />}
-          />
-          <Route
-            path="/template-reports/edit/:tempId"
-            element={<EditTemplateReport data={templateData} />}
-          /> */}
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/email-templates" element={<EmailTemplate />} />
           <Route
@@ -208,6 +197,12 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/lla" element={<LLA />} />
           <Route path="/api" element={<Api />} />
+
+          <Route path="/web/web-setting" element={<WebSetting />} />
+          <Route path="/web/general-setting" element={<GeneralSetting />} />
+          <Route path="/web/custom" element={<Customization />} />
+          <Route path="/web/custom-menu" element={<CustomMenu />} />
+          <Route path="/web/lla" element={<Lla />} />
         </Route>
       </Routes>
     </AnimatePresence>
