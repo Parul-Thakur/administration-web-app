@@ -397,7 +397,7 @@ export default function Statistics() {
                           color: "var(--text-color)",
                         },
                         "& .MuiMenuItem-root:hover": {
-                          backgroundColor: "var(--primary-color)",
+                          backgroundColor: "var(--btn-bg)",
                           color: "#fff",
                         },
                         "&.MuiPaper-root": {
@@ -468,7 +468,7 @@ export default function Statistics() {
                           color: "var(--text-color)",
                         },
                         "& .MuiMenuItem-root:hover": {
-                          backgroundColor: "var(--primary-color)",
+                          backgroundColor: "var(--btn-bg)",
                           color: "#fff",
                         },
                         "&.MuiPaper-root": {
@@ -539,7 +539,7 @@ export default function Statistics() {
                           color: "var(--text-color)",
                         },
                         "& .MuiMenuItem-root:hover": {
-                          backgroundColor: "var(--primary-color)",
+                          backgroundColor: "var(--btn-bg)",
                           color: "#fff",
                         },
                         "&.MuiPaper-root": {

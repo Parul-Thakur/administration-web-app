@@ -179,7 +179,7 @@ export default function DeviceGroups() {
                               sx={{
                                 color: "var(--text-color)",
                                 "&:hover": {
-                                  color: "var(--primary-color)", // Change color on hover
+                                  color: "var(--btn-bg)", // Change color on hover
                                 },
                               }}
                             >
@@ -207,10 +207,10 @@ export default function DeviceGroups() {
                             borderColor: "var(--grey)", // Default border color
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)", // Hover border color
+                            borderColor: "var(--btn-bg)", // Hover border color
                           },
                           "&.Mui-focused fieldset": {
-                            borderColor: "var(--primary-color)", // Focused border color
+                            borderColor: "var(--btn-bg)", // Focused border color
                           },
                         },
                       }}

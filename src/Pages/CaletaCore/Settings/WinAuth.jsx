@@ -131,11 +131,11 @@ export default function WinAuth() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -167,11 +167,11 @@ export default function WinAuth() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -219,11 +219,11 @@ export default function WinAuth() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -256,11 +256,11 @@ export default function WinAuth() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -276,7 +276,7 @@ export default function WinAuth() {
                       padding: "0.5rem 1.5rem",
                       transition: "transform 0.2s ease",
                       "&:hover": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                         transform: "translateY(5px)",
                         color: "var(--text-color)",
                       },

@@ -201,11 +201,11 @@ export default function EditServer() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)", // Focused border color
+                        borderColor: "var(--btn-bg)", // Focused border color
                       },
                     }}
                   />
@@ -238,11 +238,11 @@ export default function EditServer() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -396,10 +396,10 @@ export default function EditServer() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                         "&.Mui-focused fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                         "& .MuiInputBase-input": {
                           color: "var(--text-color)",
@@ -426,10 +426,10 @@ export default function EditServer() {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                         "&.Mui-focused fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                         "& .MuiInputBase-input": {
                           color: "var(--text-color)",

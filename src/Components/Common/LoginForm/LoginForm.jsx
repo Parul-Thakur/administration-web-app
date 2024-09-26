@@ -564,11 +564,11 @@ const LoginForm = () => {
                         borderColor: "var(--grey)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)", // Focused border color
+                      borderColor: "var(--btn-bg)", // Focused border color
                     },
                   }}
                 />
@@ -630,11 +630,11 @@ const LoginForm = () => {
                         borderColor: "var(--grey)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   }}
                 />

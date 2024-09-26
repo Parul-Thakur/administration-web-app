@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import CustomTable from "./CustomTable/CustomTable";
 
-
 function EntityPage({
   entityData: initialEntityData,
   entityName,
@@ -103,7 +102,7 @@ function EntityPage({
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="h10" component="h4" gutterBottom>
+        <Typography variant="h8" component="h4" gutterBottom>
           Add {entityLabel}
         </Typography>
       </Box>
@@ -146,11 +145,11 @@ function EntityPage({
                       borderColor: "var(--grey)",
                     },
                     "&:hover fieldset": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   },
                   "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "var(--primary-color)",
+                    borderColor: "var(--btn-bg)",
                   },
                 }}
               />
@@ -160,13 +159,12 @@ function EntityPage({
                 onClick={handleAddGroup}
                 variant="outlined"
                 sx={{
-                  fontSize: "0.8rem",
+                  fontSize: "0.7rem",
                   backgroundColor: "var(--btn-bg)",
                   color: "var(--btn-text)",
-                  padding: "0.5rem 1.5rem",
+                  padding: "0.5rem 1rem",
                   transition: "transform 0.2s ease",
                   "&:hover": {
-                    backgroundColor: "var(--btn-bg)",
                     transform: "translateY(-2px)",
                   },
                 }}

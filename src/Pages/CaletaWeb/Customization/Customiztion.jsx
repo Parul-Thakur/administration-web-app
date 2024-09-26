@@ -33,7 +33,7 @@ export default function Customization() {
     doc: "",
     print: "",
     remote: "",
-    loginInfo:false,
+    loginInfo: false,
   });
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -500,11 +500,11 @@ export default function Customization() {
                         borderColor: "var(--grey)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   }}
                 />

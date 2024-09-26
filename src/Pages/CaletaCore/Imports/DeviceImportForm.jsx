@@ -22,7 +22,11 @@ const server = ["None", "Pre Pay", "Invoice"];
 const options = ["Add Devices", "Modify Devices"];
 const auth = ["Access Code", "Windows Authentication"];
 
-export default function DeviceImportForm({ isEditMode, existingData, onSubmit }) {
+export default function DeviceImportForm({
+  isEditMode,
+  existingData,
+  onSubmit,
+}) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredUsers, setFilteredUsers] = useState(userData);
   const deviceSourceTypeOptions = [
@@ -147,11 +151,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                       borderColor: "var(--grey)",
                     },
                     "&:hover fieldset": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   },
                   "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "var(--primary-color)",
+                    borderColor: "var(--btn-bg)",
                   },
                 }}
               />
@@ -185,11 +189,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                       borderColor: "var(--grey)",
                     },
                     "&:hover fieldset": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   },
                   "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "var(--primary-color)",
+                    borderColor: "var(--btn-bg)",
                   },
                 }}
               />
@@ -754,11 +758,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                             borderColor: "var(--grey)",
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       }}
                     />
@@ -792,11 +796,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                             borderColor: "var(--grey)",
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       }}
                     />
@@ -884,11 +888,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                             borderColor: "var(--grey)",
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       }}
                     />
@@ -950,11 +954,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                             borderColor: "var(--grey)",
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       }}
                     />
@@ -987,11 +991,11 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
                             borderColor: "var(--grey)",
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       }}
                     />
@@ -1041,7 +1045,7 @@ export default function DeviceImportForm({ isEditMode, existingData, onSubmit })
               transition: "transform 0.2s ease",
               "&:hover": {
                 transform: "translateY(-2px)",
-                backgroundColor: "var(--primary-color)",
+                backgroundColor: "var(--btn-bg)",
               },
             }}
             onClick={handleSubmit}

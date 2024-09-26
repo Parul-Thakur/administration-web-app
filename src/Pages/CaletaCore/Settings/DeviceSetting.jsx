@@ -262,7 +262,7 @@ export default function DeviceSetting() {
                             padding: "0.5rem 1rem",
                             transition: "transform 0.2s ease",
                             "&:hover": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                               transform: "translateY(5px)",
                               color: "var(--text-color)",
                             },
@@ -282,7 +282,7 @@ export default function DeviceSetting() {
                             padding: "0.5rem 1rem", // Button border color
                             transition: "transform 0.2s ease",
                             "&:hover": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                               transform: "translateY(5px)",
                               color: "var(--text-color)", // Button hover background color
                             },
@@ -302,7 +302,7 @@ export default function DeviceSetting() {
                             padding: "0.5rem 1rem", // Button border color
                             transition: "transform 0.2s ease",
                             "&:hover": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                               transform: "translateY(5px)",
                               color: "var(--text-color)", // Button hover background color
                             },

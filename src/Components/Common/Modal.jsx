@@ -22,7 +22,7 @@ export default function Modal({ open, onClose, onConfirm, title, message }) {
         sx: {
           borderRadius: 2,
           textAlign: "center",
-          backgroundColor:"var(--modal-bg)",
+          backgroundColor: "var(--modal-bg)",
           p: 2,
         },
       }}
@@ -35,7 +35,7 @@ export default function Modal({ open, onClose, onConfirm, title, message }) {
             "&:hover": {
               bgcolor: "var(--hover)",
             },
-            color: "var(--primary-color)",
+            color: "var(--btn-bg)",
           }}
         >
           <CheckCircleIcon sx={{ fontSize: 40 }} />
@@ -43,7 +43,7 @@ export default function Modal({ open, onClose, onConfirm, title, message }) {
       </Box>
       <DialogTitle sx={{ fontWeight: "bold" }}>{title}</DialogTitle>
       <DialogContent>
-        <Typography variant="body1" sx={{ mb: 4, color: "var(--text-head)", }}>
+        <Typography variant="body1" sx={{ mb: 4, color: "var(--text-head)" }}>
           {message}
         </Typography>
       </DialogContent>
@@ -55,7 +55,6 @@ export default function Modal({ open, onClose, onConfirm, title, message }) {
             borderColor: "var(--text-head)",
             color: "var(--text-head)",
             "&:hover": {
-             
               backgroundColor: "var(--modal-select)",
               color: "var(--color)",
             },

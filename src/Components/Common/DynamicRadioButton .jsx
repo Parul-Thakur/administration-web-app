@@ -101,11 +101,11 @@ export default function DynamicRadioButton({ options, label }) {
             borderColor: "var(--grey)",
           },
           "&:hover fieldset": {
-            borderColor: "var(--primary-color)",
+            borderColor: "var(--btn-bg)",
           },
         },
         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-          borderColor: "var(--primary-color)",
+          borderColor: "var(--btn-bg)",
         },
       },
     };
@@ -163,11 +163,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -201,11 +201,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -293,11 +293,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -330,11 +330,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -367,11 +367,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -404,11 +404,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -441,11 +441,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -478,11 +478,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -515,11 +515,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -583,11 +583,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -620,11 +620,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -658,11 +658,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -696,11 +696,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -733,11 +733,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -770,11 +770,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -1173,11 +1173,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -1211,11 +1211,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -1301,11 +1301,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -1369,11 +1369,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />
@@ -1406,11 +1406,11 @@ export default function DynamicRadioButton({ options, label }) {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     }}
                   />

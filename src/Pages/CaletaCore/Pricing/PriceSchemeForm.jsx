@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import "react-quill/dist/quill.snow.css";
 import ActionButtonWithModal from "../../../Components/Common/ActionButtonWithModal/ActionButtonWithModal";
-import EuroSymbolIcon from '@mui/icons-material/EuroSymbol';
+import EuroSymbolIcon from "@mui/icons-material/EuroSymbol";
 
 export default function PriceSchemeForm({
   isEditMode,
@@ -77,72 +77,72 @@ export default function PriceSchemeForm({
   const renderMoneyFields = (labels) => {
     return (
       <Grid container spacing={2}>
-      {labels.map((rowLabels, rowIndex) => (
-        <Grid container item spacing={2} key={rowIndex}>
-          {rowLabels.map((label, colIndex) => (
-            <Grid item xs={6} key={colIndex}>
-              <TextField
-                fullWidth
-                size="small"
-                label={label}
-                variant="outlined"
-                name={`outlined-adornment-amount-${rowIndex}-${colIndex}`}
-                placeholder="Enter amount"
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <EuroSymbolIcon
-                        sx={{
-                          color: "var(--text-color)",
-                          fontSize: "0.8rem",
-                        }}
-                      />
-                    </InputAdornment>
-                  ),
-                  style: {
-                    fontSize: "0.8rem",
-                    color: "var(--text-color)",
-                  },
-                  inputProps: {
-                    placeholder: "0.00",
+        {labels.map((rowLabels, rowIndex) => (
+          <Grid container item spacing={2} key={rowIndex}>
+            {rowLabels.map((label, colIndex) => (
+              <Grid item xs={6} key={colIndex}>
+                <TextField
+                  fullWidth
+                  size="small"
+                  label={label}
+                  variant="outlined"
+                  name={`outlined-adornment-amount-${rowIndex}-${colIndex}`}
+                  placeholder="Enter amount"
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <EuroSymbolIcon
+                          sx={{
+                            color: "var(--text-color)",
+                            fontSize: "0.8rem",
+                          }}
+                        />
+                      </InputAdornment>
+                    ),
                     style: {
-                      MozAppearance: "textfield",
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
                     },
-                  },
-                }}
-                InputLabelProps={{
-                  style: {
+                    inputProps: {
+                      placeholder: "0.00",
+                      style: {
+                        MozAppearance: "textfield",
+                      },
+                    },
+                  }}
+                  InputLabelProps={{
+                    style: {
+                      fontSize: "0.8rem",
+                      color: "var(--text-color)",
+                    },
+                  }}
+                  sx={{
                     fontSize: "0.8rem",
-                    color: "var(--text-color)",
-                  },
-                }}
-                sx={{
-                  fontSize: "0.8rem",
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "var(--grey)",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "var(--grey)",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "var(--btn-bg)",
+                      },
                     },
-                    "&:hover fieldset": {
-                      borderColor: "var(--primary-color)",
+                    "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "var(--btn-bg)",
                     },
-                  },
-                  "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "var(--primary-color)",
-                  },
-                  "& input[type=number]": {
-                    "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
-                      WebkitAppearance: "none",
-                      margin: 0,
+                    "& input[type=number]": {
+                      "&::-webkit-outer-spin-button, &::-webkit-inner-spin-button":
+                        {
+                          WebkitAppearance: "none",
+                          margin: 0,
+                        },
                     },
-                  },
-                }}
-              />
-            </Grid>
-          ))}
-        </Grid>
-      ))}
-    </Grid>
-    
+                  }}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        ))}
+      </Grid>
     );
   };
   return (
@@ -206,11 +206,11 @@ export default function PriceSchemeForm({
                       borderColor: "var(--grey)",
                     },
                     "&:hover fieldset": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   },
                   "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "var(--primary-color)", // Focused border color
+                    borderColor: "var(--btn-bg)", // Focused border color
                   },
                 }}
               />

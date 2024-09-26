@@ -53,7 +53,7 @@ export default function DeviceGroup() {
       //           transition: "transform 0.2s ease",
       //           "&:hover": {
       //             transform: "translateY(-2px)",
-      //             backgroundColor: "var(--primary-color)",
+      //             backgroundColor: "var(--btn-bg)",
       //           },
       //         }}
       //       >
@@ -71,7 +71,7 @@ export default function DeviceGroup() {
       //           transition: "transform 0.2s ease",
       //           "&:hover": {
       //             transform: "translateY(-2px)",
-      //             backgroundColor: "var(--primary-color)",
+      //             backgroundColor: "var(--btn-bg)",
       //           },
       //         }}
       //       >

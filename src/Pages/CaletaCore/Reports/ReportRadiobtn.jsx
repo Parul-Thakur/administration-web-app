@@ -118,11 +118,11 @@ export default function ReportRadioBtn({
                         borderColor: "var(--grey)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)",
+                      borderColor: "var(--btn-bg)",
                     },
                   }}
                 />

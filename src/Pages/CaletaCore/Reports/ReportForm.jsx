@@ -386,7 +386,7 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                             padding: "0.4rem 1.5rem",
                             transition: "transform 0.2s ease",
                             "&:hover": {
-                              backgroundColor: "var(--primary-color)",
+                              backgroundColor: "var(--btn-bg)",
                               transform: "translateY(5px)",
                             },
                           }}
@@ -437,11 +437,11 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                               borderColor: "var(--grey)",
                             },
                             "&:hover fieldset": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                             },
                           },
                           "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         }}
                       />
@@ -474,11 +474,11 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                               borderColor: "var(--grey)",
                             },
                             "&:hover fieldset": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                             },
                           },
                           "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         }}
                       />
@@ -511,11 +511,11 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                               borderColor: "var(--grey)",
                             },
                             "&:hover fieldset": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                             },
                           },
                           "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         }}
                       />
@@ -700,12 +700,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                                   borderColor: "var(--grey)",
                                 },
                                 "&:hover fieldset": {
-                                  borderColor: "var(--primary-color)",
+                                  borderColor: "var(--btn-bg)",
                                 },
                               },
                               "& .Mui-focused .MuiOutlinedInput-notchedOutline":
                                 {
-                                  borderColor: "var(--primary-color)",
+                                  borderColor: "var(--btn-bg)",
                                 },
                             }}
                           />
@@ -737,12 +737,12 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                                   borderColor: "var(--grey)",
                                 },
                                 "&:hover fieldset": {
-                                  borderColor: "var(--primary-color)",
+                                  borderColor: "var(--btn-bg)",
                                 },
                               },
                               "& .Mui-focused .MuiOutlinedInput-notchedOutline":
                                 {
-                                  borderColor: "var(--primary-color)",
+                                  borderColor: "var(--btn-bg)",
                                 },
                             }}
                           />
@@ -846,11 +846,11 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                               borderColor: "var(--grey)",
                             },
                             "&:hover fieldset": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                             },
                           },
                           "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         }}
                       />
@@ -926,11 +926,11 @@ export default function ReportForm({ isEditMode, existingData, onSubmit }) {
                               borderColor: "var(--grey)",
                             },
                             "&:hover fieldset": {
-                              borderColor: "var(--primary-color)",
+                              borderColor: "var(--btn-bg)",
                             },
                           },
                           "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         }}
                       />

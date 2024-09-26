@@ -32,12 +32,19 @@ const CustomTooltip = styled(({ className, ...props }) => (
 
 const RightSidebar = () => {
   const { toggleTheme, theme } = useTheme();
-
   const handleLogout = () => {
-    // localStorage.removeItem("userEmail");
+    const themeState = localStorage.getItem("appTheme"); 
     localStorage.clear(); 
+    if (themeState) {
+      localStorage.setItem("appTheme", themeState);
+    }
+
     window.location.href = "/";
   };
+  // const handleLogout = () => {
+  //   localStorage.clear(); 
+  //   window.location.href = "/";
+  // };
 
   const userEmail = localStorage.getItem("userEmail");
 

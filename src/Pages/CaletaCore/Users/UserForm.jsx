@@ -199,11 +199,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         borderColor: "var(--grey)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)", // Focused border color
+                      borderColor: "var(--btn-bg)", // Focused border color
                     },
                   }}
                 />
@@ -236,11 +236,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         borderColor: "var(--grey)", // Default border color
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)", // Hover border color
+                        borderColor: "var(--btn-bg)", // Hover border color
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)", // Focused border color
+                      borderColor: "var(--btn-bg)", // Focused border color
                     },
                   }}
                 />
@@ -273,11 +273,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         borderColor: "var(--grey)",
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)",
+                        borderColor: "var(--btn-bg)",
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)", // Focused border color
+                      borderColor: "var(--btn-bg)", // Focused border color
                     },
                   }}
                 />
@@ -310,11 +310,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                         borderColor: "var(--grey)", // Default border color
                       },
                       "&:hover fieldset": {
-                        borderColor: "var(--primary-color)", // Hover border color
+                        borderColor: "var(--btn-bg)", // Hover border color
                       },
                     },
                     "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "var(--primary-color)", // Focused border color
+                      borderColor: "var(--btn-bg)", // Focused border color
                     },
                   }}
                 />
@@ -612,11 +612,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                             borderColor: "var(--grey)",
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)",
+                            borderColor: "var(--btn-bg)",
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       }}
                     />
@@ -650,11 +650,11 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                             borderColor: "var(--grey)", // Default border color
                           },
                           "&:hover fieldset": {
-                            borderColor: "var(--primary-color)", // Hover border color
+                            borderColor: "var(--btn-bg)", // Hover border color
                           },
                         },
                         "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-                          borderColor: "var(--primary-color)", // Focused border color
+                          borderColor: "var(--btn-bg)", // Focused border color
                         },
                       }}
                     />
@@ -890,10 +890,10 @@ const UserForm = ({ isEditMode, existingData, onSubmit }) => {
                           borderColor: "var(--grey)",
                         },
                         "&:hover fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                         "&.Mui-focused fieldset": {
-                          borderColor: "var(--primary-color)",
+                          borderColor: "var(--btn-bg)",
                         },
                       },
                     }}
