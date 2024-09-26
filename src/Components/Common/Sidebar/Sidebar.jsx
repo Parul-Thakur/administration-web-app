@@ -88,7 +88,7 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
   }, []);
   const sidebarRef = useRef(null);
   const location = useLocation();
-
+  const is1500pxOrSmaller = useMediaQuery("(max-width: 1500px)");
   const is1440pxOrSmaller = useMediaQuery("(max-width: 1440px)");
   const is1024pxOrSmaller = useMediaQuery("(max-width: 1024px)");
 
@@ -115,9 +115,17 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
       };
     }
   }, [location.pathname]);
+
+
   const navigate = useNavigate();
   const handleLogoClick = () => {
-    navigate("/");
+    if (selectedApp === "caleta-core") {
+      navigate("/dashboard"); 
+    } else if (selectedApp === "caleta-web") {
+      navigate("/web/web-setting"); 
+    } else {
+      navigate("/"); 
+    }
   };
   const isDashboardActive = location.pathname === "/dashboard";
   const isSettingsActive = location.pathname === "/settings";
@@ -127,16 +135,26 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
       <Drawer
         variant={is1024pxOrSmaller ? "temporary" : "permanent"}
         anchor="left"
-        open={open}
-        // onClose={toggleSidebar}
+        open={open && !is1024pxOrSmaller} // Hide drawer on smaller screens
         sx={{
-          width: open ? (is1440pxOrSmaller ? "60px" : "15%") : "4%",
+          width: open
+            ? is1440pxOrSmaller
+              ? "60px"
+              : is1500pxOrSmaller
+              ? "10%"
+              : "15%"
+            : "4%", // Adjust width dynamically
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: open ? (is1440pxOrSmaller ? "60px" : "15%") : "4%",
+            width: open
+              ? is1440pxOrSmaller
+                ? "60px"
+                : is1500pxOrSmaller
+                ? "10%"
+                : "15%"
+              : "4%",
             boxSizing: "border-box",
             transition: "width 0.3s",
-
             backgroundColor: "var(--sidebar-color)",
           },
           transition: "width 0.3s ease-in-out",
@@ -175,11 +193,7 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                 <>
                   <ListItemIcon
                     sx={{ minWidth: "unset" }}
-                    onClick={
-                      selectedApp === "caleta-core"
-                        ? handleLogoClick
-                        : undefined
-                    }
+                    onClick={handleLogoClick}
                     style={{ cursor: "pointer" }}
                   >
                     <img src={logo} alt="logo" style={{ width: "2rem" }} />
@@ -249,47 +263,48 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                 }}
               >
                 {/* Dashboard NavLink */}
-                <NavLink to="/dashboard" style={{ textDecoration: "none" }}>
-                  <Box
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: open ? "0.2rem 1rem" : "0.5rem 1rem 0",
+                    backgroundColor: isDashboardActive
+                      ? "var(--hover)" // Apply hover bg color when dashboard is active
+                      : "var(--drop-bg)",
+                    borderRadius: "20px",
+                    gap: open ? "1.5rem" : "0",
+                    flexDirection: open ? "row" : "column",
+                    textAlign: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleLogoClick}
+                >
+                  <SpaceDashboardIcon
                     sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      padding: open ? "0.2rem 1rem" : "0.5rem 1rem 0",
-                      backgroundColor: isDashboardActive
-                        ? "var(--hover)" // Apply hover bg color when dashboard is active
-                        : "var(--drop-bg)",
-                      borderRadius: "20px",
-                      gap: open ? "1.5rem" : "0",
-                      flexDirection: open ? "row" : "column",
-                      textAlign: "center",
+                      fontSize: "1.2rem",
+                      color: isDashboardActive
+                        ? "var(--text-head)"
+                        : "var(--text-color)",
+                      marginBottom: open ? "0" : "0.5rem",
                     }}
-                  >
-                    <SpaceDashboardIcon
+                  />
+                  {open && !is1440pxOrSmaller && (
+                    <Typography
                       sx={{
-                        fontSize: "1.2rem",
                         color: isDashboardActive
                           ? "var(--text-head)"
                           : "var(--text-color)",
-                        marginBottom: open ? "0" : "0.5rem",
+                        fontSize: "0.875rem",
+                        fontWeight: 500,
+                        display: { xs: "none", sm: "block" },
                       }}
-                    />
-                    {open && !is1440pxOrSmaller && (
-                      <Typography
-                        sx={{
-                          color: isDashboardActive
-                            ? "var(--text-head)"
-                            : "var(--text-color)",
-                          fontSize: "0.875rem",
-                          fontWeight: 500,
-                          display: { xs: "none", sm: "block" },
-                        }}
-                      >
-                        Hanoi
-                      </Typography>
-                    )}
-                  </Box>
-                </NavLink>
+                    >
+                      Hanoi
+                    </Typography>
+                  )}
+                </Box>
 
                 {/* Divider */}
                 {selectedApp !== "caleta-web" && (
@@ -361,10 +376,13 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                 {!open && (
                   <ListItemIcon
                     sx={{
-                      minWidth: "auto",
+                      display: "flex",
+                      alignItems: "center",
                       justifyContent: "center",
+                      minWidth: "auto",
                       fontSize: ".7rem",
                       color: "var(--text-head)",
+                      width: "100%", // E
                     }}
                   >
                     <AdminPanelSettingsIcon />
@@ -383,12 +401,10 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                     }}
                   />
                 )}
-                {open ? (
+                {open && (
                   <IconButton sx={{ color: "var(--text-head)" }}>
                     {openAdmin ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                   </IconButton>
-                ) : (
-                  ""
                 )}
               </ListItem>
               <Collapse in={openAdmin} timeout="auto">
@@ -514,7 +530,7 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                                 sx: { fontSize: 20 },
                               })}
                             </ListItemIcon>
-                            {openAdmin && !is1440pxOrSmaller && (
+                            {open && openAdmin && !is1440pxOrSmaller && (
                               <ListItemText
                                 primary={text}
                                 primaryTypographyProps={{
@@ -592,7 +608,7 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                                 sx: { fontSize: 20 },
                               })}
                             </ListItemIcon>
-                            {openAdmin && !is1440pxOrSmaller && (
+                            {open && openAdmin && !is1440pxOrSmaller && (
                               <ListItemText
                                 primary={text}
                                 primaryTypographyProps={{
@@ -627,10 +643,13 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                 {!open && (
                   <ListItemIcon
                     sx={{
-                      minWidth: "auto",
+                      display: "flex",
+                      alignItems: "center",
                       justifyContent: "center",
+                      minWidth: "auto",
                       fontSize: ".7rem",
                       color: "var(--text-head)",
+                      width: "100%", // E
                     }}
                   >
                     <SettingsSystemDaydreamIcon />
@@ -794,7 +813,7 @@ const Sidebar = ({ open, toggleDrawer, selectedApp }) => {
                                 sx: { fontSize: 20 },
                               })}
                             </ListItemIcon>
-                            {openAdmin && !is1440pxOrSmaller && (
+                            {open && openAdmin && !is1440pxOrSmaller && (
                               <ListItemText
                                 primary={text}
                                 primaryTypographyProps={{

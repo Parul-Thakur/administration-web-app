@@ -1,60 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { Box, CssBaseline } from "@mui/material";
-// import { Outlet, useLocation } from "react-router-dom";
-// import Sidebar from "./Sidebar/Sidebar";
-// import Breadcrumb from "./Breadcrumb/Breadcrumb";
-// import RightSidebar from "./RightSidebar/RightSidebar";
-// import CaletaSelect from "./CaletaSelect";
-
-// function Layout() {
-//   const location = useLocation();
-//   const [open, setOpen] = useState(() => {
-//     const savedState = localStorage.getItem("sidebarOpen");
-//     return savedState ? JSON.parse(savedState) : true;
-//   });
-
-//   useEffect(() => {
-//     localStorage.setItem("sidebarOpen", JSON.stringify(open));
-//   }, [open]);
-
-//   const toggleDrawer = () => {
-//     setOpen((prevOpen) => !prevOpen);
-//   };
-
-//   // Hide Breadcrumb on Dashboard page
-//   const showBreadcrumb = location.pathname !== "/dashboard";
-//   const sidebarWidth = open ? "15%" : "4%";
-//   const rightSidebarWidth = "4%";
-
-//   return (
-//     <Box sx={{ display: "flex" }}>
-//       <CssBaseline />
-
-//       <Sidebar toggleDrawer={toggleDrawer} open={open} />
-//       <Box
-//         component="main"
-//         sx={{
-//           flexGrow: 1,
-//           marginLeft: "0rem",
-//           marginRight: "3%",
-//           marginTop: "0px",
-//         }}
-//       >
-//         {/* {showBreadcrumb && <Breadcrumb />} */}
-//         {/* CaletaSelect Component at the top */}
-//         <CaletaSelect />
-
-//         {/* Breadcrumb and page content */}
-
-//         <Outlet />
-//       </Box>
-
-//       <RightSidebar />
-//     </Box>
-//   );
-// }
-
-// export default Layout;
 import React, { useEffect, useState } from "react";
 import { Box, CssBaseline } from "@mui/material";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
@@ -86,6 +29,22 @@ function Layout() {
     localStorage.setItem("selectedApp", selectedApp);
   }, [selectedApp]);
 
+  // Route protection based on selectedApp
+  useEffect(() => {
+    const isWebRoute = location.pathname.startsWith("/web");
+    const isCoreRoute = location.pathname.startsWith("/dashboard");
+
+    // Prevent access to Caleta Web routes if Caleta Core is selected
+    if (selectedApp === "caleta-core" && isWebRoute) {
+      navigate("/dashboard");
+    }
+
+    // Prevent access to Caleta Core routes if Caleta Web is selected
+    if (selectedApp === "caleta-web" && isCoreRoute) {
+      navigate("/web/web-setting");
+    }
+  }, [location.pathname, selectedApp, navigate]);
+
   // Toggle sidebar drawer
   const toggleDrawer = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -109,7 +68,7 @@ function Layout() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
 
-      <Sidebar toggleDrawer={toggleDrawer} open={open} selectedApp={selectedApp}/>
+      <Sidebar toggleDrawer={toggleDrawer} open={open} selectedApp={selectedApp} />
 
       <Box
         component="main"
@@ -122,7 +81,6 @@ function Layout() {
       >
         {/* CaletaSelect Component at the top */}
         <CaletaSelect selectedApp={selectedApp} onAppSwitch={handleAppSwitch} />
-        
 
         {/* Render page content (routes) */}
         <Outlet />
