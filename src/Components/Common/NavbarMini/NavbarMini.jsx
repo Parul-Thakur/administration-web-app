@@ -220,6 +220,14 @@ const NavbarMini = () => {
           </>
         ) : isWebSettingPage ? (
           <>
+          <li>
+              <NavLink
+                to={`/web/general-setting`}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                General Settings
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to={`/web/web-setting`}
@@ -228,14 +236,7 @@ const NavbarMini = () => {
                 Office 365 Account
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to={`/web/general-setting`}
-                className={({ isActive }) => (isActive ? "active" : "")}
-              >
-                General Settings
-              </NavLink>
-            </li>
+          
           </>
         ) : (
           <>

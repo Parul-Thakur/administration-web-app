@@ -17,7 +17,7 @@ import Alias from "./Pages/CaletaCore/Users/Alias";
 import UserGroup from "./Pages/CaletaCore/Users/UserGroup";
 import PrintDocs from "./Pages/CaletaCore/Users/PrintDocs";
 import Devices from "./Pages/CaletaCore/Devices/Devices";
-import AddDevice from "./Pages/CaletaCore/Devices/Devices";
+import AddDevice from "./Pages/CaletaCore/Devices/AddDevice";
 import EditDevice from "./Pages/CaletaCore/Devices/EditDevice";
 import DeviceGroups from "./Pages/CaletaCore/Devices/DeviceGroups";
 import PrintQueues from "./Pages/CaletaCore/PrintQueues/PrintQueues";
