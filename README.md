@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Secure Print Dashboard 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌟 Overview
+The **Secure Print Dashboard** is a dynamic frontend application built with **ReactJS** and **Material-UI**. It features interactive data tables, real-time visual insights, theme toggling, and seamless navigation between multiple web applications. The project is designed to enhance user experience by providing a responsive and intuitive UI for managing print-related data.
 
-## Available Scripts
+## 🎯 Features
+✅ **Interactive Data Tables**: Search, sort, and filter functionalities for efficient data management.  
+📊 **Real-Time Data Insights**: Graphical representation of key metrics using dashboard charts.  
+🎨 **Theme Toggling**: Switch between light and dark themes for a customizable user experience.  
+🔄 **Multi-App Navigation**: Easily toggle between different web applications within the dashboard.  
+📱 **Responsive UI**: Built with Material-UI components to ensure a smooth and consistent experience across devices.
 
-In the project directory, you can run:
+## 🛠️ Technologies Used
+- ⚛ **ReactJS** – Core frontend framework for building a dynamic and responsive UI.
+- 🎨 **Material-UI** – Pre-built UI components for a sleek and modern design.
+- 📊 **Chart.js / Recharts** – Data visualization libraries for interactive graphs.
+- 🚀 **React Router** – Navigation management for seamless multi-app switching.
 
-### `npm start`
+## 🚀 Installation
+1. **Clone the repository:**  
+   ```sh
+   git clone https://github.com/Parul-Thakur/administartion-web-app
+   ```
+2. **Navigate to the project directory:**  
+   ```sh
+   cd secure-print-dashboard
+   ```
+3. **Install dependencies:**  
+   ```sh
+   npm install
+   ```
+4. **Start the development server:**  
+   ```sh
+   npm start
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎮 Usage
+🎯 Open `http://localhost:3000` in your browser to access the dashboard.  
+🔍 Use the **search** and **sorting** features to manage data tables efficiently.  
+🌗 Switch between **light and dark themes** from the settings menu.  
+🔀 Navigate between multiple web applications using the **app toggle** feature.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🤝 Contributing
+Want to improve the project? Follow these steps:
+1. **Fork** the repository.
+2. **Create a new branch:**  
+   ```sh
+   git checkout -b feature-branch-name
+   ```
+3. **Make your changes and commit them:**  
+   ```sh
+   git commit -m 'Add new feature'
+   ```
+4. **Push the changes to your fork:**  
+   ```sh
+   git push origin feature-branch-name
+   ```
+5. **Submit a pull request** for review.
 
-### `npm test`
+## 📜 License
+This project is licensed under the **MIT License**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📬 Contact
+💌 **Email**: paru.thakur11oct@gmail.com  
+🐙 **GitHub**:(https://github.com/Parul-Thakur)  
+💼 **LinkedIn**:(https://linkedin.com/in/Parul-Thakur)  
 
-### `npm run build`
+🚀 Happy Coding! 🎉
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
